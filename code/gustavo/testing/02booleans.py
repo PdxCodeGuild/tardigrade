@@ -53,30 +53,33 @@ def test_opposite():
 # Write a function that returns True if a number within 10 of 100.
 
 
-def near_100(num):
-   num in range(90, 111)
-   return True
-
-def test_near_100():
-    assert near_100(50) == False
-    assert near_100(99) == True
-    assert near_100(105) == True
-    assert near_100(115) == False
+# def near_100(num):
+#    if num in range(90, 111):
+#     return True
+#    else:
+#     return False 
 
 
-# Maximum of Three
-# Write a function that returns the maximum of 3 parameters.
+# def test_near_100():
+#     assert near_100(50) == False
+#     assert near_100(99) == True
+#     assert near_100(105) == True
+#     assert near_100(115) == False
 
 
-def maximum_of_three(a, b, c):
-    if a > b and a > c:
-        return a
-    if b > a and b > c:
-        return c
-    if c > a and c > b:
-        return c
+# # Maximum of Three
+# # Write a function that returns the maximum of 3 parameters.
 
 
-def test_maximum_of_three():
-    assert maximum_of_three(5,6,2) == 6
-    assert maximum_of_three(-4,3,10) == 10
+# def maximum_of_three(a, b, c):
+#     if a > b and a > c:
+#         return a
+#     elif b > a and b > c:
+#         return c
+#     elif c > a and c > b:
+#         return c
+
+
+# def test_maximum_of_three():
+#     assert maximum_of_three(5,6,2) == 6
+#     assert maximum_of_three(-4,3,10) == 10
