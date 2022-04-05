@@ -35,18 +35,18 @@
 # Opposite
 # Write a function that takes two integers, `a` and `b`, and returns `True` if one is positive and the other is negative, and return `False` otherwise.
 
-def opposite(a, b):
-    if a > 0 and b < 0 or a < 0 and b > 0:
-        return True
-    else:
-        return False
+# def opposite(a, b):
+#     if a > 0 and b < 0 or a < 0 and b > 0:
+#         return True
+#     else:
+#         return False
 
 
 
-def test_opposite():
-    assert opposite(10, -1) == True
-    assert opposite(2, 3) == False
-    assert opposite(-1, -1) == False
+# def test_opposite():
+#     assert opposite(10, -1) == True
+#     assert opposite(2, 3) == False
+#     assert opposite(-1, -1) == False
 
 
 # Near 100
