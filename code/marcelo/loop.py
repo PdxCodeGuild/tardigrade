@@ -21,9 +21,8 @@ def test_stars():
 def extract_less_than_ten(nums):
     new_list= []
     for num in nums:
-        new_list.append(nums)
-        new_list.pop(2)
-        new_list.pop(3)
+       if num <= 10:
+           new_list.append(num)
     return new_list
 
 def test_extract_less_than_ten(nums):
