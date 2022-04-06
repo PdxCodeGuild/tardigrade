@@ -6,7 +6,7 @@
 # Run the tests by typing "pytest 03_loops.py"
 
 # Double Numbers
-# Write a function that takes a list of numbers and returns a new list with every number doubled
+# Write a function that takes a list of numbers and returns a new list with every number doubled.
 
 
 
