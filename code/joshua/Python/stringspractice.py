@@ -1,4 +1,5 @@
 from re import X
+import re
 import string
 from xml.etree import cElementTree
 
@@ -49,24 +50,26 @@ def test_count_letter():
 
 
 
-# def latest_letter(word):
+def latest_letter(word):
+    word = sorted(word)
+    return word[-1]
     
 
 
-# def test_latest_letter():
-#     return latest_letter('pneumonoultramicroscopicsilicovolcanoconiosis') == 'v'
+def test_latest_letter():
+    return latest_letter('pneumonoultramicroscopicsilicovolcanoconiosis') == 'v'
 
 
 
 
 
-# def count_hi(text):
-#     for 
+def count_hi(text):
+    x = text.count('hi')
+    return x
 
-
-# def test_count_hi():
-#     assert count_hi('hihi') == 2
-#     assert count_hi('hello hi llama hill') == 2
+def test_count_hi():
+    assert count_hi('hihi') == 2
+    assert count_hi('hello hi llama hill') == 2
 
 
 
