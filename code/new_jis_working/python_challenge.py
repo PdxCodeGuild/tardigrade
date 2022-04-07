@@ -11,7 +11,7 @@ def string_to_array(a):
     list_1 = a.split()
     return list_1
     
-y = string_to_array('Hi my name is jis')
+y = string_to_array('hello how are you')
 
 print(y)
 
