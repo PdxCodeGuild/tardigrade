@@ -1,4 +1,6 @@
 from re import X
+import string
+from xml.etree import cElementTree
 
 
 def loud_text(text):
@@ -74,10 +76,10 @@ def test_count_letter():
 
 def snake_case(text):
     word = str(text).lower().replace(' ', '_')
+    ting = ['`','~','!','@','#','$','%','^','&','*','(',')','-','+','=','{','[','}','}','|',':',';','<','>','?','.']
     for item in word:
-        # if item in '`,~,!,@,#,$,%,^,&,*,(,),-,+,=,{,[,},},|,:,;,",,<,,,>,.,?':
-        #     word.remove(item,'')   figure out how to replace special characters
-        
+        if item in ting:
+            word = word.replace(item,'')
     return word
         
 
@@ -85,3 +87,49 @@ def snake_case(text):
 def test_snake_case():
     assert snake_case('Hello World!') == 'hello_world'
     assert snake_case('This is another example.') == 'this_is_another_example'
+
+
+
+
+def camel_case(text):
+        for i in text:
+            if i in string.punctuation:
+                text = text.replace(i,'')
+        camel_list = list(text.title())
+        
+        
+        camel_list[0] = camel_list[0].lower()
+        
+        camel_list = "".join(camel_list)
+        
+        return camel_list.replace(' ','')
+       
+
+
+def test_camel_case():
+    assert camel_case('Hello World!') == 'helloWorld'
+    assert camel_case('This is another example.') == 'thisIsAnotherExample'
+
+
+def alternating_case(text):
+    sting = ''
+    x = 1
+    for i in text:
+        if x % 2 == 0:
+            sting += i.lower()
+            x +=1
+
+        else:
+            sting += i.upper()
+            x +=1
+
+    return sting
+
+
+
+
+
+def test_alternating_case():
+    assert alternating_case('Hello World!') == 'HeLlO WoRlD!'
+    assert alternating_case(
+        'This is another example.') == 'ThIs iS AnOtHeR ExAmPlE.'
