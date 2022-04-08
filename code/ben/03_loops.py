@@ -1,5 +1,4 @@
-
-
+import pytest
 # Practice 3: While and For Loops
 # Copy and paste this file into your own "03_loops.py"
 # Fill in the code for each of the functions
@@ -8,6 +7,7 @@
 # Double Numbers
 # Write a function that takes a list of numbers and returns a new list with every number doubled
 
+nums = [1,2,3]
 def double_numbers(nums):
     new_list = []
     for num in nums:
@@ -22,8 +22,13 @@ def test_double_numbers():
 # Write a function that takes an integer and returns that number of asterisks in a string
 
 def stars(n):
-    ...
-
+    new_list = []
+    for x in range(0,n):
+        star = '*'
+        new_list.append(star)
+        string = ' '.join(map(str,new_list)).replace(" ", "")
+    return(string)
+    
 def test_stars():
     assert stars(1) == '*'
     assert stars(2) == '**'
@@ -34,11 +39,13 @@ def test_stars():
 # Extract Less Than Ten
 # Write a function to move all the elements of a list with value less than 10 to a new list and return it.
 
-def extract_less_than_ten(nums):
-    ...
+number_list = [2,8,12,18]
+def extract_less_than_ten(numbers):
+    new_list = []
+    for number in numbers:
+        if number < 10:
+            new_list.append(numbers)
+    return new_list
 
 def test_extract_less_than_ten():
-    assert extract_less_than_ten([2, 8, 12, 18]) == [2, 8]
-
-
-
+    extract_less_than_ten([2, 8, 12, 18]) == [2, 8]
