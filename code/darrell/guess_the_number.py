@@ -7,6 +7,10 @@ x = 0
 while True:
     user_guess = input("Guess a number between 1 and 10: ")
     user_guess = int(user_guess)
+    if user_guess > random_number:
+        print("Your guess is too high.")
+    elif user_guess < random_number:
+        print("Your guess is too low.")
     x += 1
     if user_guess == random_number:
         print(f"Congrats, you guessed the number! You guessed {x} times.")
