@@ -10,10 +10,13 @@ while True:
     if user == computer:
         print(f"correct number {user} matches {computer}, it took you {trys} attempts")
         break
-    if user!=computer:
+    if user>computer:
         trys += 1
-        print(f'your number {user} is wrong. try again {computer}')
+        # print(f'your number {user} is wrong. try again {computer}')
+        print(f' youre number {user} was too high. guess again')
         print (f'you are curretly at {trys} attempts')
+    if user<computer:
+        print(f' youre number {user} was too low. guess again')
     # elif trys == 10:
     #     print( "you are out of your 10 attempts. byeeeee")
     #     break
