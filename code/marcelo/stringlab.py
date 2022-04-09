@@ -1,13 +1,13 @@
 import pytest
 
-# def loud_text(text):
-#     word = (" - ").join(list(text)).upper()
-#     return word
+def loud_text(text):
+    word = ("-").join(text).upper()
+    return word
     
 
-# def test_loud_test():
-#     assert loud_text('hello') == 'H-E-L-L-O'
-#     assert loud_text('this is loud text') == 'T-H-I-S- -I-S- -L-O-U-D- -T-E-X-T'
+def test_loud_test():
+    assert loud_text('hello') == 'H-E-L-L-O'
+    assert loud_text('this is loud text') == 'T-H-I-S- -I-S- -L-O-U-D- -T-E-X-T'
 
 def double_letters(word):
     double = ''
@@ -39,13 +39,13 @@ def test_latest_letter():
     return latest_letter('pneumonoultramicroscopicsilicovolcanoconiosis') == 'v'
 
 
-# def count_hi(text):
-#     ...
+def count_hi(text):
+    text.lower()
+    return text.count('hi')
 
-
-# def test_count_hi():
-#     assert count_hi('hihi') == 2
-#     assert count_hi('hello hi llama hill') == 2
+def test_count_hi():
+    assert count_hi('hihi') == 2
+    assert count_hi('hello hi llama hill') == 2
 
 
 
