@@ -10,19 +10,21 @@ import pytest
 #     assert loud_text('this is loud text') == 'T-H-I-S- -I-S- -L-O-U-D- -T-E-X-T'
 
 def double_letters(word):
-    return (word[0] * 2 + '' + word[1] * 2 + '' + word[3] * 4 + '' + word[4] * 2 )
-
+    double = ''
+    for letter in word:
+        double += letter*2
+    return double
 def test_double_letters():
     assert double_letters('hello') == 'hheelllloo'
 
 
 
 def count_letter(letter, word):
-    if 'i' in letter:
-        return(len(letter) + len(word) - 25)
-    if 'p' in letter:
-        return (len(letter) + len(word) - 44)
-
+    x = 0
+    for r in word:
+        if r == letter:
+            x += 1
+    return x
 def test_count_letter():
     assert count_letter('i', 'antidisestablishmentterianism') == 5
     assert count_letter('p', 'pneumonoultramicroscopicsilicovolcanoconiosis') == 2
