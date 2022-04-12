@@ -12,7 +12,7 @@ input_unit = input("Please enter the unit of measurement (ft/mi/m/km/yd/in): ")
 output_unit = input(
     "Please enter the units you are converting into (ft/mi/m/km/yd/in): ")
 
-distance_meters = int(input_distance) * distance_in_meters[input_unit]
+distance_meters = float(input_distance) * distance_in_meters[input_unit]
 
 distance_in_units = distance_meters / distance_in_meters[output_unit]
 
