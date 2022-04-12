@@ -9,6 +9,11 @@ input_distance = input("Please enter distance to be converted: ")
 
 input_unit = input("Please enter the unit of measurement (ft/mi/m/km/yd/in): ")
 
+output_unit = input(
+    "Please enter the units you are converting into (ft/mi/m/km/yd/in): ")
+
 distance_meters = int(input_distance) * distance_in_meters[input_unit]
 
-print(f"{input_distance} {input_unit} is {distance_meters}m.")
+distance_in_units = distance_meters / distance_in_meters[output_unit]
+
+print(f"{input_distance} {input_unit} is {distance_in_units}{output_unit}.")
