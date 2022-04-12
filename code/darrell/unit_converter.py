@@ -3,8 +3,10 @@ distance_in_meters = {"ft": 0.3048,
                       "m": 1,
                       "km": 1000}
 
-input_distance = input("Please enter distance in feet to convert: ")
+input_distance = input("Please enter distance to be converted: ")
 
-distance_meters = int(input_distance) * 0.3048
+input_unit = input("Please enter the unit of measurement (ft/mi/m/km): ")
 
-print(f"{input_distance} ft is {distance_meters}m.")
+distance_meters = int(input_distance) * distance_in_meters[input_unit]
+
+print(f"{input_distance} {input_unit} is {distance_meters}m.")
