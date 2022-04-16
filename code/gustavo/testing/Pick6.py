@@ -12,12 +12,13 @@ def pick6():
     counter = 0
     exp = 0
     roi = 0
+    ticket = [random.randrange(1,100), random.randrange(1,100), random.randrange(1,100), random.randrange(1,100), random.randrange(1,100), random.randrange(1,100)]
     while counter != 100000:
         counter += 1
         balance -= 2
         exp -= 2
         winner = [random.randrange(1,100), random.randrange(1,100), random.randrange(1,100), random.randrange(1,100), random.randrange(1,100), random.randrange(1,100)]
-        ticket = [random.randrange(1,100), random.randrange(1,100), random.randrange(1,100), random.randrange(1,100), random.randrange(1,100), random.randrange(1,100)]
+        
     
         set1 = set(winner)
         set2 = set(ticket)
@@ -34,7 +35,7 @@ def pick6():
         elif len(match) == 6:
             balance += 25000000
             # print(len(match))
-    roi = (balance - abs(exp))
+    roi = ((balance - exp)/exp)
     return f' Your balance is: ${balance}.00, Your ROI is ${roi}.00, You spent ${abs(exp)}.00'
     # return f'The winning numbers are: {winner} and your ticket is: {ticket}'
    
