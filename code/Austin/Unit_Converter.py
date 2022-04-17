@@ -21,7 +21,6 @@ while True:
     else:
         measurement = (conversion[start_unit])
         target = (conversion[end_unit])
-        meters = dist * measurement
         converted = dist * measurement/target
         print(f'{dist} {start_unit} is {converted} {end_unit}')
         break 
