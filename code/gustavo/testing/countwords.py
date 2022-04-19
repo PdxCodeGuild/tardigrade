@@ -16,15 +16,23 @@ with open('biowords.txt', 'w',  encoding='utf-8') as empty_file:
     empty_file.write(ben)
 with open('biowords.txt', 'r', encoding='utf-8') as new_book:
     text = new_book.read()
-    print(text)
+    # print(text)
     text = text.strip(string.punctuation)
     text = text.lower()
     text_ls = text_ls.sort()
     text_ls = text.split(' ',-1)
     
 for word in text_ls:
-    if word in bio_dict:
-       bio_dict = bio_dict[word]
+    if word not in bio_dict:
+        bio_dict[word] = 1
+    elif word in bio_dict:
+       bio_dict[word] += 1
+        
     # text_ls = text_ls
     
-    print(text_ls)
+# print(bio_dict)
+
+words = list(bio_dict.items()) # .items() returns a list of tuples
+words.sort(key=lambda tup: tup[1], reverse=True)  # sort largest to smallest, based on count
+for i in range(min(10, len(words))):  # print the top 10 words, or all of them, whichever is smaller
+    print(words[i])
