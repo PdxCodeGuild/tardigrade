@@ -8,9 +8,9 @@ units = {
 }
 
 
-user_input = input('Enter a number to be converted to meters: ')
+result = input('Enter a number to be converted to meters: ')
 user_input2 = input('Enter a unit of measurement: feet, miles, meters, kilometers, inches, yards:   ')
 
-user_input = int(user_input) * units[user_input2]
+result = int(result) * units[user_input2]
 
-print(user_input)
+print(result)
