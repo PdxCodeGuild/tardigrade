@@ -249,31 +249,35 @@ Inheritance is a mechanism that allows us to reuse code. See examples above.
 
 ## Polymorphism
 
-Polymorphism is an ability (in OOP) to use a common interface for multiple forms (data types).
-
-Suppose, we need to color a shape, there are multiple shape options (rectangle, square, circle). However we could use the same method to color any shape. This concept is called Polymorphism.
+Polymorphism in Python allows us to define methods in the child class with the same name as defined in their parent class. The process of re-implementing a method in the child class is known as Method Overriding.
 
 
 ```python
-class Snake:
-    def run(self):
-        print("Snakes can't run")
-    
-    def swim(self):
-        print("Snakes can swim")
-class Cat:
-    def run(self):
-        print("Cats can run")
-    
-    def swim(self):
-        print("Cats can't swim")
-# common interface
-def run_test(animal):
-    animal.run()
-#instantiate objects
-viper = Snake()
-persian = Cat()
-# passing the object
-run_test(viper)
-run_test(persian)
+class Bird:
+     def intro(self):
+       print("There are different types of birds")
+ 
+     def flight(self):
+       print("Most of the birds can fly but some cannot")
+ 
+class parrot(Bird):
+     def flight(self):
+       print("Parrots can fly")
+ 
+class penguin(Bird):
+     def flight(self):
+       print("Penguins do not fly")
+
+bird = Bird()
+parrot = parrot()
+penguin = penguin()
+
+bird.intro()
+bird.flight()
+ 
+parrot.intro()
+parrot.flight()
+ 
+penguin.intro()
+penguin.flight()
 ```
