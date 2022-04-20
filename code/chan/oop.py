@@ -1,7 +1,7 @@
 # Chan Saechao
 # Object Oriented Programming
 
-class bank_account:
+class BankAccount:
 
     def __init__(self, accountNumber, name, balance):
         self.accountNumber = accountNumber
@@ -35,13 +35,16 @@ class bank_account:
         print(f"Balance: {self.balance}")
         print("# ----------------------------------------------------------------------------------- #")
 
-my_bank_account = bank_account(987654321, 'Chan Saechao', 10000)
+my_bank_account = BankAccount(987654321, 'Chan Saechao', 10000)
 my_bank_account.bankFees()
 my_bank_account.deposit(1700)
 my_bank_account.withdrawl(700)
 my_bank_account.display()
     
-class rectangle:
+# Separator line
+print("# ----------------------------------------------------------------------------------- #")
+
+class Rectangle:
     def __init__ (self, length, width):
         self.length = length
         self.width = width
@@ -61,10 +64,7 @@ class rectangle:
         self.perimeter()
         self.area()
 
-# Separator line
-print("# ----------------------------------------------------------------------------------- #")
-
-class parallelepiped(rectangle):
+class Parallelepiped(Rectangle):
     def __init__(self, length, width, height):
         super().__init__(length, width)
         self.height = height
@@ -75,9 +75,12 @@ class parallelepiped(rectangle):
         self.rectangle_volume = self.length * self.width * self.height
         print(f"Volume: {self.rectangle_volume} ft^3")
 
-volume_object = parallelepiped(4, 6, 4)
+volume_object = Parallelepiped(4, 6, 4)
 
-class person:
+# Separator line
+print("# ----------------------------------------------------------------------------------- #")
+
+class Person:
     def __init__(self, name, age):
         self.name = str(name)
         self.age = str(age)
@@ -87,7 +90,7 @@ class person:
         print(f"Name: {self.name}")
         print(f"Age: {self.age}")
 
-class student(person):
+class Student(Person):
     def __init__ (self, name, age, school):
         super().__init__(name, age)
         self.school = str(school)
@@ -96,4 +99,4 @@ class student(person):
     def displayStudent(self):
         print(f"School: {self.school}")
 
-me = student("Chan Saechao", "34", "PDX Code Guild")
+me = Student("Chan Saechao", "34", "PDX Code Guild")
