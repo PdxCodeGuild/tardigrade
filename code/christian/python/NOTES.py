@@ -19,3 +19,5 @@ def two_sum(my_sums, target):
     pair = {}
                 
 print(two_sum(my_nums, target))
+
+print("testing")
