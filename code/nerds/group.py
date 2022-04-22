@@ -16,6 +16,9 @@
 # test_board = [1,'1','2','3','4','5','6','7','8','9']
 
 # print(legend_board(test_board))
+class Game():
+    def __init__(self, board) :
+        self.board = board
 
 def display_board(board):
 
@@ -32,8 +35,14 @@ def display_board(board):
     print(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
     print('   |   |')
 
-board = [' ','o','o','o','o','o','o','X','X','X',] * 10
+board = [' ',' ','2','3','4','5','6','7','8','9',] * 10
 print(display_board(board))
+
+
+
+
+
+
 
 mark = 'X'
 
