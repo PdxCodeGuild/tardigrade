@@ -7,6 +7,7 @@ class Bank:
             
     def deposit(self,amount):
         self.balance += amount
+        return self.balance
     
 
     def user_information(self):
