@@ -31,12 +31,18 @@ class Bank_account():
     
 
     def deposit(self, amount):
-        self.balance = self.balance + amount
+        self.balance += amount
         return self.balance
     
     def withdrawal(self, taken):
-        self.balance = self.balance - taken
-        return self.balance
+        if taken > self.balance:
+            print('NOT ENOUGH MONEY')
+        else:
+          self.balance -= taken
+          return self.balance
+    
+    def check_balance(self):
+        return f"your balance is {self.balance}"
     
     def bankfees(self):
         self.balance = self.balance - self.balance * .05
