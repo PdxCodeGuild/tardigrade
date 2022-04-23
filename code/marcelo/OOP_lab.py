@@ -24,7 +24,7 @@ class BankAccount:
 
 marcelo= BankAccount('800800', 'aldo',1000)
 
-new_deposit = 1000
-new_withdrawl= 50
+new_deposit = 20000
+new_withdrawl= 5000
 
 print (marcelo.deposit(), marcelo.withdrawl(), marcelo.bankfees(), marcelo.display())
