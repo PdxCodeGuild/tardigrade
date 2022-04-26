@@ -7,10 +7,11 @@ units = {
     'yards': .9144
 }
 
+user_input1 = input('Enter a unit of measurement: feet, miles, meters, kilometers, inches, yards:   ')
+user_input2 = input('Enter a number to be converted: ')
+user_input3 = input('Enter a unit of measurment to convert too: ')
 
-result = input('Enter a number to be converted to meters: ')
-user_input2 = input('Enter a unit of measurement: feet, miles, meters, kilometers, inches, yards:   ')
 
-result = int(result) * units[user_input2]
+result = int(user_input2) * units[user_input1]
 
 print(result)
