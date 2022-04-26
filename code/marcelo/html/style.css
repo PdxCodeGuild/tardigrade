@@ -1,0 +1,25 @@
+*   {
+    text-align: center;
+    font-size: 30px;
+    color: green;
+    padding: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-image: url(https://img.huffingtonpost.com/asset/581cc4c8150000d804531c0c.jpeg?ops=scalefit_720_noupscale&format=webp);
+    border-radius: 10%;
+    font-family: 'Times New Roman', Times, serif;
+    list-style-type: '👉' ;
+    
+}
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: red;
+}
+
+
+h1{
+    font-size: 50px;
+    color: red;
+    
+}
