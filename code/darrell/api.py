@@ -15,8 +15,9 @@ city = city_data.json()
 # data = response.json()
 city_lat = city[0]['lat']
 city_lon = city[0]['lon']
-# print(city_lat)
-# print(city_lon)
+print(city_lat)
+
+print(city_lon)
 
 api_string = f"https://api.openweathermap.org/data/2.5/weather?lat={city_lat}&lon={city_lon}&appid=214e3e03f90584a403aac70e81b52198&units=imperial"
 
