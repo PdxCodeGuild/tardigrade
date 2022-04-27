@@ -15,6 +15,10 @@ CSS stands for [Cascading Style Sheets](https://en.wikipedia.org/wiki/Cascading_
 - [Resources](#resources)
 - [Libraries](#libraries)
 
+## Useful Links
+
+[List of CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference)
+
 
 ## CSS Syntax
 
