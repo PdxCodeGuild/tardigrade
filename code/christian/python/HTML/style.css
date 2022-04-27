@@ -1,0 +1,55 @@
+/* This is how you add comments in CSS */
+
+body{
+    text-align: center;
+    font-family: fantasy;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-image: url("https://i1.wp.com/gurpreetvirdibains.com/wp-content/uploads/2019/01/slow-motion-serene-deep-space-galaxy-and-stars-background-black-and-white-4k_r77tk52fx_thumbnail-full15.png?ssl=1");
+    background-repeat: no-repeat;
+    background-size: 300%;
+}
+
+h1{
+    font-size: 600%;
+    color: rgb(216, 143, 17);
+}
+
+h2{
+    font-size: 150%;
+    color: rgba(81, 5, 5, 0.908);
+}
+
+p{
+    color: rgb(253, 255, 255);
+    font-size: 120%;
+}
+
+div{
+    color: rgb(253, 255, 255);
+    font-size: 120%;
+}
+
+uo{
+    color: rgb(253, 255, 255);
+    font-size: 120%;
+}
+
+img{
+    width: 50%;
+}
+
+uo {
+    list-style: none;
+}
+
+li::before {
+    content: "(-_-)";
+    color: rgb(81, 5, 5, 0.908)
+}
+
+a {
+    color: rgb(81, 5, 5, 0.908)
+}
