@@ -1,0 +1,44 @@
+body {
+    text-align: center;
+    background-image: url("https://www.tegs.co.za/wp-content/uploads/2017/03/rosewood-close.jpg");
+  background-color: #c9b7b7;
+
+
+}
+img {
+
+    border-radius: 50%;
+}
+h3 {
+    font-size: xx-large;
+    font-weight: 800;
+    background-image: radial-gradient(#553c9a, #ee4b2b);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+p {
+    color: rgb(208, 208, 221);
+    padding: 10px 50px 20px;
+    font-family: monospace;
+    font-size: large;
+    margin: 10px 50px 20px;
+    background-color: black;
+
+} 
+ul {
+
+    font-size: x-large;
+}
+
+q {
+    font: small-caps bold 24px/1 sans-serif;
+    font-size: xx-large;
+}
+ ul {
+
+    list-style-type: square;
+    list-style-position: inside;
+
+}
