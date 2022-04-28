@@ -1,0 +1,57 @@
+header {
+    padding: 10px;
+    text-align: center;
+    background: #686868;
+    color: white;
+    font-size: 30px;
+}
+
+  aside {
+    width: 40%;
+    padding-left: .5rem;
+    margin-left: .5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: #FFF8DC;
+}
+
+aside > p {
+    margin: .5rem;
+    display: block;
+    font-family: 'Fira Sans', sans-serif;
+    color: black;
+}
+
+p {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+nav
+.container {
+    justify-content: space-evenly;
+  }
+
+li {
+    list-style: none;
+    display: inline;
+   }
+
+section {
+    display: block;
+}
+
+article {
+    display: block;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    background: #686868;
+    color: white;
+}

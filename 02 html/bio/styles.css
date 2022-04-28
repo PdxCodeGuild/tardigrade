@@ -1,0 +1,48 @@
+body {
+    background-image: url("007.white.jpg");
+    background-color: #cccccc;
+    background-size: 100%;
+   }
+   body {
+    color: rgb(87, 87, 165);
+  }
+
+  img {
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #p1 {
+    text-align: center;
+    color: rgb(97, 124, 212);
+    border: 5px solid #5f5f5f;
+    line-height: 150px;
+    width: 30%
+    height: 150px
+  }
+
+  
+  
+  #p1 p {
+    display: inline-block;
+    line-height: normal;
+    vertical-align: middle;
+    }
+
+
+  h1 {
+    color: red;
+  }
+  p {
+    text-align: center;
+}
+DIV.container {
+    min-height: 10em;
+    display: table-cell;
+    vertical-align: middle }
+
+<DIV class="container">
+ 
+</DIV>
