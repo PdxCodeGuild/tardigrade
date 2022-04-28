@@ -1,0 +1,51 @@
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    border-radius: 25px;
+    border: 3px solid black;
+  }
+
+.intro {
+text-align: center;
+font-family: "Courier New";
+  }
+
+.heading {
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+.don {
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+.homes {
+    text-align: center;
+    list-style-position: inside;
+    font-family: "Courier New";
+    color: rebeccapurple
+}
+
+.quote{
+    font-style: italic;
+    text-align: center;
+}
+
+.content {
+    max-width: 1000px;
+    margin: auto;
+    border: 3px solid black;
+  }
+
+  .body {
+    background-color: lightcyan;
+   }
+
+.link {
+    color:red;
+}
