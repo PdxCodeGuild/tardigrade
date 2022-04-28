@@ -1,0 +1,69 @@
+body{
+    padding: 5%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    background-position: center;
+    background-image: url(https://thumbs.gfycat.com/JoyousEmbarrassedBlackbear-size_restricted.gif);
+    text-align: center;
+    font-family:'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(29, 66, 138);
+    opacity: 90%;
+
+}
+p{
+    background-color: rgb(225, 199, 44);
+    
+}
+a {
+    
+    font-size: large;
+    background-color: rgb(225, 199, 44);
+    color: whitesmoke;
+ 
+}
+
+ol {
+    list-style: none;
+    display: table;
+    margin: auto;
+    background-color:rgb(225, 199, 44);
+    padding: .5% ;
+   
+
+  }
+
+  li::before {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    content: "\f35a";
+    color: rgb(29, 66, 138);
+
+    margin-right: 10px;
+  }
+
+
+img{
+    align-items: center;
+    width: 800px;
+    border-radius: 30px;
+    
+
+}
+
+div{
+    font-family:cursive;
+    font-size: larger;
+    color:rgb(29, 66, 138);
+    margin: auto;
+    background-color:rgb(225, 199, 44) ;
+    padding: 0 px ;
+   
+
+}
+h2{
+        margin: auto;
+    background-color:rgb(225, 199, 44) ;
+    padding: 0 px ;
+  
+}
