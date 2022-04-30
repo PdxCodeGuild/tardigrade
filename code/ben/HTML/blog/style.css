@@ -1,0 +1,109 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 300px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.img {
+    border: 3px solid black;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo_left {
+    text-align: left;
+}
+
+.column_left {
+    float: left;
+    width: 65%;
+}
+
+.column_right {
+    float: right;
+    width: 30%;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: black;
+}
+
+.navbar a {
+    float: center;
+    color: white;
+    text-align: center;
+    padding: 20px 22px;
+    text-decoration: none;
+    font-size: 25px;
+    cursor: pointer
+}
+
+.navbar a:hover {
+    background-color: black;
+}
+
+ol {
+    padding: 10px;
+    font-size: 20x;
+    color: black;
+}
+
+.searchbar input[type=text] {
+    float: center;
+    padding: 6px;
+    border: 2;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+.article_box {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 3px solid black;
+}
+
+.article_box_bottom {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border: 3px solid black;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item {
+    width: auto;
+    height: auto;
+}
+
+.link {
+    color:red;
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+}
