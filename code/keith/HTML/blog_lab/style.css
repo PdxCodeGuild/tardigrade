@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
+h2 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 200%;
+    font-weight: 900;
+    padding-left: 7%;
+    color: azure;
+}
+
+nav > ul {
+
+    list-style-type: none;
+    /* margin: 0; */
+    /* padding: 0; */
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 500px;
+    padding-top: 50px; 
+
+}
+nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: flex-end;
+}
+li {
+    position: relative;
+    padding-left: 90px;
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;
+    margin-right: 40px;
+    font-weight: 800;
+    border: 1px, dotted;
+    
+}
+li:hover{
+
+    cursor: pointer;
+    background-color: black;
+    color: white;
+
+}
+
+nav{ 
+    background-color: darkolivegreen;
+    display: flex;
+    align-items: center;
+    height: 120px;
+    border-top-left-radius:30px;
+    border-bottom-left-radius:30px; 
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+ul > button {
+    font-family: 'Oleo Script', cursive;
+    text-align:center;
+    margin-top: 60px;
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    justify-content: center;
+
+}
+button:hover{
+    cursor: pointer;
+}
+div {
+    
+        display: flex;
+        justify-content: center;
+    
+}
+P {
+    font-size: 45px;
+    text-align: center;
+    padding-top: 100px;
+    font-family: 'Dosis', sans-serif;
+
+  
+}
+section {
+
+    display: flex;
+    justify-content: flex-start;
+    color-adjust: antiquewhite;
+    
+}
+
+main {
+    display: flex;
+    padding-top: 12%;
+
+
+}
+img{
+    border-radius: 50%;
+    float: left;
+    width:  300px;
+    height: 300px;
+    object-fit: cover;
+
+}
+.para {
+    padding-top: 40%;
+
+
+}
