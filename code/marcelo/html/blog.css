@@ -1,0 +1,149 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+header{
+    margin-bottom: 50px;
+    background-color: rgb(176, 198, 227);
+    box-shadow: 11px 14px 21px -9px rgba(0,0,0,0.07);
+}
+
+li {
+    list-style-type: none;
+    border: 1px dotted black;
+    cursor: pointer;
+}
+
+img, li{
+    padding: 10px;
+    margin: 5px; 
+}
+
+li:hover{
+    background-color: black;
+    color: white;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+}
+
+section:first-child{
+   display: flex;
+   justify-content: center;
+}
+
+main{
+    padding: 0px 50px;
+}
+
+section{
+    padding-bottom: 50px;
+}
+
+
+@media screen and (max-width: 768px){
+    
+    ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 0px 50px;
+    }
+
+    section:first-child{
+        flex-direction: column;
+        align-items: center;
+}
+img{
+    width: 250px;
+}
+ p{
+     font-size: 25px;
+ }
+
+}
+
+@media screen and (max-width: 400px){
+ul{
+    font-size: 25px; */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header>div{
+    font-size: 100px;
+}
+
+header{
+    display: flex;
+    margin: 0px;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 5px solid black;
+    background-color: black;
+    color: white;
+}
+
+header> ul{
+    min-width: 10%;
+    list-style-type: none;
+    align-content: space-between;
+    display: flex;
+    align-items: center;
+
+}
+
+ul>li{
+    margin: 1px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.pizza{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: aqua;
+    border: 10px solid aqua;
+}
+
+div > p{
+    font-size: 50px;
+}
+
+figure{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    font-size: 35px;
+    align-items: center;
+    padding: 1px;
+    border: 1px dashed black;
+}
+section > div{
+    background-color: aqua;
+}
+
+section >figure{
+    background-color: black;
+    display: flex;
+}
+img{
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    margin: 1px;
+    padding: 1px;
+    border: 10px;
+}
+
+.img1{
+    flex: 1.3344;
+}
+.img2{
+    flex: 2
+}
