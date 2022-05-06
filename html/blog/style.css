@@ -1,0 +1,52 @@
+
+body {
+    background-image: url(brick.jpg);
+    
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 4em;
+    max-width: 100%;
+    background-color: #9B9B9B;
+    color: black;
+    padding: 1%;
+    line-height: 24px;
+}
+
+
+
+.pizza {
+    font-family: Segoe UI;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: Segoe UI;
+}
+
+.top-list {
+    display: flex;
+    justify-content: center;
+    gap: 5em
+}
+
+.container {
+    display: flex;
+    margin-top: 10em;
+}
+
+.box {
+    background-color: #9B9B9B;
+    border: 2px solid black;
+    margin: 0 1em;
+    padding: 10px;
+    text-align: center;
+}
+
