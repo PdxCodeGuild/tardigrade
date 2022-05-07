@@ -1,0 +1,49 @@
+body {
+    text-align: center;
+    font-size: 30px;
+    color: green;
+    padding: 5%;
+    background-image: url(https://img.huffingtonpost.com/asset/581cc4c8150000d804531c0c.jpeg?ops=scalefit_720_noupscale&format=webp);
+    cursor: pointer;
+    
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    border: 10px solid;
+    border-color: red;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 60px;
+    background-color: black;
+    padding: 1%;
+}
+
+
+.pizza{
+    border: 5px solid;
+    border-color: red;
+    background-color: black;
+    color: green;
+    font-style: oblique;
+}
+
+.pie{
+    padding: 3%;
+    list-style-type: '👉' ;
+
+}
+img{
+    border-radius: 8%;
+}
+
+p{
+    font-style: italic;
+    border: 5px solid;
+    border-color: black;
+    background-color: black;
+    color: white;
+    border-radius: 5%;
+    border-width: 10px;
+}
