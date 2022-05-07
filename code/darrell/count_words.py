@@ -35,6 +35,7 @@ for word in range(len(text)):
         word_dict[single_word] = 1
 
 # print(word_dict)
+# print(word_dict.items())
 
 words = list(word_dict.items())  # .items() returns a list of tuples
 # sort largest to smallest, based on count

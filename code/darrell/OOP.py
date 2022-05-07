@@ -4,20 +4,32 @@ class BankAccount:
         self.name = name
         self.balance = balance
 
-    def deposit(self):
-        return
+    def deposit(self, amount):
+        self.balance += amount
+        return self.balance
 
-    def withdrawal(self):
-        return
+    def withdrawal(self, amount):
+        if amount > self.balance:
+            return ("not enough money")
+        else:
+            self.balance -= amount
+            return self.bank_fees()
 
-    def bankFees(self):
-        fees = self.balance * .05
-        return fees
+    def bank_fees(self):
+        self.balance -= self.balance * .05
+        return self.balance
 
     def display(self):
         display_acct = [self.accountNumber, self.name, self.balance]
         print(display_acct)
         return display_acct
+
+    def check_balance(self):
+        return f"Your balance is ${self.balance}"
+
+
+wells_fargo = BankAccount(34003402, "darrell eikner", 400)
+print(wells_fargo.deposit(25))
 
 
 class Rectangle:

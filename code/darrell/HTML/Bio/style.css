@@ -106,6 +106,7 @@ span {
 blockquote {
     font-size: 17px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
     line-height: 20px;
     width: 70%;
     margin: 0 auto;
