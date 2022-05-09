@@ -1,0 +1,75 @@
+header {
+    text-align: center;
+    box-sizing:border-box;
+    color: darkolivegreen;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav-tabs {
+   
+    background-color: black;
+    padding: 10;
+    margin: 50px;
+    display: flex;
+    justify-content: right;
+    
+}
+
+main > section {
+    align-content: center;
+}
+
+.item{
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    padding: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.pa-pillars {
+    border: 20px;
+    padding: 20px;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.pillar{
+
+    color: black;
+    background-color: white;
+    font-size: 20px;
+    border: 5px;
+    padding: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.fit-picture {
+    width: 40%;
+    max-height: 50;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blogs {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+ 
+
+  
+}
+
+.blog {
+    color: black;
+    background-color: rgba(4, 6, 0, 0.395);
+    padding: 10px;
+    margin: 35px;
+    font-size: 15px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 3px solid black;
+}
