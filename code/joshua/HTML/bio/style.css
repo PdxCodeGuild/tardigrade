@@ -1,0 +1,33 @@
+img {
+    border-radius: 25px;
+    border: 2px solid #3a0419;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+
+
+}
+
+body {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: cursive;
+    color: brown;
+
+}
+
+::after{
+    content: '';
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    position: absolute;
+    background-image: url(https://play-lh.googleusercontent.com/8ddL1kuoNUB5vUvgDVjYY3_6HwQcrg1K2fd_R8soD-e2QYj8fT9cfhfh3G0hnSruLKec);
+    opacity: .01;
+
+}
+
+
