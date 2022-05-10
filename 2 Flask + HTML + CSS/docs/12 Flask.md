@@ -124,6 +124,52 @@ Static files (css, js, images, etc) must be put in a folder called `static`. You
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
 ```
 
+## Base html
+
+You can create a common html file that shared component with other html templates, so that you do not have to repeat HTML markup.
+
+The example below is for a "base.html" file
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>My Webpage</title>
+  </head>
+
+  <body>
+    <div id="content">{% block content %} {% endblock %}</div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+  </body>
+</html>
+
+```
+
+Any other html file can source common elements from the base file with this syntax:
+
+```html
+
+{% extends "base.html" %} {% block content %}
+
+<h1>Hello there</h1>
+  
+{% endblock %}
+
+```
 
 ## Query Parameters
 
