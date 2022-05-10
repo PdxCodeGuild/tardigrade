@@ -50,3 +50,22 @@ def temperature():
     person_age = request.form['person_age'] # 34
     return redirect('/')
 ```
+
+# Conditional Rendering
+
+We can conditionally render CSS classes using if and else statements
+
+```python
+@app.route('/test/')
+def test():
+    color = "red"
+    return render_template('test.html',color=color)
+
+```
+
+```html
+<div class="container mt-5">
+    <button type="button" class="btn btn-{% if color=='red'%}danger{%else%}warning{% endif%}">Primary</button>
+</div>
+```
+
