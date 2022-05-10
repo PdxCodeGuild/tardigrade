@@ -1,0 +1,39 @@
+body {
+    background-color: #642005;
+    padding: 20px;
+    font-family: Hoefler Text,Baskerville Old Face,
+                 Garamond,Times New Roman,serif;
+}
+
+header {
+    background-color: #e0702d;
+    border: 1px solid #9d9d9d;
+    border-left: 10px solid black;
+    border-top: 5px solid black;
+    padding: 8px 15px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+article {
+    background-color: #f1b14e;
+    border: 1px solid black;
+    padding: 6px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+p {
+    background-color: #fdfdc8;
+    border: 1px solid black;
+    padding: 6px;
+    margin-left: 20px;
+    border-radius: 8px;
+}
+
+img {
+    border: 0px solid black;
+    float: right;
+    margin: 10px;
+}
