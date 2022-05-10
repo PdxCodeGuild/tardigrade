@@ -53,7 +53,7 @@ def temperature():
 
 # Conditional Rendering
 
-We can conditionally render CSS classes using if and else statements
+We can conditionally render CSS classes using if/ else statements
 
 ```python
 @app.route('/test/')
@@ -69,3 +69,21 @@ def test():
 </div>
 ```
 
+You can also dinamically render any element
+
+```python
+@app.route('/test/')
+def test():
+    options = ['volvo','saab','toyota']
+    return render_template('test.html',options=options)
+
+```
+
+```html
+<select class="form-select" aria-label="Default select example">
+    <option selected>Open this select menu</option>
+    {%for option in options%}
+    <option value="{{option}}">{{option}}</option>
+    {%endfor%}
+  </select>
+```
