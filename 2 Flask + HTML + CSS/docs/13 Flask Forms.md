@@ -136,10 +136,10 @@ def home():
     if request.method == "GET":
         return render_template('<your-template>.html')
     elif request.method == "POST":
-        text = request.form['text']
-        radio = request.form['gridRadios']
-        checks = request.form.getlist('check')
-        select = request.form.get('select-elements')
+        text = request.form['text'] #text field
+        radio = request.form['gridRadios'] #radio buttons
+        checks = request.form.getlist('check') #radio buttons
+        select = request.form.get('select-elements') # select element
         print('TEXT', text)
         print('radio', radio)
         print('checkboxes', checks)
