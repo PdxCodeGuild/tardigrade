@@ -138,7 +138,7 @@ def home():
     elif request.method == "POST":
         text = request.form['text'] #text field
         radio = request.form['gridRadios'] #radio buttons
-        checks = request.form.getlist('check') #radio buttons
+        checks = request.form.getlist('check') #check boxe
         select = request.form.get('select-elements') # select element
         print('TEXT', text)
         print('radio', radio)
