@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+{% block title %}{{title}}{% endblock %}
+
+{% block content%}
+<div class="container">
+    <h1>Burrito Shop Order Form</h1>
+
+    <br></br>
+    <form action="/submit" method="post">
+        <div class="container2">
+            <div class="row row-cols-auto">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                        <input type="text" class="form-control" placeholder="First name" aria-label="First name" name = "first">
+                        </div>
+                        <div class="col">
+                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name = "last">
+                        </div>
+                    </div>
+                    <br></br> 
+                    <h5>Chose your tortilla:</h5>
+                    <section>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadiotortilla1" value = "White Flour"/>
+                            <label class="form-check-label" for="flexRadiotortilla1">
+                                White Flour
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadiotortilla2" value = "Wheat Flour"/>
+                            <label class="form-check-label" for="flexRadiotortilla2">
+                                Wheat Flour
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadiotortilla3" value = "Spinach"/>
+                            <label class="form-check-label" for="flexRadiotortilla3">
+                                Spinach
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadiotortilla4" value = "Corn"/>
+                            <label class="form-check-label" for="flexRadiotortilla4">
+                                Corn
+                            </label>
+                        </div>
+                    </section>
+                    <h5>Chose your rice:</h5>
+                    <section>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadiorice1" value = "White Rice"/>
+                            <label class="form-check-label" for="flexRadiorice1">
+                                White Rice
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadiorice2" value = "Brown Rice"/>
+                            <label class="form-check-label" for="flexRadiorice2">
+                                Brown Rice
+                            </label>
+                        </div>
+                    </section>
+                    <h5>Chose your beans:</h5>
+                    <section>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadiobeans1" value = "Black Beans"/>
+                            <label class="form-check-label" for="flexRadiobeans1">
+                                Black Beans
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadiobeans2" value = "Pinto Beans"/>
+                            <label class="form-check-label" for="flexRadiobeans2">
+                                Pinto Beans
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadiobeans3" value = "None" />
+                            <label class="form-check-label" for="flexRadiobeans3">
+                                None
+                            </label>
+                        </div>
+                    </section>
+                    <h5>Chose your protein:</h5>
+                    <section>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadiomeat1" value = "Chicken" />
+                            <label class="form-check-label" for="flexRadiomeat1">
+                                Chicken
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadiomeat2" value = "Carne Asada" />
+                            <label class="form-check-label" for="flexRadiomeat2">
+                                Carne Asada
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadiomeat3" value = "Carnitas" />
+                            <label class="form-check-label" for="flexRadiomeat3">
+                                Carnitas
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadiomeat4" value = "None" />
+                            <label class="form-check-label" for="flexRadiomeat4">
+                                None
+                            </label>
+                        </div>
+                    </section>
+                    <h5>Additional Ingredients:</h5>
+                    <section>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio1"
+                                value="Cheese"/>
+                            <label class="form-check-label" for="inlineRadio1">Cheese</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio2"
+                                value="Sour Cream"/>
+                            <label class="form-check-label" for="inlineRadio2">Sour Cream</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type= "checkbox" name="inlineRadioOptions" id="inlineRadio3"
+                                value="Lettuce"/>
+                            <label class="form-check-label" for="inlineRadio3">Lettuce</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio4"
+                                value="Mild Salsa"/>
+                            <label class="form-check-label" for="inlineRadio4">Mild Salsa</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio5"
+                                value="Hot Salsa"/>
+                            <label class="form-check-label" for="inlineRadio4">Hot Salsa</label>
+                        </div>
+                    </section>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">
+                            <h5>Please add any special instructions below:</h5>
+                        </label>
+                        <input class="form-control form-control-lg" id = "instructions" type="text" name="notes">
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary mb-3">Submit Order</button>
+                    </div>
+                <div class="col">
+                        <p>
+                            <img src="data:image/jpeg;base64,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" class="img-fluid" alt="...">
+                        </p>
+                </div>
+            </div>
+        </div>
+    </form> 
+</div>
+
+
+
+
+
+
+{% endblock%}
