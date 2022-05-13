@@ -1,0 +1,259 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="card">
+  <img
+    src="https://media.glamour.com/photos/582b59d4253997651bc287eb/master/w_1250,c_limit/GettyImages-74332810.jpg"
+    class="card-img-top"
+    alt="..."
+  />
+
+  <form action="/order/" method="post">
+    <div class="card-body">
+      <h5 name="burrito_name">World Class Burrito</h5>
+      <h6>$6.50</h6>
+      <p>Our world class burrito - made anyway you like it!</p>
+    </div>
+    <div class="div-header">
+      <h5>Please choose your starch</h5>
+      <p>Choose up to 2</p>
+    </div>
+    <div class="form-check">
+      <input
+        name="check"
+        class="form-check-input"
+        type="checkbox"
+        value="Cilantro Lime Rice"
+        id="flexCheckDefault"
+      />
+      <label class="form-check-label" for="flexCheckDefault">
+        Cilantro Lime Rice
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        name="check"
+        class="form-check-input"
+        type="checkbox"
+        value="Spanish Rice"
+        id="flexCheckDefault"
+      />
+      <label class="form-check-label" for="flexCheckDefault">
+        Spanish Rice
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        name="check"
+        class="form-check-input"
+        type="checkbox"
+        value="Brown Rice"
+        id="flexCheckDefault"
+      />
+      <label class="form-check-label" for="flexCheckDefault">
+        Brown Rice
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        name="check"
+        class="form-check-input"
+        type="checkbox"
+        value="Black Beans"
+        id="flexCheckDefault"
+      />
+      <label class="form-check-label" for="flexCheckDefault">
+        Black Beans
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        name="check"
+        class="form-check-input"
+        type="checkbox"
+        value="Refried Beans"
+        id="flexCheckDefault"
+      />
+      <label class="form-check-label" for="flexCheckDefault">
+        Refried Beans
+      </label>
+    </div>
+    <div class="div-header">
+      <h5>Please choose your meat</h5>
+      <p>Choose up to 1</p>
+    </div>
+    <div class="form-check">
+      <input
+        name="check"
+        class="form-check-input"
+        type="checkbox"
+        value="Carnitas (Pork)"
+        id="flexCheckDefault"
+      />
+      <label class="form-check-label" for="flexCheckDefault">
+        Carnitas (Pork)
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        name="check"
+        class="form-check-input"
+        type="checkbox"
+        value="Chicken"
+        id="flexCheckDefault"
+      />
+      <label class="form-check-label" for="flexCheckDefault"> Chicken </label>
+    </div>
+    <div class="form-check">
+      <input
+        name="check"
+        class="form-check-input"
+        type="checkbox"
+        value="Beef"
+        id="flexCheckDefault"
+      />
+      <label class="form-check-label" for="flexCheckDefault">
+        Ground Beef
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        name="check"
+        class="form-check-input"
+        type="checkbox"
+        value="Steak"
+        id="flexCheckDefault"
+      />
+      <label class="form-check-label" for="flexCheckDefault"> Steak </label>
+    </div>
+
+    <div class="div-header">
+      <h5>Please choose your vegetables</h5>
+      <p>Choose up to 7</p>
+    </div>
+
+    <div class="form-check">
+      <input
+        name="check"
+        class="form-check-input"
+        type="checkbox"
+        value="Lettuce"
+        id="flexCheckDefault"
+      />
+      <label class="form-check-label" for="flexCheckDefault"> Lettuce </label>
+    </div>
+    <div class="form-check">
+      <input
+        name="check"
+        class="form-check-input"
+        type="checkbox"
+        value="Tomato"
+        id="flexCheckDefault"
+      />
+      <label class="form-check-label" for="flexCheckDefault"> Tomato </label>
+    </div>
+    <div class="form-check">
+      <input
+        name="check"
+        class="form-check-input"
+        type="checkbox"
+        value="Onion"
+        id="flexCheckDefault"
+      />
+      <label class="form-check-label" for="flexCheckDefault"> Onion </label>
+    </div>
+
+    <div class="form-check">
+      <input
+        name="check"
+        class="form-check-input"
+        type="checkbox"
+        value="Bell Pepper"
+        id="flexCheckDefault"
+      />
+      <label class="form-check-label" for="flexCheckDefault">
+        Bell Pepper
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        name="check"
+        class="form-check-input"
+        type="checkbox"
+        value="Corn"
+        id="flexCheckDefault"
+      />
+      <label class="form-check-label" for="flexCheckDefault">Corn</label>
+    </div>
+    <div class="form-check">
+      <input
+        name="check"
+        class="form-check-input"
+        type="checkbox"
+        value="Cilantro"
+        id="flexCheckDefault"
+      />
+      <label class="form-check-label" for="flexCheckDefault"> Cilantro </label>
+    </div>
+    <div class="form-check">
+      <input
+        name="check"
+        class="form-check-input"
+        type="checkbox"
+        value="Jalapenos"
+        id="flexCheckDefault"
+      />
+      <label class="form-check-label" for="flexCheckDefault">Jalapenos</label>
+    </div>
+
+    <div class="div-header">
+      <h5>Please choose your other items</h5>
+      <p>Choose up to 5</p>
+    </div>
+    <div class="form-check">
+      <input
+        name="check"
+        class="form-check-input"
+        type="checkbox"
+        value="Guacamole"
+        id="flexCheckDefault"
+      />
+      <label class="form-check-label" for="flexCheckDefault"> Guacamole </label>
+    </div>
+    <div class="form-check">
+      <input
+        name="check"
+        class="form-check-input"
+        type="checkbox"
+        value="Salsa"
+        id="flexCheckDefault"
+      />
+      <label class="form-check-label" for="flexCheckDefault"> Salsa </label>
+    </div>
+    <div class="form-check">
+      <input
+        name="check"
+        class="form-check-input"
+        type="checkbox"
+        value="Sour Cream"
+        id="flexCheckDefault"
+      />
+      <label class="form-check-label" for="flexCheckDefault">
+        Sour Cream
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        name="check"
+        class="form-check-input"
+        type="checkbox"
+        value="Chipotle Ranch"
+        id="flexCheckDefault"
+      />
+      <label class="form-check-label" for="flexCheckDefault"
+        >Chipotle Ranch</label
+      >
+    </div>
+    <button class="order_button" type="submit">Add to order</button>
+  </form>
+</div>
+{% endblock %}

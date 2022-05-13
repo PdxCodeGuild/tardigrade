@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="card">
+  <form action="/order/" method="post">
+    <div class="card-body">
+      <h5 name="burrito_name">Order Confirmation</h5>
+    </div>
+    <div class="div-header">
+      <h5>You ordered the following:</h5>
+      <p>Please edit your selections</p>
+    </div>
+    {%for check in checks%}
+    <div class="form-check">
+      <input
+        name="check"
+        class="form-check-input"
+        type="checkbox"
+        value="{{check}}"
+        id="flexCheckDefault"
+        checked
+      />
+      <label class="form-check-label" for="flexCheckDefault"> {{check}} </label>
+    </div>
+    {%endfor%}
+
+    <button class="order_button" type="submit">Back to order page</button>
+    <button class="order_button" type="submit">Proceed to checkout</button>
+  </form>
+</div>
+{% endblock %}
