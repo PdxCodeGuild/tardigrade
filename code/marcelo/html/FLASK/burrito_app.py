@@ -8,12 +8,12 @@ def home():
     elif request.method == 'POST':
         email= request.form['email']
         password = request.form['password']
-        return base()
+        return burrito()
 
 
-@app.route('/base/', methods= ['GET', 'POST'])
-def base():
-    return render_template('base.html')
+@app.route('/burrito/', methods= ['GET', 'POST'])
+def burrito():
+    return render_template('burrito.html')
 
 
 app.run(debug=True)
