@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+<div class="container-md">
+  <div class="row">
+    <div class="col-sm"> </div>
+    <div class="col-sm">Welcome To The Burrito Shop!</div>
+    <div class="col-sm"> </div>
+  </div>
+  <div class="row">
+    <div class="col-sm"> </div>
+    <div class="col-sm">
+      <h1>Tortilla</h1>
+      <div class="form-check-inline">
+          <input class="form-check-input" type="radio" name="Tortilla" id="White Flour">
+          <label class="form-check-label" for="White Flour">
+            White Flour
+          </label>
+      </div>
+      <div class="form-check-inline">
+          <input class="form-check-input" type="radio" name="Tortilla" id="Wheat Flour">
+          <label class="form-check-label" for="Wheat Flour">
+            Wheat Flour
+          </label>
+      </div>
+      <div class="form-check-inline">
+          <input class="form-check-input" type="radio" name="Tortilla" id="Corn">
+          <label class="form-check-label" for="Corn">
+            Corn 
+          </label>
+      </div>
+      <div class="form-check-inline">
+          <input class="form-check-input" type="radio" name="Tortilla" id="Spinach">
+          <label class="form-check-label" for="Spinach">
+            Spinach
+          </label>
+      </div>
+
+      <h2>Rice</h2>
+      <div class="form-check-inline">
+          <input class="form-check-input" type="radio" name="Rice" id="White">
+          <label class="form-check-label" for="White">
+              White
+          </label>
+          </div>
+          <div class="form-check-inline">
+          <input class="form-check-input" type="radio" name="Rice" id="Brown">
+          <label class="form-check-label" for="Brown">
+              Brown
+          </label>
+          </div>
+      </div>
+
+      <h3>Beans</h3>
+        <div class="form-check-inline">
+          <input class="form-check-input" type="radio" name="Beans" id="Black Beans">
+          <label class="form-check-label" for="Black Beans">
+              Black Beans
+          </label>
+          </div>
+          <div class="form-check-inline">
+          <input class="form-check-input" type="radio" name="Beans" id="Pinto Beans">
+          <label class="form-check-label" for="Pinto Beans">
+              Pinto Beans
+          </label>
+        </div>
+    </div>
+
+    <h4>Protein</h4>
+    <div class="form-check-inline">
+          <input class="form-check-input" type="radio" name="Protein" id="Carnitas">
+          <label class="form-check-label" for="Carnitas">
+            Carnitas
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <input class="form-check-input" type="radio" name="Protein" id="Chicken">
+          <label class="form-check-label" for="Chicken">
+            Chicken 
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <input class="form-check-input" type="radio" name="Protein" id="Soforitas">
+          <label class="form-check-label" for="Soforitas">
+            Soforitas
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <input class="form-check-input" type="radio" name="Protein" id="None">
+          <label class="form-check-label" for="None">
+            None
+          </label>
+      </div>
+    </div>
+    <div class="col-sm"> 
+    <h5>Additional Ingredients</h5>
+      <div class="form-check-inline">
+        <input class="form-check-input" type="checkbox" value="" id="Cheese">
+        <label class="form-check-label" for="Cheese">
+          Cheese
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <input class="form-check-input" type="checkbox" value="" id="Sour Cream">
+        <label class="form-check-label" for="Sour Cream">
+          Sour Cream
+        </label>
+      </div>
+    </div>
+    <form>
+        <div class="mb-3">
+          <label for="Delivery" class="form-label">Delivery Instructions</label>
+          <input type="text" class="form-control" id="Delivery" aria-describedby="DeliveryHelp">
+        </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
