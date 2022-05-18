@@ -35,9 +35,8 @@ def add_post(request):
         title = request.POST['title']   # get the title from the POST submission, this comes from a form
         text = request.POST['text']     # get the text from the POST submission, this comes from a form
         pub_date = request.POST['pub_date']
-        # add the new blog post to the database. objects.create() automatically saves the new blog post for us so we
-        # don't need a separate call to the save() method
-        blogs = Blog.objects.create(title = title, text = text, pub_date = pub_date)
+        # add the new blog post to the database. objects.create() automatically saves the new blog post for us.
+        Blog.objects.create(title = title, text = text, pub_date = pub_date)
         return redirect('posts')
    
 ```
