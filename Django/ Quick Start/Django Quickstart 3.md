@@ -1,5 +1,5 @@
 This guide covers the content in the folder **Forms and Links**.
-## How to use a model and a database inside your template
+## How to use a model and a database
 
 Before continuing further, add a new URL in the my_app > urls.py folder:
 
@@ -77,3 +77,6 @@ def add_post(request):
 {% endblock %}
 
 ```
+
+## Delete a blog post
+

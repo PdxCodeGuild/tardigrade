@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<a href="http://localhost:8000/add">add a blog post</a>
+<a href="{%url 'add_posts'%}">add a blog post</a>
 <ul>
   {% for post in blogs %}
   <p>Title: {{ post.title }}</p>
