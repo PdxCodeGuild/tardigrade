@@ -1,0 +1,415 @@
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 200;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  background-image: linear-gradient(to right, rgb(2, 168, 209), rgb(1, 57, 71));
+}
+
+h1 {
+  opacity: 1;
+  color: rgb(223, 223, 223);
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 40px !important;
+  margin: 0;
+  position: relative;
+  top: 50px;
+  animation: from-top;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+  /*animation-iteration-count: infinite;*/
+}
+
+/* @keyframes from-top {
+    0%{left: -100px; top: -100px; opacity: 0; color: #333;}
+    100%{ left: 0px; top: -100px; opacity: 1; color: rgb(223, 223, 223);}
+    
+} */
+
+h2 {
+  opacity: 1;
+  color: rgb(255, 187, 0);
+  font-family: "Oswald", sans-serif !important;
+  font-size: 30px !important;
+  font-weight: 300;
+  margin: 0;
+  position: relative;
+  top: 60px;
+  left: 0px;
+  animation: fade-in;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
+  /*animation-iteration-count: infinite;*/
+}
+
+/* @keyframes fade-in {
+    0%{opacity: 0; }
+    100%{opacity: 1;}
+    
+} */
+
+h3 {
+  color: rgb(0, 4, 7);
+  font-family: "Libre Bodoni", serif;
+  font-size: 25px;
+  font-weight: 300;
+  margin: 0;
+}
+
+#h3_quote {
+  color: rgb(153, 153, 153);
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.home_button {
+  background-color: rgb(255, 208, 0);
+  border: 0px;
+  border-radius: 10px !important;
+  color: rgb(32, 32, 32);
+  padding: 10px;
+  width: 300px;
+  font-family: "Oswald", sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 30px !important;
+  position: relative;
+  top: 90px;
+}
+
+.home_button:hover {
+  border: 0px;
+  cursor: pointer;
+  background-color: rgb(214, 175, 0) !important;
+}
+
+#wrapper {
+  margin: 0 auto;
+  width: 100%;
+  height: 1400px;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../static/burrito.png");
+  background-position: 46%;
+  background-size: 20%;
+  background-repeat: no-repeat;
+}
+
+.nav1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav1 ul {
+  display: flex;
+}
+
+.nav_ul_left {
+  justify-content: space-around;
+}
+.nav_ul_center {
+  align-self: center;
+}
+
+.nav_ul_right {
+  align-self: flex-end;
+}
+
+footer nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 20%;
+}
+
+header {
+  opacity: 1;
+  margin-bottom: 50px;
+  padding-top: 20px;
+  width: 100%;
+  animation: fade-in;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 7s;
+  /*animation-iteration-count: infinite;*/
+}
+
+/* @keyframes fade-in {
+0%{opacity: 0; }
+100%{opacity: 1;}
+
+} */
+
+header ul {
+  font-size: 16px;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+footer ul {
+  font-size: 16px;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+main {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+main img {
+  width: 90%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+#searchbox {
+  width: 90%;
+  margin-bottom: 40px;
+  padding: 10px;
+  padding-left: 30px;
+  font-size: 15px;
+  font-weight: 300;
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 25px;
+  background-image: url(https://cdn2.hubspot.net/hubfs/4004166/bioticresearch_website_assets/images/search_icon.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  height: 30px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+  cursor: pointer;
+  border-bottom: 5px solid #fff;
+  color: rgb(255, 255, 255);
+}
+
+footer ul li a {
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  text-decoration: none;
+  cursor: pointer;
+  border-bottom: none;
+}
+
+footer {
+  opacity: 1;
+  width: 100%;
+  height: 80px;
+  padding: 20px;
+  background-color: rgb(34, 34, 34);
+  /* position: absolute;
+    bottom: 0px; */
+  animation: fade-in;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 7s;
+  /*animation-iteration-count: infinite;*/
+}
+
+/* @keyframes fade-in {
+0%{opacity: 0; }
+100%{opacity: 0.95;}
+
+} */
+
+.box {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  animation-name: move-around;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+/* @keyframes move-around {
+    0%{
+        background-color: #333; top: -150px; left: 0px; 
+    }
+    25%{ background-color: rgb(248, 1, 1); top: -150px; left: 200px; 
+
+    }
+    50%{background-color: rgb(255, 255, 255); top: -100px; left: 200px; 
+        
+    }
+    100%{background-color: rgb(0, 119, 255); top: -48px; left: 250px; width: 40px; height: 40px;
+        
+    }
+    
+} */
+
+.box2 {
+  width: 100px;
+  height: 100px;
+  top: 200px;
+  position: relative;
+  margin: auto;
+  transition: background-color, border-radius;
+  transition-duration: 0.5s;
+  transition-delay: 0s, 0s;
+  background-color: rgb(168, 168, 168);
+}
+
+.box2:hover {
+  background-color: rgb(248, 105, 105);
+  border-radius: 15%;
+}
+
+.project_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+svg {
+  fill: #fff;
+  width: 30%;
+  height: 30%;
+}
+
+.card {
+  width: 600px !important;
+  border: none !important;
+  border-radius: 0px !important;
+  margin: 0 auto;
+}
+
+.card-img-top {
+  background-color: rgb(61, 61, 61) !important;
+  width: 30%;
+  height: 30%;
+}
+
+.card-body {
+  text-align: left !important;
+  font-size: 15px;
+  height: 150px;
+  padding-top: 0px !important;
+}
+
+.card-body h5 {
+  font-size: 35px !important;
+  font-weight: 600 !important;
+  font-family: "Oswald", sans-serif !important;
+}
+
+.card-body h6 {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  font-family: "Oswald", sans-serif !important;
+}
+
+.accordion-button {
+  border: none !important;
+  border-radius: 0px !important;
+  font-size: 20px !important;
+  background-color: rgb(240, 240, 240) !important;
+}
+
+.div-header {
+  background-color: rgb(247, 247, 247);
+  padding: 15px 0px 3px 30px;
+  text-align: left;
+}
+
+.div-header p {
+  margin-top: -10px !important;
+  color: rgb(109, 109, 109);
+}
+
+.form-check {
+  padding: 10px 30px 10px 50px !important;
+  text-align: left !important;
+}
+
+.form-check-input {
+  border: 3px solid rgb(114, 114, 114) !important;
+  border-radius: 0px !important;
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 20px;
+}
+
+.form-check-input:checked {
+  background-color: #fc9b4d !important;
+}
+
+.form-check-label {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+}
+
+button {
+  background-color: rgb(0, 0, 0) !important;
+  border: none;
+  color: #fff !important;
+  width: 200px;
+  padding: 15px;
+  font-size: 15px !important;
+}
+
+#form {
+  position: absolute;
+  top: 250px;
+}
+
+form {
+  background-color: #fff;
+  width: 30%;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+label {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 500;
+  color: rgb(65, 65, 65) !important;
+}
+
+#map {
+  position: absolute;
+  top: 1000px;
+  width: 40%;
+  height: 40%;
+}
+
+#map_frame {
+  position: absolute;
+  top: 450px;
+  width: 30%;
+  height: 50%;
+}

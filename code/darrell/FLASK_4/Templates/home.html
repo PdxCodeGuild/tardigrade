@@ -1,0 +1,39 @@
+{% extends "base.html" %} {% block content %}
+
+<h1>Map Form</h1>
+<form id="form" action="" method="POST">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Street</label>
+    <input
+      type="text"
+      name="street"
+      width="300px"
+      class="form-control form-control-sm"
+      id="exampleFormControlInput1"
+      placeholder="Please enter a street Address"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">City</label>
+    <input
+      type="text"
+      name="city"
+      class="form-control form-control-sm"
+      id="exampleFormControlInput1"
+      placeholder="Please enter a city"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">State</label>
+    <input
+      type="text"
+      name="state"
+      class="form-control form-control-sm"
+      id="exampleFormControlInput1"
+      placeholder="Please enter a state"
+    />
+  </div>
+  <button type="submit" class="btn">Get Map</button>
+</form>
+
+{% endblock %}

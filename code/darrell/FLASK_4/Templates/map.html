@@ -1,0 +1,42 @@
+{% extends "base.html" %} {% block content %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>LAT: {{lat}}</h1>
+    <h1>LONG: {{long}}</h1>
+    <h2>{{street_num}} {{street}}</h2>
+    <h2>{{city}} {{state}} {{zip}}</h2>
+    <h2>{{county}}</h2>
+
+    <iframe
+      id="map_frame"
+      width="450"
+      height="250"
+      frameborder="0"
+      style="border: 0"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/embed/v1/view?key=AIzaSyCamJWA17Tsl2xJJLlb1BvFlPWmpjh0Xew&center={{lat}},{{long}}&zoom=18&maptype=satellite"
+      allowfullscreen
+    ></iframe>
+  </body>
+</html>
+
+{% endblock %}
