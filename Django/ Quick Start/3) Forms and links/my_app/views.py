@@ -25,3 +25,9 @@ def add_post(request):
         pub_date = request.POST['pub_date']
         blogs = Blog.objects.create(title = title, text = text, pub_date = pub_date)
         return redirect('posts')
+
+def delete_post(request, id):
+    blog_post = Blog.objects.get(id=id)
+    print(blog_post) ## check the terminal, it should output the object before it gets deleted
+    blog_post.delete()
+    return redirect('posts')

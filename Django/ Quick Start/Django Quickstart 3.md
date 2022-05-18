@@ -80,3 +80,66 @@ def add_post(request):
 
 ## Delete a blog post
 
+In the html file `posts.html` add an anchor tag. The complete code in the page should be:
+
+```html
+
+{% extends 'base.html' %}
+{% block content %}
+<a href="{%url 'add_posts'%}">add a blog post</a>
+<ul>
+  {% for post in blogs %}
+  <p>Title: {{ post.title }}</p>
+  <p>ID: {{ post.id }}</p>
+  <p>Description: {{ post.text }}</p>
+  <p>Pub Date: {{post.pub_date}}</p>
+  <a href="">Delete Post</a>
+  {% empty %}
+  {% endfor %}
+</ul>
+{% endblock %}
+```
+
+In `views.py`, add an extra function to handle the deletion process:
+
+```python
+def delete_post(request, id):
+    blog_post = Blog.objects.get(id=id)
+    print(blog_post) ## check the terminal, it should output the object before it gets deleted
+    blog_post.delete()
+    return redirect('posts')
+```
+
+Let's create a path to handle the view. In `urls.py` add:
+
+```python
+
+    path('delete_post/<int:id>', views.delete_post, name='delete_post')
+```
+
+Go back to `posts.html` and add the route to the anchor tag:
+
+```html
+{% extends 'base.html' %}
+{% block content %}
+<a href="{%url 'add_posts'%}">add a blog post</a>
+<ul>
+  {% for post in blogs %}
+  <p>Title: {{ post.title }}</p>
+  <p>ID: {{ post.id }}</p>
+  <p>Description: {{ post.text }}</p>
+  <p>Pub Date: {{post.pub_date}}</p>
+  <a href="{% url 'delete_post' post.id%}">Delete Post</a>
+
+  {% empty %}
+  {% endfor %}
+</ul>
+{% endblock %}
+
+```
+
+You should now be able to delete blog posts!
+
+
+
+
