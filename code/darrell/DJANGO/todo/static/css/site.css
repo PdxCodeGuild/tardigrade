@@ -1,0 +1,38 @@
+h1 {
+  color: firebrick;
+}
+
+h4 {
+  color: firebrick;
+}
+
+body {
+  background-color: rgb(79, 185, 255);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#container {
+  background-color: rgb(255, 255, 255);
+  width: 50%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+#container a {
+  text-decoration: none;
+  background-color: rgb(2, 65, 107);
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+#description {
+  font-size: 20px;
+  background-color: rgb(199, 153, 92);
+  padding: 10px;
+}
+
+#description a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
