@@ -34,7 +34,7 @@ def see_details(request, id): ##we get the id of the element. Remember, all elem
 ```html
 {% extends 'base.html' %}
 {% block content %}
-<a href="{%url 'add' %}">add a blog post</a>
+<a href="{%url 'add_posts' %}">add a blog post</a>
 <ul>
   {% for post in blogs %}
   <p><a href="{%url 'details' post.id %}">Title: {{ post.title }}</a></p>
