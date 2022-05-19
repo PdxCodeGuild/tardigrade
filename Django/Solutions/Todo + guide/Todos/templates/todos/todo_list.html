@@ -1,10 +1,10 @@
 {% extends 'base.html' %} 
 {% block content %}
-<a href="http://localhost:8000/todo/add">add task</a>
+<a href="{%url 'add'%}">add task</a>
 
 {% for todo in todos %}
 <p>
-  <a href="http://localhost:8000/todo/details/{{ todo.id }}"
+  <a href="{% url 'details' todo.id%}"
     >{{ todo.title }}</a
   >
 </p>

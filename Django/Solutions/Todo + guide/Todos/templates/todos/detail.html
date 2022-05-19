@@ -6,5 +6,5 @@
     <p>status: {{ todo.status }}</p>
     <a href="{% url 'update' todo.id %}">update</a>
     <a href="{%url 'remove' todo.id %}">remove</a>
-    <a href ="http://localhost:8000/todo/">Back to main todo list</a>
+    <a href ="{%url 'list'%}">Back to main todo list</a>
 {% endblock %}

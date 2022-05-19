@@ -26,7 +26,7 @@ def todo_list(request):
 ```html
 {% extends 'base.html' %}
 {% block content %}
-<a href="{%url 'todo/add'%}">add task</a>
+<a href="{%url 'add'%}">add task</a>
 <ul>
   {% for todo in todos %}
   <p>Title: {{ todo.title }}</p>
@@ -146,7 +146,7 @@ But how can we have dinamic links in the list.html page? Go back to that page, r
 
 {% for todo in todos %}
 <p>
-  <a href="{% url 'todo/details' todo.id%}"
+  <a href="{% url 'details' todo.id%}"
     >{{ todo.title }}</a
   >
 </p>
@@ -211,7 +211,7 @@ def update(request, id):
 You can also add the following to go back to the main list of todos
 
 ```html
-<a href ="{%url 'todo'%}">Back to main todo list</a>
+<a href ="{%url 'list'%}">Back to main todo list</a>
 ```
 
 9. Let's implement a function to delete a todo. This time we do not need much, we just need to ask the database to delete something. Let's implement the function in the todo_app > views.py page:
