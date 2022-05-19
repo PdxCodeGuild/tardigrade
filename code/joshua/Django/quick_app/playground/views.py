@@ -15,5 +15,9 @@ def add_info(request):
         return render(request, 'add.html')
     elif request.method == 'POST':
         title = request.POST['title']
-        text = request.POST['text']
-        return render(request, 'add.html')
+        text = request.POST['text'],
+        context = {
+            'title' : title,
+            'text' : text
+        }
+        return render(request, 'add.html', context,  {'name' : 'Joshua'})
