@@ -62,3 +62,57 @@ As you can see we added an <a> tag with a link to page that is served by the vie
 </ul>
 {% endblock %}
 ```
+
+## Update a blog post
+
+Let's converted the `details.html`page into a form. Leave the form action attribute blank for the moment.
+
+```html
+{% extends 'base.html' %}
+{% block content %}
+<p><a href="{% url 'posts'%}">Back to main view</a></p>
+
+<form action="" method="POST">
+  {% csrf_token %} title: <br />
+  <input type="text" name="title" placeholder=" {{ post.title }}" /><br /><br />
+  <textarea name="text" id="" cols="30" rows="10" placeholder=" {{ post.text }}"></textarea><br />
+  <input type="date" id="start" name="pub_date" value="2018-07-22" min="2018-01-01" max="2030-12-31">
+  <br />
+  <input type="submit" />
+</form>
+{% endblock %}
+
+```
+
+In `views.py`, add the logic to handle the blog post update
+
+```python
+def update_post(request, id):
+    blog_post = Blog.objects.get(id=id)
+    blog_post.title = request.POST['title']
+    blog_post.text = request.POST['text']
+    blog_post.pub_date = request.POST['pub_date']
+    print(blog_post)
+    blog_post.save()
+    return redirect('posts')
+
+```
+
+In `urls.py` add a new route:
+
+```python
+    path('update_post/<int:id>', views.update_post, name = 'update_post')
+
+
+```
+
+Connect the form to the route! Go back to the `details.html`page and reference the route in the form action attribute:
+
+
+```html
+
+<form action="{%url 'update_post' post.id%}" method="POST">
+```
+
+You should now be able to update blog posts!
+
