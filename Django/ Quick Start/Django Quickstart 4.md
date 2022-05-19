@@ -65,7 +65,7 @@ As you can see we added an <a> tag with a link to page that is served by the vie
 
 ## Update a blog post
 
-Let's converted the `details.html`page into a form. Leave the form action attribute blank for the moment.
+Let's convert the `details.html`page into a form. Leave the form action attribute blank for the moment.
 
 ```html
 {% extends 'base.html' %}
