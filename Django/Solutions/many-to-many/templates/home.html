@@ -15,7 +15,7 @@
               id="exampleFormControlSelect1"
             >
               {%for player in all_players%}
-              <option value="{{player}}">{{player}}</option>
+              <option value="{{player}} {{player.id}}">{{player}}</option>
               {%endfor%}
             </select>
 

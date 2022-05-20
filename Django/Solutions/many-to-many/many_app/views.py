@@ -18,6 +18,15 @@ def home(request):
 
 def add_to_team(request, id):
     team = Team.objects.get(id=id)
-    player = request.POST('')
-    print(team)
+    player = Player.objects.get(id=request.POST['team-select'][-1])
+    player.team_name.add(team)
+    print(team, player)
     return redirect('home')
+
+def players(request):
+    all_players = Player.objects.all()
+    return render(request, 'players.html', {"all_players": all_players})
+
+def teams(request):
+    all_teams = Team.objects.all()
+    return render(request, 'teams.html', {"all_teams": all_teams})
