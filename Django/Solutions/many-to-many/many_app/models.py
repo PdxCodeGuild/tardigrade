@@ -1,15 +1,15 @@
 from django.db import models
 
-class Publication(models.Model):
-    title = models.CharField(max_length=30)
+class Team(models.Model):
+    name = models.CharField(max_length=30)
 
     def __str__(self):
-        return self.title
+        return self.name
 
-class Article(models.Model):
-    headline = models.CharField(max_length=100)
-    publications = models.ManyToManyField(Publication)
+class Player(models.Model):
+    first_name = models.CharField(max_length=100)
+    team_name = models.ManyToManyField(Team)
 
 
     def __str__(self):
-        return self.headline
+        return self.first_name
