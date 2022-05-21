@@ -5,7 +5,8 @@
 <form action="{% url 'todo' %}" method="POST">
     {% csrf_token %} 
     <br><input type="text" name="title" placeholder="enter title here"><br>
-    <br><input type="date" id="start" name="create_date" value="2022-05-20" min="2018-01-01" max="2030-12-31"><br>
+    <br>Create Date: <input type="date" id="start" name="create_date" value="2022-05-20" min="2018-01-01" max="2030-12-31"><br>
+    <br>Completed Date: <input type="date" id="start" name="completed_date" value="2022-05-20" min="2018-01-01" max="2030-12-31"><br>
     <br><textarea name="text" id="" cols="30" rows="10" placeholder="enter text here"></textarea><br>
     Completed?<br><select name="complete"><br>
         <option value = "True">Yes</option>
