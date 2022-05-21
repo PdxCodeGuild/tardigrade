@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>ToDo List</h1>
+<ul>
+  {% for todo in todos %}
+  <p>ID: #{{ todo.id }}</p>
+  <p>Title: {{ todo.title }}</p>
+  <p>Date Created: {{todo.create_date}}</p>
+  <p>Description: {{ todo.text }}</p>
+  <p>Completed?: {{todo.complete}}</p>
+  <p><a href="{% url 'remove' todo.id%}">Delete Post</a></p>
+  <p><a href="{% url 'todo_details' todo.id%}">Edit Post</a></p>
+  {% empty %}
+  {% endfor %}
+</ul>
+{% endblock %}
