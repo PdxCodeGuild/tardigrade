@@ -1,0 +1,34 @@
+{% extends 'base.html' %} {% block content %}
+<p><a href="{% url 'todo_items'%}">Back to main view</a></p>
+
+<form action="{%url 'update_item' item.id%}" method="POST">
+  {% csrf_token %} title: <br />
+  <input
+    type="text"
+    name="description"
+    placeholder=" {{ item.description }}"
+  /><br /><br />
+  <input
+    type="date"
+    id="start"
+    name="created_date"
+    value="2018-07-22"
+    min="2018-01-01"
+    max="2030-12-31"
+  />
+  <input
+    type="date"
+    id="start"
+    name="completed_date"
+    value="2018-07-22"
+    min="2018-01-01"
+    max="2030-12-31"
+  />
+  <input type="radio" id="completed" name="is_completed" value="True" />
+  <label for="completed">Completed</label><br />
+  <input type="radio" id="not_completed" name="is_completed" value="False" />
+  <label for="not_completed">Not Completed</label><br />
+  <br />
+  <input type="submit" />
+</form>
+{% endblock %}
