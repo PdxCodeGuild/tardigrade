@@ -1,3 +1,23 @@
-{% extends 'base.html' %} {% block content %}
-<h1>Home</h1>
-{% endblock %}
+{% extends 'base.html' %} {% block content %} {% if todo_item|length == 0 %}
+
+<h1>Welcome to Ike's To-do App!</h1>
+<p class="big_btn">
+  <a href="todo_items/">View to-do items</a>
+</p>
+
+{% else %}
+
+<h1>Search results: {{todo_item|length}} items</h1>
+<hr />
+{% for item in todo_item %}
+<p class="description">
+  <a href="{%url 'see_details' item.id %}">{{ item.description }}</a>
+</p>
+<div id="item_info">
+  <p>Id: {{item.id}}</p>
+  <p>Created:{{item.created_date}}</p>
+  <p>Completed: {{item.completed_date}}</p>
+  <p>Is complete: {{item.is_completed}}</p>
+</div>
+<hr />
+{% endfor %} {% endif %} {% endblock %}
