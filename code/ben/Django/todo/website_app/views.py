@@ -26,12 +26,13 @@ def to_do(request):
     elif request.method == 'POST': 
         title = request.POST['title']  
         create_date  = request.POST['create_date'] 
+        completed_date  = request.POST['completed_date'] 
         text = request.POST['text']     
         if (request.POST['complete'] == 'False'):
             complete = False
         else:
             complete = True
-        todo.objects.create(title = title, text = text, create_date = create_date, complete = complete)
+        todo.objects.create(title = title, text = text, create_date = create_date, complete = complete, completed_date = completed_date)
         return redirect ('posts')
 
 def todo_details(request, id):
@@ -42,6 +43,7 @@ def update_todo(request, id):
     todo_post = todo.objects.get(id=id)
     todo_post.title = request.POST['title'] 
     todo_post.create_date = request.POST['create_date']  
+    todo_post.completed_date = request.POST['ompleted_date'] 
     todo_post.text = request.POST['text']
     todo_post.complete = request.POST['complete']
     todo_post.save()
