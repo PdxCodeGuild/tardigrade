@@ -1,0 +1,23 @@
+{%extends 'base.html'%} {%block content%}
+
+
+<div class="container">
+    <h1>Todo List's</h1>
+    {%for todos in todolist%}
+    <p>{{todos.title}}</p>
+    <p>{%for item in todos.text%}
+        <ul>
+            {{item}}
+        </ul>
+        {%endfor%}
+    </p>
+    <p>{{todos.pub_date}}</p>
+    <p>{{todos.id}}</p>
+    <a href="{%url 'delete_list' todos.id%}" class="btn btn-secondary active" role="button" aria-pressed="true">Delete Todo List</a>
+    <hr>
+    {%endfor%}
+</div>
+
+
+
+{%endblock%}
