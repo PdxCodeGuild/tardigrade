@@ -1,0 +1,16 @@
+{% extends 'base.html' %} 
+{% block content %}
+<h1>Edit ToDo</h1>
+
+<form action="{%url 'update_todo' todo_post.id%}" method="POST">
+    {% csrf_token %} 
+    <br><input type="text" name="title" placeholder="{{todo_post.title}}"><br>
+    <br>Create Date<input type="date" id="start" name="create_date" value="2018-07-22" min="2018-01-01" max="2030-12-31" placeholder="{{todo_post.create_date}}"><br>
+    <br>Completed Date<input type="date" id="start" name="completed_date" value="2018-07-22" min="2018-01-01" max="2030-12-31" placeholder="{{todo_post.completed_date}}"><br>
+    <br><textarea name="text" id="" cols="30" rows="10" placeholder="{{todo_post.text}}"></textarea><br>
+    Completed?<br><select name="complete" placeholder="{{todo_post.complete}}"><br>
+        <option value = "True">Yes</option>
+        <option value = "False">No</option>
+    <input type="submit" value="add">
+</form>
+{% endblock %}
