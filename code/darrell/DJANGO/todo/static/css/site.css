@@ -1,38 +1,169 @@
 h1 {
-  color: firebrick;
+  color: rgb(255, 136, 0);
+  font-size: 25px;
 }
 
 h4 {
-  color: firebrick;
+  color: rgb(255, 136, 0);
+  font-size: 20px;
 }
 
 body {
-  background-color: rgb(79, 185, 255);
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: rgb(0, 29, 48);
+  font-family: "Akshar", sans-serif;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  width: 100%;
+  background-color: none;
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 35px;
+}
+
+nav a {
+  color: #fff !important;
+  text-decoration: none;
+  font-family: "Akshar", sans-serif;
+  font-size: 20px;
+}
+
+.navbar {
+  background-color: none !important;
 }
 
 #container {
-  background-color: rgb(255, 255, 255);
-  width: 50%;
+  background-color: none;
+  width: 40%;
   padding: 20px;
   margin: 0 auto;
+  color: #fff;
 }
 
-#container a {
+a.delete_link {
   text-decoration: none;
-  background-color: rgb(2, 65, 107);
-  color: white;
-  padding: 5px;
+  background-color: none;
+  color: rgb(255, 136, 0);
+  padding: 0px;
   border-radius: 3px;
+  font-size: 15px;
 }
 
-#description {
-  font-size: 20px;
-  background-color: rgb(199, 153, 92);
-  padding: 10px;
+a.delete_link:hover {
+  text-decoration: none;
+  background-color: none;
+  color: rgb(204, 109, 1);
+  padding: 0px;
+  border-radius: 3px;
+  font-size: 15px;
 }
 
-#description a {
+.breadcrumb a {
+  text-decoration: underline !important;
+  color: rgb(255, 136, 0) !important;
+  font-size: 15px !important;
+  margin-top: 20px;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+  background-color: none;
+  color: rgb(182, 98, 2);
+  padding: 0px;
+  border-radius: 3px;
+  font-size: 15px;
+}
+
+.description {
+  font-size: 22px;
+  background-color: none;
+  margin: 0;
+}
+
+.description a {
   text-decoration: none;
   color: rgb(255, 255, 255);
+  padding: 0px;
+}
+
+.description a:hover {
+  text-decoration: none;
+  color: rgb(172, 172, 172);
+  padding: 0px;
+}
+
+.add_todo a {
+  text-decoration: none;
+  background-color: rgb(255, 136, 0);
+  color: rgb(0, 0, 0);
+  padding: 8px;
+  border-radius: 3px;
+  font-size: 20px;
+}
+
+.add_todo a:hover {
+  background-color: rgb(214, 114, 0);
+}
+
+.add_todo {
+  color: rgb(0, 0, 0) !important;
+  padding: 0px !important;
+  border-radius: 3px !important;
+  border: none !important;
+  font-size: 25px !important;
+  margin-top: 10px;
+}
+
+.submit {
+  background-color: rgb(255, 136, 0);
+  color: rgb(0, 0, 0);
+  padding: 8px;
+  border-radius: 3px;
+  border: none;
+  font-size: 20px;
+}
+
+.submit:hover {
+  background-color: rgb(207, 111, 0);
+  color: rgb(0, 0, 0);
+  padding: 8px;
+  border-radius: 3px;
+  border: none;
+  font-size: 20px;
+}
+
+.big_btn a {
+  text-decoration: none;
+  background-color: rgb(255, 136, 0);
+  color: rgb(0, 0, 0);
+  padding: 15px;
+  border-radius: 3px;
+  font-size: 40px;
+  position: absolute;
+  top: 150px;
+}
+
+.big_btn a:hover {
+  text-decoration: none;
+  background-color: rgb(207, 111, 1);
+  color: rgb(0, 0, 0);
+  padding: 15px;
+  border-radius: 3px;
+  font-size: 40px;
+}
+
+#item_info {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  color: rgb(146, 146, 146);
+}
+
+hr {
+  padding: 0px;
+  margin: 0;
 }

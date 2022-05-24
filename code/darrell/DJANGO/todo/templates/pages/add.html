@@ -1,13 +1,18 @@
 {% extends 'base.html' %} {% block content %}
+
+<h1>Add to-do item</h1>
+<hr />
 <form action="{% url 'add_todo_items' %}" method="POST">
-  {% csrf_token %} title: <br />
+  {% csrf_token %}
   <input
     type="text"
+    class="form-control me-2"
     name="description"
-    placeholder="enter todo item description"
+    placeholder="enter to-do item description"
   /><br /><br />
   <input
     type="date"
+    class="form-control me-2"
     id="start"
     name="created_date"
     value="2018-07-22"
@@ -17,6 +22,7 @@
   <br />
   <input
     type="date"
+    class="form-control me-2"
     id="start"
     name="completed_date"
     value="2018-07-22"
@@ -27,7 +33,7 @@
   <input type="radio" id="completed" name="is_completed" value="True" />
   <label for="completed">Completed</label><br />
   <input type="radio" id="not_completed" name="is_completed" value="False" />
-  <label for="not_completed">Not Completed</label><br />
-  <input type="submit" />
+  <label for="not_completed">Not Completed</label><br /><br /><br />
+  <input type="submit" class="submit" />
 </form>
 {% endblock %}

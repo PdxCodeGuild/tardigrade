@@ -62,3 +62,10 @@ def update_item(request, id):
     print(todo_item)
     todo_item.save()
     return redirect('todo_items')
+
+
+def search_items(request):
+    search = request.POST['search_item']
+    todo_item = TodoItem.objects.filter(description__startswith=search)
+    print(search, todo_item)
+    return render(request, 'pages/home.html', {"todo_item": todo_item})

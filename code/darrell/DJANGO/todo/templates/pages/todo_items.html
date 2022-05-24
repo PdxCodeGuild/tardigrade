@@ -1,16 +1,26 @@
 {% extends 'base.html' %} {% block content %}
 <ul>
-  <h4>There are {{todos|length}} items in the list</h4>
-  <a href="{% url 'add_todo_items' %}">Add a todo item</a>
+  <h1>{{todos|length}} items</h1>
+  <hr />
+  <p class="add_todo">
+    <a href="{% url 'add_todo_items' %}">Add new item</a>
+  </p>
+  <hr />
   {% for item in todos %}
-  <p id="description">
+  <p class="description">
     <a href="{%url 'see_details' item.id %}">{{ item.description }}</a>
   </p>
-  <p>ID: {{ item.id }}</p>
-  <p>Created Date: {{ item.created_date }}</p>
-  <p>Completed Date: {{item.completed_date}}</p>
-  <p>Is Completed: {{item.is_completed}}</p>
-  <a href="{% url 'delete_item' item.id %}" class="button_link">Delete Item</a>
+  <div id="item_info">
+    <p>ID: {{ item.id }}</p>
+    <p>Created: {{ item.created_date }}</p>
+    <p>Completed: {{item.completed_date}}</p>
+    <p>Is Completed: {{item.is_completed}}</p>
+    <a href="{% url 'delete_item' item.id %}" class="delete_link"
+      >Delete Item</a
+    >
+  </div>
+
+  <hr />
   {% empty %} {% endfor %}
 </ul>
 {% endblock %}
