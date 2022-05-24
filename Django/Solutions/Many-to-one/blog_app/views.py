@@ -32,3 +32,18 @@ def view_all(request):
     #Reporter.objects.filter(article__pk=1) Gives a list of reporters linked to an article
     all_reporters = Reporter.objects.all()   
     return render(request, 'list.html', {"all_reporters":all_reporters})
+
+
+    """
+    As per documentation linked above here's a few operations you can run with the two models:
+
+    r= Reporter(first_name='John', last_name='Smith', email='john@example.com') ## creates a reporter entry
+    new_article2 = Article.objects.create(headline="Paul's story", pub_date=date(2006, 1, 17), reporter=r) ## creates an article entry
+    new_article2.reporter ## returns the reporter linked to the article
+        <Reporter: John Smith>
+    new_article2.reporter.id ## returns the id of the reporter linked to the article
+    1
+    r.article_set.all() ## returns a list of all articles linked to a reporter
+        <QuerySet [<Article: John's second story>, <Article: Paul's story>, <Article: This is a test>]>
+    
+    """
