@@ -6,7 +6,7 @@ from django.contrib import messages
 
 def user_register(request):
     if request.method == "POST":
-        new_user= User(
+        new_user= User.objects.create(
             username = request.POST['username'],
             email = request.POST['email'],
             first_name = request.POST['first_name'],
