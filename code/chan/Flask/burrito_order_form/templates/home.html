@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+{% block content%}
+
+<div class="container mt-5 mx-auto">
+    <div class="row">
+        <div class="col-lg-7 mb-4 gx-0">
+            <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/3/4/1/FNM_040113-Chipotle-Chicken-Burritos-Recipe_s4x3.jpg.rend.hgtvcom.826.620.suffix/1381343667380.jpeg"
+                class="img-fluid" alt="Burrito">
+            <p class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end fst-italic">It looks better in your
+                stomach. - Chan</p>
+        </div>
+        <div class="col-lg-4 mb-5 gx-3">
+            <form action="/" method= 'POST'>
+                <div class="mb-3">
+                    <label for="userName" class="form-label">Name:</label>
+                    <input name="userName" type="text" class="form-control" id="userName" aria-describedby="emailHelp">
+                </div>
+
+                <div class="mb-3">
+                    <label for="userPassword" class="form-label">Password</label>
+                    <input name="userPassword" type="password" class="form-control" id="userPassword">
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="row">
+                            <div class="col">
+                                <div class="mt-2">
+                                    <p>Tortilla</p>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tortillas" id="whiteFlour" value="White Flour">
+                                    <label class="form-check-label" for="whiteFlour">
+                                        White Flour
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tortillas" id="wheatFlour" value="Wheat Flour">
+                                    <label class="form-check-label" for="wheatFlour">
+                                        Wheat Flour
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tortillas" id="spinach" value="Spinach">
+                                    <label class="form-check-label" for="spinach">
+                                        Spinach
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tortillas" id="corn" value="Corn">
+                                    <label class="form-check-label" for="corn">
+                                        Corn
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mt-2">
+                                    <p>Beans</p>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="beans" id="blackBeans" value="Black Beans">
+                                    <label class="form-check-label" for="blackBeans">
+                                        Black Beans
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="beans" id="pintoBeans" value="Pinto Beans">
+                                    <label class="form-check-label" for="pintoBeans">
+                                        Pinto Beans
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mt-2">
+                                    <p>Rice</p>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="rice" id="whiteRice" value="White Rice">
+                                    <label class="form-check-label" for="whiteRice">
+                                        White Rice
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="rice" id="brownRice" value="Brown Rice">
+                                    <label class="form-check-label" for="brownRice">
+                                        Brown Rice
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mt-2">
+                                    <p>Protein</p>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="proteins" id="carnitas" value="Carnitas">
+                                    <label class="form-check-label" for="carnitas">
+                                        Carnitas
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="proteins" id="chicken" value="Chicken">
+                                    <label class="form-check-label" for="chicken">
+                                        Chicken
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="proteins" id="pork" value="Pork">
+                                    <label class="form-check-label" for="pork">
+                                        Pork
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="proteins" id="beef" value="Beef">
+                                    <label class="form-check-label" for="beef">
+                                        Beef
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="proteins" id="sofritas" value="Sofritas">
+                                    <label class="form-check-label" for="sofritas">
+                                        Sofritas
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="proteins" id="none" value="None">
+                                    <label class="form-check-label" for="none">
+                                        None
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mt-2">
+                                    <p>Additional Ingredients</p>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Cheese" id="cheese" name="check">
+                                    <label class="form-check-label" for="cheese">
+                                        Cheese
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Sour Cream" id="sourCream" name="check">
+                                    <label class="form-check-label" for="sourCream">
+                                        Sour Cream
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-2 gx-2">
+                    <label for="FormControlDeliveryInstructions" class="form-label">Delivery Instructions</label>
+                    <textarea class="form-control" id="deliveryInstructions" rows="3" name="instructions"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary mt-4">Order</button>
+
+            </form>
+        <!-- </div>
+        <div class="col-lg-3 border mb-4">
+            <h3>Order Total:</h3>
+        </div> -->
+    </div>
+</div>
+{%endblock%}
