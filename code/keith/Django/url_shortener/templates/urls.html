@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>
+        URL Shortner
+    </title>
+    <style>
+        table {
+            margin-left: 650px;
+        }
+    </style>
+</head>
+<body>
+    <a href="/" style="font-size: 25px; ">Home</a>
+    <table border="5px solid #000">
+        <thead>
+            <tr>
+                <th>Old url</th>
+                <th>New url</th>
+            </tr>
+        </thead>
+        {% for i in url %}
+        <p><a target = "_blank" href={{i.original_url}}>{{i.shortened_url}} </a></p>
+     
+        <tbody>
+            <tr>
+                <td>{{i.original_url}}</td>
+                <td>{{i.shortened_url}}</td>
+            </tr>
+        </tbody>
+        {% endfor %}    
+    </table>
+</body>
+</html>
