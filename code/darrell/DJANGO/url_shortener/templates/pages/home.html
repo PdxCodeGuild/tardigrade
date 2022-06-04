@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block content %}
+<h1>URL Converter</h1>
+<p>Enter a URL to be converted</p>
+<form action="{%url 'home' %}" method="POST">
+  {% csrf_token %} <br />
+  <input class="form-control" type="text" placeholder="Enter URL" name="url" />
+  <input class="btn btn-primary mb-3 mt-4" type="submit" value="Submit" />
+</form>
+{% if new_url %}
+<h4 class="mt-4">Short Url: <a href="{{new_url.url}}">{{new_url}}</a></h4>
+<p>Click above link to visit encoded URL</p>
+{% endif %} {% endblock %}

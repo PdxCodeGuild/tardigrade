@@ -1,0 +1,9 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Save URL</h1>
+<form action="" method="POST">
+  {% csrf_token %} <br />
+  <input type="text" name="posted_url" value="{{posted_url.url}}" />
+  <input type="submit" value="Submit" />
+</form>
+
+{% endblock %}
