@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Edited URLs</h1>
+<ul>
+    {%for url in url_list%}
+    <p>1. Original URL: {{url.url}}</p>
+    <p>2. New URL: <a href={{url.url}}>{{url.url_short}}</a></p>
+    {% empty %}
+    {% endfor %}
+</ul>
+
+{% endblock %}

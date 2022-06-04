@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %}
+<h1>URL Shortener</h1>
+
+<form action="{% url 'url' %}" method="POST">
+    {% csrf_token %} 
+    <br><input type="text" name="url" placeholder="Past URL Here"><br>
+    {% comment %} <br><textarea name="url_short" id="" cols="30" rows="10" placeholder="Enter desired shorten URL here"></textarea><br> {% endcomment %}
+    <input type="submit" value="add">
+</form>
+{% endblock %}
