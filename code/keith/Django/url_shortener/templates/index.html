@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>
+        URL Shortener
+    </title>
+    <style>
+        table {
+            margin-left: 650px;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="urlcreated" style="font-size: 25px; ">View Url</a>
+    <h1 align="center">URL Shortener</h1>
+    <form action="createshorturl" method="POST">
+        {% csrf_token %}
+        <table>
+            <tbody>
+                <tr>
+                    <td><label>URL</label></td>
+                    <td><input type="text" name="url"></td>
+                </tr>
+                <tr>
+                    <td><button>Submit</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+ 
+</html>
