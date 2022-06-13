@@ -31,7 +31,7 @@ The following code demonstrates how each of these are used:
   const a = document.getElementById("mydiv");
   const b = document.getElementsByTagName("div");
   console.log(bs.length); // 3
-  Array.from(bs).map(function (item) {
+  Array.from(b).map(function (item) {
     //allows you to iterate from a HTML collection list
     console.log(item);
   });
