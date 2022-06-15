@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+
+body {
+
+    display: flex;
+    background-color: rgb(164, 65, 65);
+   
+}
+.container{
+    
+    height: 10rem;
+    color:rgb(20, 22, 20)
+    
+}
+.nav-item{
+    color: darkorchid;
+}
+
+img {
+    border-radius: 50%;
+    height: 200px;
+    
+
+}
+
+.job{
+
+    font-size: 10px;
+    
+}
+
+.nav-bar li a{
+
+    color: brown !important;
+}
+ .jumbotron{
+     height: 500px;
+     background-image: url(./image/Michigan.jpeg);
+     background-size: cover;
+     background-repeat: no-repeat;
+    
+ }
+ .jumbo{
+     padding-left: 0px;
+ }
+ .intro{
+     text-align: center;
+     font-family: 'Dancing Script', cursive;
+     font-size: 10rem;
+     
+}
+.intro-font{
+    font-family: 'Fjalla One', sans-serif;
+    color: rgb(23, 21, 18);
+    text-align: center;
+    font-size: 2rem;
+
+}
+.learn-btn{
+    text-align: center;
+}
+.navig{
+    color: cornflowerblue;
+    width: 300px;
+    background-color: darkkhaki;
+    height: 100vh;
+    
+}

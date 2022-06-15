@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<p><a href="{% url 'home'%}">Back to main view</a></p>
+
+<form action="{% url 'update_post' todo_item.id %}" method="POST">
+    {% csrf_token %} title: <br />
+    <input type="text" name="title" placeholder=" {{ todo_item.title }}" /><br /><br />
+    <p>Date{{todo_item.start_date}}</p>
+    <input type="date" id="start" name="start_date" value="{{todo_item.start_date}}" min="2018-01-01" max="2030-12-31">
+    <input type="date" id="start" name="end_date" value="{{todo_item.end_date}}" min="2018-01-01" max="2030-12-31">
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="completed" value="True" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+            Task Completed
+        </label>
+    </div>
+    <br />
+    <input type="submit" />
+  </form>
+
+
+<!-- {{todo_item.title}}
+{{todo_item.start_date}}
+{{todo_item.end_date}}
+{{todo_item.completed}} -->
+
+{% endblock %}
