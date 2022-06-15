@@ -1,0 +1,44 @@
+{%extends 'base.html'%} {%block content%}
+<div class="container">
+
+    <div class="col">
+        <h3>Things to Do</h3>
+        {% for task in todo_list%}
+        {%if task.complete%}
+            {%if task.completed_date == null%}                               <!-- {This allows me to only generate the calender to select the completed date, once the complete date is added it goes to the else which displays it} -->
+                <p>{{task.title}}</p>
+                <a href="{%url 'un_cross' task.id%}">Uncross Item <a>
+                <p>Created Date:{{task.created_date}}</p>
+                <form action="{%url 'completion_date' task.id%}" method="POST">
+                    {% csrf_token%}
+                    <input type="date" id="start" name="select_date"
+                    min="2000-01-01" max="2024-12-31">
+                    <input class="btn btn-primary" type="submit" value="Submit" >
+                </form>
+                <a href="{% url 'delete' task.id%}" class="btn btn-secondary active" role="button"
+                    aria-pressed="true">Delete</a>
+            {%else%}
+                <p>{{task.title}}</p>
+                <a href="{%url 'un_cross' task.id%}">Uncross Item <a>
+                <p>Created Date:{{task.created_date}}</p>
+                <p>Completed Date:{{task.completed_date}}</p>
+                <a href="{% url 'delete' task.id%}" class="btn btn-secondary active" role="button"
+                    aria-pressed="true">Delete</a>
+            {%endif%}
+            <hr>
+        {%else%}
+            <p>{{task.title}}</p>
+            <a href="{%url 'cross_off' task.id%}">Cross Off Completed Item<a>
+            <p>Created Date:{{task.created_date}}</p>
+            <a href="{% url 'delete' task.id%}" class="btn btn-secondary active" role="button"
+                aria-pressed="true">Delete</a>
+
+            <hr>
+        {%endif%}
+        {% endfor%}
+    </div>
+</div>
+
+
+
+{%endblock%}
