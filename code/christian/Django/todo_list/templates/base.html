@@ -1,0 +1,27 @@
+<!-- todo_list/todo_app/templates/base.html -->
+<!-- Base template -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Simple.css-->
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <title>Christian's To-Do Lists</title>
+</head>
+
+<body>
+    <div>
+        <h1 onclick="location.href='{% url "index" %}'">
+            Christian's To-Do Lists
+        </h1>
+    </div>
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+
+</html>
