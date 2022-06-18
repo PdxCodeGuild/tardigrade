@@ -58,12 +58,23 @@ function numMatches() {
         
     let ROI = earnings - expenses/expenses;
     ROI *= 100;
+    console.log(`Winning: ${winning}`);
     console.log(`Your current balance: ${balance}`);
     console.log(`Your earnings: ${earnings}`);
     console.log(`Your expenses: ${expenses}`);
     console.log(`Your ROI: ${ROI}%`);
+
+    let msg = '<h3>Current Bal</h3><p>$ ' + balance + '</p>';
+    msg += '<h3>Earnings</h3><p>$ ' + earnings + '</p>';
+    msg += '<h3>Expenses</h3><p>$ ' + expenses + '</p>';
+    msg += '<h3>ROI</h3><p>$ ' + ROI + '%</p>';
+    let el = document.getElementById('message');
+    el.innerHTML = msg;
+    
     
 }
+
+
 
 pick6()
 numMatches()

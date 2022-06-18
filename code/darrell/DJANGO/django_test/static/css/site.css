@@ -1,0 +1,24 @@
+h1 {
+  color: rgb(153, 18, 0);
+}
+
+#wrapper {
+  width: 50%;
+  background-color: rgb(255, 238, 215);
+  padding: 0;
+}
+
+h5 {
+  font-family: Georgia, "Times New Roman", Times, serif !important;
+  color: rgb(153, 18, 0);
+}
+
+.description {
+  background-color: rgb(183, 206, 206);
+}
+
+.date {
+}
+
+.id {
+}

@@ -22,4 +22,5 @@ if (userUnit == "ft") {
     convertedDistance = userDistance * unitToMeters.in;
 }
 
-console.log(convertedDistance)
+console.log(convertedDistance);
+

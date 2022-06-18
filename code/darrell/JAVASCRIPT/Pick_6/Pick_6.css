@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  color: rgb(185, 185, 185) !important;
+  font-size: 20px !important;
+}
+
+h3 {
+  color: rgba(153, 214, 194, 0.877);
+  font-size: 28px !important;
+  padding: 20px;
+  border-bottom: 3px rgb(187, 187, 187) solid;
+}
+
+#wrapper {
+  padding-top: 80px !important;
+  text-align: center;
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+}
+
+#left {
+  margin: 0 auto;
+  text-align: center;
+  width: 70%;
+  background-color: rgb(61, 61, 61) !important;
+  padding: 40px;
+}
+
+#message {
+  margin: 0 auto;
+  text-align: center;
+  width: 30%;
+  background-color: rgb(24, 24, 24) !important;
+  padding: 20px;
+}
