@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ToDo List Lab</title>
+</head>
+
+<body>
+
+    <div>
+        <input id = "inputbar" type = "text"><button id="addList" >Add ToDo</button>
+        <div class = "todo">
+
+        </div>
+
+    </div>
+
+    <h3>ToDo List</h3>
+    <ul id="myIncompleteList">
+        <li>Work on Lab</li>
+        <li>Workout</li>
+        <li>List reasons why Python is better than JavaScript</li>
+    </ul>
+
+    <h3>Completed List</h3>
+    <ul id="myCompleteList">
+
+
+    </ul>
+    <script>
+        addList.addEventListener('click', function (event) {
+            let addInput = document.getElementById('inputbar');
+            let myIncompleteList = document.getElementById('myIncompleteList');
+            let li = document.createElement('li');
+            li.setAttribute('id', addInput.value);
+            li.appendChild(document.createTextNode(addInput.value));
+            myIncompleteList.appendChild(li);
+        })
+
+        let removeInput = document.getElementById('myIncompleteList');
+        removeInput.addEventListener('click', function (event) {
+            let myCompleteList = document.createElement('li');
+            let et = event.target.innerHTML;
+            let liis=document.createTextNode(et);
+            myCompleteList.appendChild(liis);
+            document.getElementById('myCompleteList').appendChild(myCompleteList)
+            event.target.remove(); 
+        })
+
+    </script>
+</body>
+
+</html>
