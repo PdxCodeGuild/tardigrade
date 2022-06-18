@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>TODO</h1>
+        <input type="text" id="todo" name="ToDo"><br>
+
+
+        <button id = 'BTN' type="button">Click to add to list</button>
+        <div id = "output"></div>
+
+        <h2>Incomplete</h2>
+        <ul id='list'>
+            
+
+        </ul>
+
+        <h2>Complete List</h2>
+        <ul id='completeList'>
+
+        </ul>
+    </div>
+
+    <script>
+
+        const incomplete = document.getElementById('list')  /// this line accesses my element that is the incomplete list to be added to
+        const inputBox = document.getElementById('todo')   // this line accesses the above input box
+        const complete = document.getElementById('completeList')  /// 
+        const BTN = document.getElementById('BTN')   //// this line
+        BTN.addEventListener('click', function (event){   ///this listens to my button and what i want to happen when its clicked
+            
+
+           
+            const li = document.createElement('li') //IMPORTANT this like makes the li element from scratch
+            li.innerText = inputBox.value // this makes the value of the li whatever is input in the box
+            incomplete.appendChild(li) /// this appends that newly found li to my incomplete list
+            
+     });
+     incomplete.addEventListener('click', function(event){
+         if (event.target.tagName === "LI"){
+         event.target.style.textDecoration = "line-through"
+         complete.appendChild(event.target)
+        //  console.log(event.target)
+    }
+
+
+
+     });
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -13,8 +13,7 @@ h2 {
 nav > ul {
 
     list-style-type: none;
-    /* margin: 0; */
-    /* padding: 0; */
+   
     display: flex;
     justify-content: flex-end;
     padding-left: 500px;
