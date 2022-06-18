@@ -80,7 +80,7 @@ input {
   padding: 4px;
   color: #fff;
   font-size: 15px;
-  margin-left: 30px;
+  margin-left: 40px;
 }
 
 #deleted_btn {
@@ -102,13 +102,14 @@ li {
   justify-content: space-between;
 }
 
+/*
 #list_text {
   width: 70%;
   justify-content: flex-start;
-  background-color: rgb(128, 62, 62);
 }
 
 #list_buttons {
   width: 30%;
   justify-content: flex-end;
 }
+*/
