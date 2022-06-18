@@ -52,7 +52,7 @@ h4 {
   font-weight: 600 !important;
   background-color: rgb(248, 211, 176);
   padding: 10px;
-  border-bottom: 1px rgb(129, 127, 124) solid;
+  border-bottom: 1px rgb(124, 120, 113) solid;
 }
 
 input {
@@ -71,4 +71,44 @@ input {
   padding: 8px;
   color: #fff;
   font-size: 18px;
+}
+
+#completed_btn {
+  background-color: rgb(1, 106, 138);
+  border: none;
+  border-radius: 5px;
+  padding: 4px;
+  color: #fff;
+  font-size: 15px;
+  margin-left: 30px;
+}
+
+#deleted_btn {
+  background-color: rgb(1, 106, 138);
+  border: none;
+  border-radius: 5px;
+  padding: 4px;
+  color: #fff;
+  font-size: 15px;
+}
+
+li {
+  list-style-type: none;
+  color: rgb(54, 54, 54);
+  font-size: 20px;
+  margin-left: -15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#list_text {
+  width: 70%;
+  justify-content: flex-start;
+  background-color: rgb(128, 62, 62);
+}
+
+#list_buttons {
+  width: 30%;
+  justify-content: flex-end;
 }
