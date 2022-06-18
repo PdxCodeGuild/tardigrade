@@ -1,6 +1,5 @@
 
 let textField = document.getElementById('user_input');
-/*console.log(textField, 'user_input');*/
 let incompleteUl = document.getElementById('incomplete_list');
 let CompleteUl = document.getElementById('complete_list');
 let LI = document.getElementsByTagName('li');
@@ -11,7 +10,7 @@ const btn1 = document.getElementById('btn1');
 btn1.addEventListener("click", function() {
     let textValue = textField.value;
     const newLI = document.createElement('LI');
-    newLI.innerHTML += `<li> ${textValue} <nbsp/><button id='completed_btn'>Completed</button> <button id='deleted_btn'>Delete</button></li>`;
+    newLI.innerHTML += `<li> <div id="list_text">${textValue}</div><nbsp/></div id="list_buttons"><button id='completed_btn'>Completed</button> <button id='deleted_btn'>Delete</button></div></li>`;
     incompleteUl.appendChild(newLI);
     
 
