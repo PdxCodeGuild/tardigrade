@@ -1,0 +1,76 @@
+/*My div */
+#myDIV {
+    margin: auto;
+    width: 50%
+}
+
+/* myList */
+#myList {
+    padding-left: 20px;
+}
+
+/* no bullets */
+ul li {
+    margin-left: 0;
+    padding-left: 0;
+    list-style-type: none;
+    display: block;
+    position: relative;
+    margin-top: 10px;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+    background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+    color: rgb(7, 7, 7);
+    text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+/* Style the close button */
+.close {
+    text-align: right;
+    position: absolute;
+    right: 0%;
+    width: max-content;
+    padding: 0;
+}
+
+.close:hover {
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+}
+
+/* Style the "Add" button */
+.btn {
+    padding: 4px;
+    margin: 0;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    float: right;
+    text-align: right;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255)
+}
