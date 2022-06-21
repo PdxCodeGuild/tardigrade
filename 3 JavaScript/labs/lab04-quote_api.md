@@ -28,26 +28,6 @@ Then you can show those quotes in a list.Note that if the text has spaces or spe
 
 In order to get authorization for this request, we need to add a request header with the authorization token using [setRequestHeader](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader). I'll give you the API key through slack. You can then put it in this altered version of our http_get function, or do it yourself. **Do not commit or push code containing the key to the repo. There are bots that crawl through github looking for keys.**
 
-```javascript
-function http_get(url, success) {
-    let xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState === 1) {
-            xhttp.setRequestHeader('Authorization', 'Token token="<api kep here>"')
-        } else if (this.readyState === 4 && this.status === 200) {
-            let data = JSON.parse(xhttp.responseText);
-            success(data);
-        } else if (this.readyState === 4 && this.status === 404) {
-            // handle 404
-        }
-    };
-    xhttp.open("GET", url);
-    xhttp.send();
-}
-```
-
-This is how you do it with Fetch
-
 ```Javascript
 
 const myHeaders = new Headers();
@@ -58,14 +38,12 @@ fetch(url, {
   method: 'GET',
   headers: myHeaders,
 })
- .then(function(response){
-    return response.json()
-  })
- .then(function(data){
-    //or pass a callback function to handle data
+ .then(response=>response.json())
+ .then(data=>{
+    //ad your logic here
     console.log(data)  
 })
-  .catch(function(error){
+  .catch(error=>{
     console.error('There has been a problem with your fetch operation:', error);
   });
 
