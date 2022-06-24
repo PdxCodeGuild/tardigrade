@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block content %}
+<div id="wrapper">
+  <h1>Current Posts</h1>
+  <ul>
+    <a href="{% url 'add_posts' %}">add a blog post</a>
+    {% for post in blogs %}
+    <h5 class="title">Title: {{ post.title }}</h5>
+    <p class="description">Description: {{ post.text }}</p>
+    <p class="date">Pub Date: {{post.pub_date}}</p>
+    <p class="ID">ID: {{ post.id }}</p>
+    {% empty %} {% endfor %}
+  </ul>
+</div>
+{% endblock %}

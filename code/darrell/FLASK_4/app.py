@@ -28,17 +28,17 @@ def home():
         county = county['long_name']
         state = address[5]
         state = state['short_name']
-        zip = address[7]
-        zip = zip['long_name']
+        # zip = address[7]
+        # zip = zip['long_name']
         geometry = dict['geometry']
         location = geometry['location']
         lat = location['lat']
         long = location['lng']
         print(results)
-        print(f"{street_num} {street} {city} {county} {state} {zip}")
+        print(f"{street_num} {street} {city} {county} {state}")
         print(lat)
         print(long)
-        return render_template('map.html', data=data, lat=lat, long=long, street_num=street_num, street=street, city=city, county=county, state=state, zip=zip)
+        return render_template('map.html', data=data, lat=lat, long=long, street_num=street_num, street=street, city=city, county=county, state=state, )
 
 
 @app.route('/map/', methods=["GET", "POST"])
