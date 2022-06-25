@@ -1,0 +1,40 @@
+{% extends 'base.html' %} {% block content %}
+<div class="task">
+    <h1>Update Task</h1>
+    <div>
+        <p>Task id: {{ todo_item.id }}</p>
+    </div>
+
+    <form action="{% url 'save_todo' todo_item.id %}" method="post">{% csrf_token %}
+        <div>
+            <div>
+                <label>Task:</label>
+                <input type="text" name="description" size="50" value="{{todo_item.description}}">
+            </div>
+            <div>
+                <label>Start: {{todo_item.start_date}}</label>
+                <input type="date" id="start_date" name="start_date" min="2000-01-01" max="2024-12-31"
+                    placeholder="{{todo_item.start_date}}">
+            </div>
+            <div>
+                <label>Complete: {{todo_item.complete_date}}</label>
+                <input type="date" id="complete_date" name="complete_date" min="2000-01-01" max="2024-12-31"
+                    placeholder="{{todo_item.complete_date}}">
+            </div>
+            <div>
+                <p>{{todo_item.completed}}</p>
+                <!-- check if true or false for checkbox-->
+                {% if todo_item.completed == False %}
+                <input type="checkbox" name="completed"><label for="checked">Completed</label>
+                {% else %}
+                <input type="checkbox" name="completed" checked><label for="checked">Completed</label>
+                {% endif %}
+            </div>
+            <div>
+                <input type="submit" value="Update"><a href="../" class="btn">Cancel</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
