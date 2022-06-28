@@ -1,0 +1,109 @@
+body {
+  background: rgb(2, 51, 79);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 51, 79, 1) 0%,
+    rgba(5, 124, 190, 1) 100%
+  );
+
+  font-family: Arial;
+  /*background-image: radial-gradient(circle, #fa9026 70%, #fb6c1f 100%);*/
+}
+
+#wrapper {
+  margin: 0 auto;
+  width: 80% !important;
+  text-align: left;
+}
+
+#header {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  font-size: 30px !important;
+  font-weight: 500 !important;
+  margin-bottom: 10px !important;
+}
+
+h2 {
+  color: rgb(189, 189, 189);
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+button {
+  color: #fff;
+  font-size: 20px;
+  background-color: rgb(42, 112, 153);
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: rgb(138, 136, 14);
+}
+
+#logo {
+  background-image: url("Asset\ 1@3x.png");
+  background-size: 200px;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 100px;
+  margin-top: 40px;
+}
+
+hr {
+  border: 1px solid rgb(5, 37, 54);
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+input {
+  font-size: 20px;
+  padding: 10px;
+  width: 50%;
+  border-radius: 5px;
+  border: none;
+}
+
+#quotesUL {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: -50px;
+}
+
+#quoteListItem {
+  background: rgb(255, 255, 255);
+
+  width: 300px;
+  height: 180px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 3px;
+  box-shadow: rgb(68, 67, 67) 5px;
+  color: rgb(36, 35, 35);
+  font-size: 14px;
+}
+
+#quoteListItem:hover {
+  background: rgb(228, 226, 147);
+}
+
+h3 {
+  color: rgb(143, 143, 143);
+  font-size: 20px !important;
+  font-weight: 200 !important;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
