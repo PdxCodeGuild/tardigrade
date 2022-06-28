@@ -1,0 +1,40 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="task">
+    <h1>To do List</h1>
+    <form action="{% url 'add_todo' %}" method="post">{% csrf_token %}
+        <div>
+            <div>
+                <label>Task:</label>
+                <input type="text" name="description" size="50">
+            </div>
+            <div>
+                <label>Start:</label>
+                <input type="date" id="start_date" name="start_date" min="2000-01-01" max="2024-12-31">
+                <label>Complete:</label>
+                <input type="date" id="complete_date" name="complete_date" min="2000-01-01" max="2024-12-31">
+            </div>
+            <div>
+                <input type="submit" value="Add Todo Item">
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="task">
+    <h2>Tasks:</h2>
+    <ul class="list">
+        {% for item in todo_items %}
+            {% if item.completed == True %}
+                <li class="completed">{{item.description}}
+                </li>
+            {% else %}
+                <li>{{item.description}}
+                </li>
+            {% endif %}
+            <a href="{% url 'delete_todo' item.id%}">Delete</a>
+            <a href="{% url 'update_todo' item.id%}">Update</a>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
