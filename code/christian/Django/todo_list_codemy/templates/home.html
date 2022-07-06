@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<h1>"Today Decides Tomorrow"</h1>
+</br>
+<!-- POSTING MESSAGES -->
+{% if messages %}
+{% for message in messages %}
+<div class="container">
+    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        <strong>Get some! </strong>{{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+</div>
+
+{% endfor %}
+{% endif %}
+</br>
+
+<!-- POSTING DATA W/ TABLES -->
+
+{% if all_items %}
+<table class="table table-bordered">
+    <thead>
+        <tr class="table-dark">
+            <th scope="col">#</th>
+            <th scope="col">Item</th>
+            <th scope="col">Status</th>
+            <th scope="col">Remove</th>
+        </tr>
+    </thead>
+    {% for things in all_items %}
+    {% counter = 1 %} 
+    {% if things.completed %}
+    <tbody>
+        <tr class="table-success">
+            <th scope="row">{{ things.kp }}></th>
+            <td class="striker"><a href="{% url 'edit' things.id %}">{{ things.item }}</a></td>
+            <td><a href="{% url 'incomplete' things.id %}">Completed</a></td>
+            <td><a href="{% url 'delete' things.id %}">DELETE</a></td>
+        </tr>
+    </tbody>
+    {% else %}
+    <tbody>
+        <tr>
+            <th scope="row">{{ things.pk }}</th>
+            <td><a href="{% url 'edit' things.id %}">{{ things.item }}</a></td>
+            <td class="table-warning"><a href="{% url 'complete' things.id %}">Incomplete</a></td>
+            <td><a href="{% url 'delete' things.id %}">DELETE</a></td>
+        </tr>
+    </tbody>
+    {% endif %}
+    {% endfor %}
+</table>
+
+{% endif %}
+{% endblock%}
