@@ -31,17 +31,21 @@ Home
             <th scope="col">#</th>
             <th scope="col">Item</th>
             <th scope="col">Status</th>
+            <th scope="col">Date Created</th>
+            <th scope="col">Date Completed</th>
             <th scope="col">Remove</th>
         </tr>
     </thead>
     {% for things in all_items %}
-    {% counter = 1 %} 
+
     {% if things.completed %}
     <tbody>
         <tr class="table-success">
             <th scope="row">{{ things.kp }}></th>
             <td class="striker"><a href="{% url 'edit' things.id %}">{{ things.item }}</a></td>
             <td><a href="{% url 'incomplete' things.id %}">Completed</a></td>
+            <td>{{ things.date_created }}</td>
+            <td>Complete Date</td>
             <td><a href="{% url 'delete' things.id %}">DELETE</a></td>
         </tr>
     </tbody>
@@ -51,6 +55,8 @@ Home
             <th scope="row">{{ things.pk }}</th>
             <td><a href="{% url 'edit' things.id %}">{{ things.item }}</a></td>
             <td class="table-warning"><a href="{% url 'complete' things.id %}">Incomplete</a></td>
+            <td>{{ things.date_created }}</td>
+            <td>You can do this!</td>
             <td><a href="{% url 'delete' things.id %}">DELETE</a></td>
         </tr>
     </tbody>
