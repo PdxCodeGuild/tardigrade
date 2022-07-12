@@ -1,0 +1,39 @@
+/* Makeup Tan: #DDAF94
+
+Blush: #E8CEBF
+
+Complimentary Green: #266150
+
+Dark Highlight: #4F4846
+
+Lightly Off White:  */
+
+/* The navigation bar */
+
+
+
+body {
+    background-color: #FDF8F5;
+}
+
+.bg-light {
+    --bs-bg-opacity: 1;
+    background-color: #E8CEBF!important;
+    font-family: Monaco;
+}
+
+.imageContainer{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+}
+
+
+.introImages{
+    width: 200px;
+}
+
+.mt-4{
+    padding-top: 50px ;
+    padding-bottom: 50px;
+}
