@@ -1,0 +1,276 @@
+body {
+  background-color: rgb(0, 0, 0);
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  margin: 0px;
+  color: rgb(238, 238, 238);
+}
+
+#container {
+  display: flex;
+  /* flex-direction: row; */
+}
+
+#leftSideBar {
+  background-color: rgb(36, 36, 36);
+  width: 5%;
+  height: 100%;
+  margin: 0px;
+  padding: 15px 20px;
+}
+
+#logo {
+  background-image: url("Asset\ 1@3x.png");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 100px;
+  margin-top: 20px;
+  /* text-align: center;
+  vertical-align: bottom;
+  width: 150px;
+  height: 70px;
+  padding: 10px 0px;
+  font-family: Oswald;
+  font-style: italic; */
+  font-size: 25px;
+  color: #eeeeee;
+}
+
+#leftSidebarList {
+  /* background-color: rgb(29, 29, 29); */
+  padding: 20px 10px;
+}
+
+#leftSidebarList li {
+  margin-bottom: 20px;
+  color: rgb(168, 168, 168);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+#leftSidebarList li a {
+  text-decoration: none;
+  color: rgb(145, 145, 145);
+}
+
+#newClaim {
+  background-color: black;
+  width: 50%;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 300px;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+#rightBar {
+  width: 90%;
+}
+
+#navBar {
+  background-color: rgb(36, 36, 36);
+  padding: 5px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  /* position: fixed; */
+}
+
+#navBar input {
+  background-color: rgb(70, 70, 70);
+  border-radius: 3px;
+  border: none;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  width: 300px;
+  height: 20px;
+  margin-top: 20px;
+}
+
+#userProfile {
+  margin-right: 50px;
+  width: 172px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  vertical-align: middle;
+  /* background-color: blue; */
+  padding: 10px;
+}
+
+#profilePic {
+  background-image: url("kisha thumbnail.jpg");
+  background-size: 100px;
+  background-position: -20px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+#profileInfo h2 {
+  margin: 12px 0px 5px 0px;
+  color: rgb(221, 221, 221);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+#profileInfo p {
+  margin: 0px;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgb(116, 116, 116);
+}
+
+#emailULList {
+  width: 100%;
+  padding: 0px;
+  margin: 0 auto;
+  background-color: rgb(26, 26, 26);
+}
+
+#emailUL {
+  border-radius: 3px;
+  border: none;
+  padding: 5px 30px;
+  margin: 0px;
+}
+
+li {
+  list-style: none;
+  margin: 0px;
+}
+
+#emailUL:hover {
+  background-color: rgb(53, 53, 52);
+}
+
+a h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  /* text-transform: uppercase; */
+  padding: 0px;
+  margin: 0px;
+  color: rgb(180, 178, 178);
+}
+
+a h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  /* text-transform: uppercase; */
+  margin-bottom: 5px;
+  color: rgb(255, 255, 255);
+}
+a h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: rgb(143, 142, 142);
+  margin: 0px;
+}
+
+hr {
+  border: 1px dashed rgb(83, 83, 83);
+}
+
+#emailULList a {
+  text-decoration: none;
+  color: rgb(173, 173, 173);
+}
+
+pre {
+  white-space: pre-wrap; /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+table {
+  /* background-color: rgb(44, 44, 44); */
+  width: 85%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border-radius: 15px;
+}
+
+table.unstyledTable thead {
+  background: #00414d;
+  color: rgb(233, 232, 232);
+  border-radius: 15px;
+}
+table.unstyledTable thead th {
+  font-weight: normal;
+  border: 1px dotted #000000;
+  padding: 10px;
+}
+
+table.unstyledTable tbody {
+  background-color: #302f2f;
+}
+
+table.unstyledTable tbody tr {
+  color: rgb(199, 198, 198);
+  /* background-color: #4f5357; */
+}
+
+table.unstyledTable tr td {
+  width: 6%;
+  font-size: 11px;
+  padding: 12px;
+  border: 1px dotted #000000;
+}
+
+table.unstyledTable tfoot {
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  /* background-color: #246ab1; */
+}
+
+table.unstyledTable tbody tr:hover {
+  background-color: #e4cd05;
+  color: #000000;
+}
+
+table.unstyledTable a {
+  text-decoration: none;
+  color: rgb(173, 173, 173);
+}
+
+table.unstyledTable a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.sm-td {
+  width: 2%;
+}
+
+.md-td {
+  width: 10%;
+}
+
+.lg-td {
+  width: 35%;
+}
+
+#emailTR {
+  width: 800px;
+  padding-right: 1000px;
+  /* background-color: aqua; */
+}
+
+#emailTB {
+  width: 100%;
+  padding-right: 0px;
+  border: 1px dotted #000000;
+}
