@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Anger Iceberg | Home
+{% endblock title %}
+
+
+{% block content %}
+
+
+<div class="container">
+    <img class="ice" src="../../static/images/iceberg2.jpg" alt="Watchout! This is one Angry Iceberg...">
+
+    <!-- BOOTSTRAP ALERT - SUCCESSFUL LOGIN - START-->
+
+    {% if messages %}
+    </br>
+    {% for message in messages %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+
+    <!-- BOOTSTRAP ALERT - SUCCESSFUL LOGIN - END-->
+    </br>
+    <!-- GREER THE USER - BEGIN -->
+
+    {% if user.is_authenticated %}
+    <div class="greeting">
+        <h1 class="text-center">Welcome to the Anger Iceberg App {{ user.username }}!</h1>
+        <p class="text-center">Find and click an emotion that most describes the root of your anger.</p>
+    </div>
+
+    <!-- FEAR: : KWs fear, faith, courage, -->
+    <form method=POST action="{% url 'advice' %}" class="form-inline my-2 my-lg-0">
+        {% csrf_token %}
+        <button class="btn btn-info btn-lg my-2 my-sm-0" name="feeling" value='fearful' type="submit">
+            😨 Fearful
+        </button>
+    </form>
+    <!-- GUILT: KWs forgive,  -->
+    <form method=POST action="{% url 'advice' %}" class="form-inline my-2 my-lg-0">
+        {% csrf_token %}
+        <button class="btn btn-info btn-lg my-2 my-sm-0" name="feeling" value='guilty' type="submit">
+            😞 Guilty
+        </button>
+    </form>
+    <!-- DISTRUST: KWs distrust, trust,  -->
+    <form method=POST action="{% url 'advice' %}" class="form-inline my-2 my-lg-0">
+        {% csrf_token %}
+        <button class="btn btn-info btn-lg my-2 my-sm-0" name="feeling" value='distrustful' type="submit">
+            🤨 Distrustful
+        </button>
+    </form>
+    <!-- ATTACKED: KWs pain, enemy, enemies -->
+    <form method=POST action="{% url 'advice' %}" class="form-inline my-2 my-lg-0">
+        {% csrf_token %}
+        <button class="btn btn-info btn-lg my-2 my-sm-0" name="feeling" value='attacked' type="submit">
+            🤕 Attacked
+        </button>
+    </form>
+    <!-- STRESS: KWs stress, anxiety -->
+    <form method=POST action="{% url 'advice' %}" class="form-inline my-2 my-lg-0">
+        {% csrf_token %}
+        <button class="btn btn-info btn-lg my-2 my-sm-0" name="feeling" value='stressed' type="submit">
+            🤯 Stressed
+        </button>
+    </form>
+    <!-- REJECTION: KWs  rejection, friend, confidence-->
+    <form method=POST action="{% url 'advice' %}" class="form-inline my-2 my-lg-0">
+        {% csrf_token %}
+        <button class="btn btn-info btn-lg my-2 my-sm-0" name="feeling" value='rejected' type="submit">
+            😭 Rejected
+        </button>
+    </form>
+    <!-- REGRET: KWs regret, content, enjoy -->
+    <form method=POST action="{% url 'advice' %}" class="form-inline my-2 my-lg-0">
+        {% csrf_token %}
+        <button class="btn btn-info btn-lg my-2 my-sm-0" name="feeling" value='regretful' type="submit">
+            😩 Regretful
+        </button>
+    </form>
+    <!-- END OF EMOTIONS -->
+    {% else %}
+    <h1 class="text-center">Welcome to the Anger Iceberg App!</h1>
+    <p class="text-center">Is this your first time here? If you haven''t already, be sure to create an account.
+        Otherwise,
+        go ahead and login!</p>
+    {% endif %}
+
+    <!-- GREET THE USER - END -->
+
+</div>
+
+
+{% endblock content %}

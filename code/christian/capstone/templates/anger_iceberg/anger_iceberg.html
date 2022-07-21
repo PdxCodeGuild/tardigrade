@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Anger Iceberg | What's below the surface?
+{% endblock title %}
+
+
+{% block content %}
+</br>
+<h1>Anger Iceberg</h1>
+<p>This is a test of a request to the API to create a DB.</p>
+
+</br>
+<h1>List of Quotes</h1>
+{% for quote in all_quotes %}
+<h5 style="background-color:DodgerBlue">{{quote.text}}"</h5>
+<p>-<b>{{quote.author}}</b></p>
+<hr>
+</br>
+{% endfor block%}
+{% endblock content %}

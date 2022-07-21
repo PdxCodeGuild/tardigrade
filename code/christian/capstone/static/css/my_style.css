@@ -1,0 +1,36 @@
+* {
+    text-align: center;
+}
+
+.container {
+    padding: 0;
+    margin: 0;
+}
+
+.ice {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    background-position: center center;
+    position: relative;
+}
+
+.container .alert {
+    position: absolute;
+    top: 15px;
+    left: 40%
+}
+
+.container .greeting {
+
+    position: absolute;
+    top: 100px;
+    color: white;
+    text-align: center;
+}
+
+[value~="fearful"] {
+    position: absolute;
+    top: 1000px;
+    left: 700px;
+}

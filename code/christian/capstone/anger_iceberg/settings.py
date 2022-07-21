@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'anger_iceberg_app',
+    'authenticate',
 ]
 
 MIDDLEWARE = [

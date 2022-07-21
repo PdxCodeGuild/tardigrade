@@ -18,5 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('anger_iceberg_app.urls') )
+    path('', include('anger_iceberg_app.urls') ),
+    path('', include('authenticate.urls') ),
 ]
