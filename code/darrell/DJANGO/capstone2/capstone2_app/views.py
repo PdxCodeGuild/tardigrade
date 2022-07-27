@@ -17,9 +17,11 @@ def about(request):
 
 def claims(request):
     notes = kisha_case_notes()
+    # email_to_claim()
+
 
     for x in range(len(notes)):
-        claim_number = notes[x]["Claim #"]
+        claim_number = f'#{notes[x]["Claim #"]}'
         lit_dates = notes[x]["Lit Dates"]
         claimant = notes[x]["Claimant"]
         action_required = notes[x]["Action Required"]
@@ -43,12 +45,40 @@ def claims(request):
 
 # gets all of the blog posts from the database and stores them in a variable
     claims = Claim.objects.all()
+    email_msg = Email.objects.all()
+    
+   
+    for x in range(len(email_msg)):
+    
+        email_claim_no = email_msg[x]
+        claim_id = Claim.objects.filter(claim_number=email_claim_no).first()
+        if claim_id:
+            email_id = Email.objects.get(id=claim_id.id)
+            print(claim_id, claim_id.id, email_id)
+      
+            
+                 
+        
+            
+            
+     
+        # for y in range(len(email_msg)):
+            
+        #     print(claimNum)
+        #     # if claim_number == claim:
+        #     #      email_msg = Email.objects.filter(claim_number == claim).all()
+        #     #      print(email_msg)
+
 
 # creates the context dictionary to send the blog posts to the template
     context = {
-        'claims': claims
+        'claims': claims,
+        'email_msg': email_msg
     }
     return render(request, 'pages/claims.html', context)
+
+
+
 
 
 
@@ -75,7 +105,7 @@ def email(request):
              
         else: 
             claimNum = "No matching claim number"
-   
+
         emailSubject = filtered_messages[x]['Subject']
         emailFrom = filtered_messages[x]['From: (Name)']
         emailFromAddress = filtered_messages[x]['From: (Address)']
@@ -84,13 +114,17 @@ def email(request):
         
         # print(claimNum)
         # print("Subject: " + emailSubject)
+
+
         
         Email.objects.get_or_create(claimNum=claimNum, emailSubject=emailSubject, emailFrom=emailFrom, emailFromAddress=emailFromAddress, emailTo=emailTo, emailBody=emailBody)
-
+        # Email.objects.all().delete()
     # filtered_messages.clear()
 
 # gets all of the blog posts from the database and stores them in a variable
+    # email_msgs = Email.objects.all()
     email_msgs = Email.objects.all()
+    # print(len(email_msgs))
 
 # creates the context dictionary to send the blog posts to the template
     context = {
