@@ -1,23 +1,73 @@
-{% extends 'base.html' %} {% block content %} {% if claims|length == 0 %}
+{% extends 'base.html' %} {% block content %} 
 
-<h1>Welcome to Ike's Capstone App!</h1>
-<p class="big_btn">
-  <a href="claims/">View claims</a>
-</p>
 
-{% else %}
+<h1>Dashboard</h1><hr>
 
-<h1>Search results: {{claims|length}} items</h1>
-<hr />
-{% for claim in claims %}
-<p class="description">
-  <a href="{%url 'see_details' claim.id %}">{{ claim.claim_number }}</a>
-</p>
-<div id="claim_info">
-  <p>Id: {{claim.id}}</p>
-  <p>Claim Number:{{claim.claim_number}}</p>
-  <p>Claimant: {{claim.claimant}}</p>
+<div id="home_container">
 
-  <hr />
-  {% endfor %} {% endif %} {% endblock %}
+
+
+<div id="total_claims" class="dashboard_item" >
+<div class="dashboard_item_header">
+<h1>Total Claims</h1>
 </div>
+
+<p>{{ total_claims }}</p></div>
+
+<div id="total_emails" class="dashboard_item" >
+<div class="dashboard_item_header">
+<h1>Total Emails</h1>
+</div>
+<p>{{ total_emails }}</p></div>
+
+<div id="nationwide"  class="dashboard_item" >
+<div class="dashboard_item_header">
+<h1>Nationwide Claims</h1>
+</div>
+<p>{{ nationwide }}</p></div>
+
+<div id="scottsdale"  class="dashboard_item" >
+<div class="dashboard_item_header">
+<h1>Scottsdale Claims</h1>
+</div>
+<p>{{ scottsdale }}</p></div>
+
+<div id="over_60"  class="dashboard_item" >
+<div class="dashboard_item_header">
+<h1>Claims Over 60 Days Since Last Note</h1>
+</div>
+<p>{{ total_claims_over_60 }}</p></div>
+
+</div>
+
+<div class="dash_separator">
+
+ <a href="claims/"><div class="view_claims"><p>
+ View claims
+</p></div></a>
+
+<a href="add_claims/"><div class="add_claim"><p>
+ Add new claim
+</p></div></a>
+
+<a href="email/"><div class="view_emails"><p>
+ View Emails
+</p></div></a>
+
+<div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {% endblock %}
+

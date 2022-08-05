@@ -1,13 +1,13 @@
 body {
   /* background-image: linear-gradient(
     to bottom,
-    #161616,
-    #131313,
-    #1f1f1f,
-    hsl(0, 0%, 14%),
-    #242424
+    #3b3b3b,
+    #3a3a3a,
+    #464646,
+    hsl(0, 0%, 19%),
+    #3b3b3b
   ); */
-  background-color: #fff;
+  background-color: rgb(48, 48, 48);
   background-repeat: no-repeat;
   padding: 0px;
   font-family: Arial, Helvetica, sans-serif;
@@ -16,10 +16,21 @@ body {
   color: rgb(238, 238, 238);
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
 #container {
   display: flex;
   /* flex-direction: row; */
 }
+
+
+
+#splash_main h1{
+  font-size: 40px;
+}
+
 
 #leftSideBar {
   /* background-image: linear-gradient(
@@ -30,20 +41,21 @@ body {
     #242424,
     #242424
   ); */
-  background-color: rgb(51, 0, 43);
-  width: 100px;
-  height: 100%;
+  background-color: rgb(27, 27, 27);
+
+  width: 8%;
+  height: 100vh;
   margin: 0px;
   padding: 15px 20px;
 }
 
 #logo {
-  background-image: url("Asset 1@3x.png");
-  background-size: 100px;
+  background-image: url("ClaimHub-logo.png");
+  background-size: 140px;
   background-repeat: no-repeat;
   width: 200px;
   height: 100px;
-  margin-top: 20px;
+  margin-top: -10px;
   /* text-align: center;
   vertical-align: bottom;
   width: 150px;
@@ -55,6 +67,26 @@ body {
   color: #eeeeee;
 }
 
+#logo_splash {
+  background-image: url("ClaimHub-logo.png");
+  background-size: 200px;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+  /* text-align: center;
+  vertical-align: bottom;
+  width: 150px;
+  height: 70px;
+  padding: 10px 0px;
+  font-family: Oswald;
+  font-style: italic; */
+  font-size: 25px;
+  color: #eeeeee;
+}
+
+
+
 #leftSidebarList {
   /* background-color: rgb(29, 29, 29); */
   padding: 20px 10px;
@@ -63,13 +95,18 @@ body {
 #leftSidebarList li {
   margin-bottom: 20px;
   color: rgb(168, 168, 168);
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 500;
 }
 
 #leftSidebarList li a {
   text-decoration: none;
   color: rgb(145, 145, 145);
+}
+
+i {
+  color: rgb(5, 141, 0);
+  margin-right: 10px;
 }
 
 #newClaim {
@@ -97,34 +134,26 @@ body {
     #242424,
     #292828
   ); */
-  background-color: rgb(51, 0, 43);
+  background-color: rgb(27, 27, 27);
   padding: 5px 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  
   margin-bottom: 25px;
   /* position: fixed; */
 }
 
-#navBar input {
-  background-color: rgb(104, 67, 101);
-  border-radius: 3px;
-  border: none;
-  padding: 10px;
-  color: rgb(255, 255, 255);
-  font-size: 13px;
-  width: 300px;
-  height: 20px;
-  margin-top: 20px;
-}
+
 
 #userProfile {
-  margin-right: 50px;
-  width: 172px;
+  margin-left: 0px;
+  width: 300px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   vertical-align: middle;
+  gap: 85px;
   /* background-color: blue; */
   padding: 10px;
 }
@@ -139,15 +168,17 @@ body {
   height: 60px;
 }
 
+
+
 #profileInfo h2 {
-  margin: 12px 0px 5px 0px;
+  margin: 12px 0px 5px -70px;
   color: rgb(235, 235, 235);
   font-weight: 600;
   font-size: 17px;
 }
 
 #profileInfo p {
-  margin: 0px;
+  margin: 0px 0px 0px -70px;
   font-size: 12px;
   font-weight: 500;
   color: rgb(141, 140, 140);
@@ -161,13 +192,15 @@ body {
 }
 
 #emailDiv {
-  border-radius: 3px;
+ 
   border: none;
   padding: 5px 30px;
   margin: 0px;
-  background-color: rgb(32, 32, 32);
-  border-bottom: 1px dotted #000;
+  background-color: rgb(34, 34, 34);
+ 
 }
+
+
 
 li {
   list-style: none;
@@ -179,12 +212,12 @@ li {
 }
 
 h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 25px;
   font-weight: 400;
   /* text-transform: uppercase; */
-  padding: 0px;
-  margin: 20px;
+  padding-left: 45px;
+
   color: rgb(180, 178, 178);
 }
 
@@ -331,13 +364,7 @@ pre {
   width: 35%;
 }
 
-.show {
-  display: block;
-}
 
-.hide {
-  display: none;
-}
 
 .DSLN {
   text-align: center;
@@ -348,3 +375,297 @@ pre {
 
 
 } */
+
+#search_div input {
+  color: #646464;
+  font-size: 16px !important;
+  background-color: rgb(228, 228, 228) !important;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 1px;
+  padding: 15px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.login_container input {
+  color: #646464;
+  font-size: 16px !important;
+  background-color: rgb(228, 228, 228) !important;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 1px;
+  padding: 15px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+#username {
+width: 90%;
+color: #646464;
+  font-size: 18px !important;
+ 
+
+}
+
+#password {
+width: 90%;
+color: #646464;
+  font-size: 18px !important;
+ 
+  
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  
+}
+
+.form_container {
+  width: 80%;
+  margin: 0 auto;
+  
+}
+
+.form_container label {
+  font-size: 20px;
+  color: #c5c2c2;
+}
+
+.form_container input[type="text"], textarea {
+  color: #ffffff;
+  font-size: 20px !important;
+  background: none;
+  border: none;
+  border-bottom: 1px dotted rgb(241, 241, 241);
+  /* border-radius: 1px;rgb(228, 228, 228) !important; */
+  padding: 5px;
+  margin: 15px;
+  /* width: 10%; */
+}
+
+
+
+label {
+  font-size: 13px;
+  color: #7c7c7c;
+  
+}
+
+.login_container {
+  width: 18%;
+  background-color: rgb(247, 247, 247);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0px 0px 50px #00000070;
+
+}
+.login_header {
+  width: 100%;
+  padding: 20px 0px 20px 0px;
+  font-size: 25px;
+  color: #969696;
+  font-weight: 100;
+  border-bottom: 1px solid #d8d8d8;
+
+}
+
+.login_form {
+  width: 80%;
+  /* background-color: rgb(43, 144, 226); */
+  padding: 27px;
+  
+
+}
+
+.form-group{
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.login_container a {
+  text-decoration: none;
+  color: rgb(0, 124, 207);
+  font-size: 11px;
+ 
+  
+}
+
+
+
+#login_button {
+  background-color: rgb(1, 139, 231);
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  padding: 15px;
+  width: 50%;
+}
+
+#search_div {
+  width: 30%;
+}
+
+#navBar input {
+  background-color: rgb(90, 90, 90) !important;
+  border-radius: 3px;
+  border: none;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  width: 300px;
+  height: 20px;
+  margin-top: 20px;
+}
+
+
+#search_button {
+  background-color: rgb(4, 105, 0);
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  padding: 12px;
+  width: 14%;
+  font-size: 15px;
+  
+}
+
+.back_to_link {
+  text-decoration: underline;
+  color: #778b00 !important;
+}
+
+#home_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 95%;
+  
+}
+
+.dashboard_item {
+  width: 220px;
+  background-color: #02751b;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* box-shadow: 0px 0px 25px #81818170; */
+  align-items: center;
+  text-align: center;
+  margin: 30px;
+  font-size: 40px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.dashboard_item_header {
+  border-bottom: 1px dashed rgb(214, 214, 214);
+  width: 100%;
+}
+
+.dashboard_item h1 {
+  font-size: 20px;
+  color: #e0e0e0;
+  padding:0;
+}
+
+.view_claims {
+  
+  font-size: 20px;
+  margin-left: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(4, 105, 0);
+  border-radius: 3px;
+  color: #fff;
+  padding: 5px 13px;
+  width: 230px;
+  text-align: center;
+
+}
+
+.view_emails {
+  
+  font-size: 20px;
+  margin-left: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(4, 105, 0);
+  border-radius: 3px;
+  color: #fff;
+  padding:  5px 13px;
+  width: 230px;
+  text-align: center;
+
+}
+
+.add_claim {
+  
+  font-size: 20px;
+  margin-left: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(4, 105, 0);
+  border-radius: 3px;
+  color: #fff;
+  padding:  5px 13px;
+  width: 230px;
+  text-align: center;
+
+}
+
+#total_claims {
+  background-color:  #610199;
+  color: #fff !important;
+}
+
+#total_emails {
+  background-color: #005ca7;
+  color: #fff !important;
+}
+
+#nationwide {
+  background-color: #bb4500;
+  color: #fff !important;
+}
+
+#scottsdale {
+  background-color: #ddb500;
+  color: #000 !important;
+}
+
+#scottsdale h1{
+  
+  color: #000 !important;
+}
+
+#over_60 {
+  background-color: #b90000;
+  color: #fff !important;
+}
+
+.message {
+  width:100%;
+  background-color: #3c5d61;
+  padding: 5px 0px 5px 45px;
+  font-size: 15px;
+  margin: 0px;
+  border-bottom: 1px dashed #0c201e;
+}
+
+.dash_separator {
+  border-top: 1px dashed rgb(158, 158, 158);
+  width: 100%;
+  padding: 30px 0px 0px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* box-shadow: 0px 0px 25px #81818170; */
+  align-items: center;
+  text-align: center;
+}
+
+

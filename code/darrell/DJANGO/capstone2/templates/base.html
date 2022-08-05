@@ -5,8 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/aecd4adda0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'styles.css' %}" />
-    
+    <link rel="stylesheet" href="{% static 'accordion.css' %}" />
+   
     {% comment %} <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -19,29 +21,34 @@
    <body>
     <div id="container">
       <div id="leftSideBar">
-        <div id="logo"></div>
+        <a href= "{% url 'home' %} "><div id="logo"></div></a>
         <div id="leftSideBarSection">
           <ul id="leftSidebarList">
             <li>
-              <a href=""
-                ><i class="fa-solid fa-chart-line" style="color: green"></i>
-                Dashboard</a
-              >
+              <a href= "http://127.0.0.1:8000"><i class="fa-solid fa-chart-line"></i>Dashboard</a>
             </li>
-            <li><a href="/claims/">Claims List</a></li>
-            <li><a href="/email/">Email List</a></li>
+            <li><i class="fa-solid fa-person-circle-exclamation" ></i><a href="/claims/">Claims List</a></li>
+            <li><i class="fa-solid fa-envelope"></i><a href="/email/">Email List</a></li>
+            <li><a href="{% url 'logout' %}" >Logout</a></li>   
           </ul>
         </div>
       </div>
       <div id="rightBar">
         <div id="navBar">
-          <input type="text" placeholder="Search" />
+          <div id="search_div">
+           <form class="" method="POST" action="{% url 'search' %} ">
+               {% csrf_token %}
+            <input type="text" placeholder="Search" name="searched" /> 
+            <button id="search_button" type="submit" class="">Go</button>
+            </form>
+            </div>
           <div id="userProfile">
             <div id="profilePic"></div>
             <div id="profileInfo">
               <h2>Kisha Eikner</h2>
               <p>Claims Adjuster I</p>
             </div>
+            {% comment %} <div id="logout"><a href="http://127.0.0.1:8000/accounts/logout">Logout</a></div> {% endcomment %}
           </div>
         </div>
         <div id="main">
@@ -49,7 +56,11 @@
 
     {% block content %} {% endblock %}
 </div>
-    <script src="{% static 'app.js' %}"></script>
+    
+    <script src="{% static 'app.js' %}"   type="text/javascript"></script>
+     <script src="{% static 'claims2.js' %}"  type="text/javascript"></script>
+      <script src="{% static 'claims3.js' %}"  type="text/javascript"></script>
+     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -70,5 +81,6 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/toastify-js"
     ></script>
+    
   </body>
 </html>

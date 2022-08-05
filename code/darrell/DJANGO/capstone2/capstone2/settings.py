@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'capstone2_app'
+    'capstone2_app',
+    'accounts',
+    'rest_framework',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [

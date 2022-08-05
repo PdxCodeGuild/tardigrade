@@ -1,4 +1,4 @@
-{% comment %} {% extends 'base.html' %} {% block content %} {% if claims|length == 0 %}
+{% extends 'base.html' %} {% block content %} {% if claims|length == 0 %}
 
 <h1>Claims List</h1>
 <p class="big_btn">
@@ -8,6 +8,7 @@
 {% else %}
 
 <h1>You have {{claims|length}} active claims</h1>
+<h1>You have {{email_msg|length}} matching emails</h1>
 
 <div id="claims">
   <table id="claimsTable" class="content-table">
@@ -43,10 +44,10 @@
           <td>
             <b><a href="">{{claim.claim_number}}</a></b>
           </td>
-          <td>{{claim.lit_dates}}</td>
-          <td>{{claim.claimant}}</td>
-          <td>{{claim.coverage_letter}}</td>
-          <td>{{claim.dc_assigned}}</td>
+          <td>{{claim_instance.lit_dates}}</td>
+          <td>{{claim_instance.claimant}}</td>
+          <td>{{claim_instance.coverage_letter}}</td>
+          <td>{{claim_instance.dc_assigned}}</td>
           <td>{{claim.date_coverage_letter_sent}}</td>
           <td id="DSLN">{{claim.days_since_last_note}}</td>
           <td>{{claim.follow_up_date}}</td>
@@ -63,13 +64,17 @@
           <td><a href="">Delete</a></td>
         </tr></a>
               
-            {% for email in email_msg %}
+            
+
+            {% for item in email_msg %}
+               {% if item.claimNum == claim.claim_number %}
 
                       <div id="emailDiv">
-                      <tr id="emailTR"><td id="emailTD"><a href=""><div id="emailDiv"><h2 id="claimNum">{{email.claimNum}}</h2><h3 id="Subject">{{email.emailSubject}}</h3>
-                      <h4 id="From">From: {{email.emailFrom}}</h4></div></a></td></tr>
+                      <tr id="emailTR"><td id="emailTD" colspan="20"><a href=""><div id="emailDiv"><h2 id="claimNum">{{item.claimNum}}</h2><h3 id="Subject">{{item.emailSubject}}</h3>
+                      <h4 id="From">From: {{item.emailFrom}}</h4></div></a></td></tr>
                     </div>
-            
+                
+                {%endif%}
          
             {% endfor %}
             
@@ -80,4 +85,8 @@
   </table>
 </div>
 
-{% endif %} {% endblock %} {% endcomment %}
+
+
+
+{% endif %} {% endblock %}
+

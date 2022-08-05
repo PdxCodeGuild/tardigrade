@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container mt-5">
+  <a href="{% url 'claims'%}" class="back_to_link"><h3>Back to claims</h3></a>
+  <ul>
+    <p>ID: {{ claim.id }}</p>
+    <p>Claim Number: {{ claim.claim_number}}</p>
+    <p>Lit. Dates: {{ claim.lit_dates }}</p>
+    <p>Claimant: {{ claim.claimant}}</p>
+    <p>Coverage Letter: {{ claim.coverage_letter}}</p>
+    <p>DC Assigned?: {{ claim.dc_assigned}}</p>
+    <p>Date Coverage Letter Sent: {{ claim.date_coverage_letter_sent}}</p>
+    <p>Days Since Last Note: {{ claim.days_since_last_note}}</p>
+    <p>Follow Up Date: {{ claim.follow_up_date}}</p>
+    <p>In Suit?: {{ claim.in_suit}}</p>
+    <p>Insured Facility: {{ claim.insured_facility}}</p>
+    <p>Insurer Policy: {{ claim.insurer_policy}}</p>
+    <p>Last Note Date: {{ claim.last_note_date}}</p>
+    <p>Settlement Value: {{ claim.settlement_value}}</p>
+    <p>State: {{ claim.state}}</p>
+    <p>Action Required: {{ claim.action_required}}</p>
+    <p>Bulk Insured: {{ claim.bulk_insured}}</p>
+    <p>Claim Type: {{ claim.claim_type}}</p>
+  </ul>
+</div>
+
+<a href="{% url 'delete_claim' claim.id %}"><div class="">Edit Claim</div></a>
+            <a href="{% url 'delete_claim' claim.id %}"><div class="">Delete Claim</div></a>
+{% endblock %}
+
+
+

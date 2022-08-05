@@ -1,4 +1,8 @@
 from django.db import models
+from datetime import datetime
+from datetime import date
+from datetime import timedelta
+
 
 
 class Claim(models.Model):
@@ -9,11 +13,8 @@ class Claim(models.Model):
     in_suit = models.CharField(max_length=100, null=True, blank=True)
     dc_assigned = models.CharField(max_length=100, null=True, blank=True)
     state = models.CharField(max_length=50, null=True, blank=True)
-    date_coverage_letter_sent = models.CharField(
-        max_length=100, null=True, blank=True)
-    # last_note_date = models.DateField(null=True, blank=True)
-    days_since_last_note = models.CharField(max_length=100, null=True, blank=True)
-    # follow_up_date = models.DateField(null=True, blank=True)
+    date_coverage_letter_sent = models.CharField(max_length=100, null=True, blank=True)
+    last_note_date = models.DateField(null=True, blank=True)
     insured_facility = models.CharField(max_length=200, null=True, blank=True)
     coverage_letter = models.CharField(max_length=200, null=True, blank=True)
     settlement_value = models.CharField(max_length=200, null=True, blank=True)
@@ -25,6 +26,33 @@ class Claim(models.Model):
     def __str__(self):
         return f'{self.claim_number}'
 
+   
+    @property
+    def Days_Since_Last_Note(self):
+        today = date.today()
+        dsln = abs(self.last_note_date - today)
+        dsln_stripped = str(dsln).split(",",1)[0]
+        dsln_stripped_num = str(dsln_stripped).split(" ")[0]
+        return  dsln_stripped_num
+
+    @property
+    def Days_Since_Last_Note_Over_60(self):
+        today = date.today()
+        dsln = abs(self.last_note_date - today)
+        dsln_stripped = str(dsln).split(",",1)[0]
+        dsln_stripped_num = str(dsln_stripped).split(" ")[0]
+        if (int(dsln_stripped_num) > 59):
+            return  dsln_stripped_num
+        
+
+    @property
+    def Follow_Up_Date(self):
+        fwp_date = self.last_note_date + timedelta(days=60)
+        fwp_date_stripped = str(fwp_date).split(",",1)[0]
+        # fwp_string =f'{fwp_date_stripped: %m/%d/%Y}'
+        return  fwp_date_stripped
+
+   
 
 
 
@@ -39,7 +67,7 @@ class Email(models.Model):
 
 
     def __str__(self):
-        return f'{self.claimNum}'
+        return f'{self.claimNum}, {self.claim}'
 
 
 

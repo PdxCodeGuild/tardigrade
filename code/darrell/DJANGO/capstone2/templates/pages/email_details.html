@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container mt-5">
+  <a href="{% url 'email'%}" class="back_to_link"><h3>Back to emails</h3></a>
+  <ul>
+    <p>ID: {{ email_msg.id }}</p>
+    <p>Claim Number: {{ email_msg.claimNum}}</p>
+    <p>Subject: {{ email_msg.emailSubject}}</p>
+    <p>From: {{ email_msg.emailFrom}}</p>
+    <p>From Address: {{ email_msg.emailFromAddress}}</p>
+    <p>To: {{ email_msg.emailTo}}</p>
+    <p><pre>{{email_msg.emailBody}}</pre></p>
+  </ul>
+</div>
+{% endblock %}
+
+

@@ -1,75 +1,124 @@
-{% extends 'base.html' %} {% block content %} {% if claims|length == 0 %}
+{% extends 'base.html' %} {% block content %} 
 
-<h1>Claims List</h1>
+
+
+{% if claims_list|length == 0 %}
+
+<h1>Claims List</h1><hr>
 <p class="big_btn">
   <a href="claims/">View claims</a>
 </p>
 
 {% else %}
+<h1>Claims List</h1><hr> 
+<p class="message">You have {{claims_list|length}} active claims</p>
+<p class="message">You have {{email_msg|length}} matching emails</p>
+<a href="{% url 'add_claims' %}" ><div class="add_claim"><p>Add a claim</p></div></a>
 
-<h1>You have {{claims|length}} active claims</h1>
 
-<div id="claims">
-  <table id="claimsTable" class="content-table">
-    <thead>
-      <tr>
-        <th></th>
-        <th class="sm-td">Claim #</th>
-        <th class="md-td">Lit. Dates</th>
-        <th class="md-td">Claimant</th>
-        <th class="sm-td">COV LTR</th>
-        <th>DC ASGN?</th>
-        <th>COV LTR Sent Date</th>
-        <th class="DSLN">DSLN</th>
-        <th>FWP Date</th>
-        <th>In Suit?</th>
-        <th>Insured Facility</th>
-        <th>Insurer Policy</th>
-        <th>Last Note</th>
-        <th>Settlement Value</th>
-        <th>State</th>
-        <th>Action Required</th>
-        <th>Bulk Insured</th>
-        <th>Claim Type</th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody id="firstTbody">
-      {% for claim in claims %}
-      <a href=""
-        ><tr>
-          <td><button name="" id="toggleBtn" class="toggleBtn">+</button></td>
-          <td>
-            <b><a href="">{{claim.claim_number}}</a></b>
-          </td>
-          <td>{{claim.lit_dates}}</td>
-          <td>{{claim.claimant}}</td>
-          <td>{{claim.coverage_letter}}</td>
-          <td>{{claim.dc_assigned}}</td>
-          <td>{{claim.date_coverage_letter_sent}}</td>
-          <td id="DSLN">{{claim.days_since_last_note}}</td>
-          <td>{{claim.follow_up_date}}</td>
-          <td>{{claim.in_suit}}</td>
-          <td>{{claim.insured_facility}}</td>
-          <td>{{claim.insurer_policy}}</td>
-          <td>{{claim.last_note_date}}</td>
-          <td>{{claim.settlement_value}}</td>
-          <td>{{claim.state}}</td>
-          <td>{{claim.action_required}}</td>
-          <td>{{claim.bulk_insured}}</td>
-          <td>{{claim.claim_type}}</td>
-          <td><a href="">Edit</a></td>
-          <td><a href="">Delete</a></td>
-        </tr></a>
-              
+
+
+
+<ul class="nav">
+<li class="nav_header">
+       <div class="item_div_claimnum">Claim #</div>
+        <div class="item_div">Lit. Dates</div>
+        <div class="item_div">Claimant</div>
+        <div class="item_div">COV LTR</div>
+        <div class="item_div">DC ASGN?</div>
+        <div class="item_div">COV LTR Sent</div>
+        <div class="item_div">DSLN</div>
+        <div class="item_div">FWP Date</div>
+        <div class="item_div">In Suit?</div>
+        <div class="item_div">Insured Facility</div>
+        <div class="item_div">Insurer Policy</div>
+        <div class="item_div">Last Note</div>
+        <div class="item_div">Settlement Value</div>
+        <div class="item_div">State</div>
+        <div class="item_div">Action Required</div>
+        <div class="item_div">Bulk Insured</div>
+        <div class="item_div">Claim Type</div>
+        <div class="item_div_edit_delete">-</div>
+        <div class="item_div_edit_delete">-</div>
+    </li>
+   
+  
+   {% for claim in claims_list %}
+   
+   <li class="nav-item">
+     <a href="{% url 'claim_details' claim.id %}" class="nav-link">
+            <div class="item_div_claimnum"><b>{{claim.claim_number}}</b></div>
+            <div class="item_div">{{claim.lit_dates}}</div>
+            <div class="item_div">{{claim.claimant}}</div>
+            <div class="item_div">{{claim.coverage_letter}}</div>
+            <div class="item_div">{{claim.dc_assigned}}</div>
+            <div class="item_div">{{claim.date_coverage_letter_sent}}</div>
+            <div class="item_div dsln">{{claim.Days_Since_Last_Note}}</div>
+            <div class="item_div">{{claim.Follow_Up_Date}}</div>
+            <div class="item_div">{{claim.in_suit}}</div>
+            <div class="item_div">{{claim.insured_facility}}</div>
+            <div class="item_div">{{claim.insurer_policy}}</div>
+            <div class="item_div">{{claim.last_note_date}}</div>
+            <div class="item_div">{{claim.settlement_value}}</div>
+            <div class="item_div">{{claim.state}}</div>
+            <div class="item_div">{{claim.action_required}}</div>
+            <div class="item_div">{{claim.bulk_insured}}</div>
+            <div class="item_div">{{claim.claim_type}}</div></a>
+            <a href="{% url 'update_claim' claim.id %}"><div class="item_div_edit_delete">Edit</div></a>
+            <a href="{% url 'delete_claim' claim.id %}"><div class="item_div_edit_delete">Delete</div></a>
+      
+      
+
+      
+      
+
+  </li>
      
-      
-      
+         
+           
+             {% for item in email_msg %}
+            {% if item.claimNum == claim.claim_number %}
+              <div class="nav-submenu ">
+        
+         <a href="" class="nav-submenu-link"><div id="emailDiv"><h2 id="claimNum">{{item.claimNum}}</h2><h3 id="Subject">Subject: {{item.emailSubject}}</h3>
+                      <h4 id="From">From: {{item.emailFrom}}</h4></div></a>
+              </div>
+             {%endif%} {% endfor %}
+            
+         
 
-      {% endfor %}
-    </tbody>
-  </table>
-</div>
+    
 
-{% endif %} {% endblock %}
+
+    {% endfor %}
+   
+   
+  
+   
+</ul>
+
+<!--
+
+
+
+{{ claims_list }}<br/>
+Has Previous: {{ claims_list.has_previous }}<br/>
+Has Next: {{ claims_list.has_next }}<br/>
+Current Page: {{ claims_list.number }}<br/>
+Number of Pages: {{ claims_list.paginator.num_pages }}<br/><br/><br/><br/>
+
+-->
+
+{% if claims_list.has_previous %}
+    <a href="?page=1">&laquo First</a>
+    <a href="?page={{ claims_list.previous_page_number }}">Previous</a>
+{% endif %}
+
+Page {{ claims_list.number }} of {{ claims_list.paginator.num_pages }}
+
+{% if claims_list.has_next %}
+    <a href="?page={{ claims_list.next_page_number }}">Next</a>
+    <a href="?page={{ claims_list.paginator.num_pages }}">Last &raquo</a>
+{% endif %}<br/><br/><br/><br/>
+<br/><br/><br/><br/>
+{% endif %}{% endblock %}
