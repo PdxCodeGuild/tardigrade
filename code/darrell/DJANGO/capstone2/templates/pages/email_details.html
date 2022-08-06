@@ -1,6 +1,16 @@
 {% extends 'base.html' %} {% block content %}
-<div class="container mt-5">
-  <a href="{% url 'email'%}" class="back_to_link"><h3>Back to emails</h3></a>
+<div class="page_header">
+<h1>Email Details View</h1>  
+<a href="{% url 'claims' %}" ><div class="add_claim"><p>View claims</p></div></a>
+</div> 
+
+<div class="back_link">
+<a href="{% url 'claims'%}" class="back_to_link"><h3>Back to claims list</h3></a>
+<a href="{% url 'email'%}" class="back_to_link"><h3>Back to email list</h3></a>
+</div>
+
+<div class="email_details_container">
+  
   <ul>
     <p>ID: {{ email_msg.id }}</p>
     <p>Claim Number: {{ email_msg.claimNum}}</p>

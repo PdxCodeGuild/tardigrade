@@ -1,30 +1,44 @@
 {% extends 'base.html' %} {% block content %}
-<div class="container mt-5">
-  <a href="{% url 'claims'%}" class="back_to_link"><h3>Back to claims</h3></a>
-  <ul>
-    <p>ID: {{ claim.id }}</p>
-    <p>Claim Number: {{ claim.claim_number}}</p>
-    <p>Lit. Dates: {{ claim.lit_dates }}</p>
-    <p>Claimant: {{ claim.claimant}}</p>
-    <p>Coverage Letter: {{ claim.coverage_letter}}</p>
-    <p>DC Assigned?: {{ claim.dc_assigned}}</p>
-    <p>Date Coverage Letter Sent: {{ claim.date_coverage_letter_sent}}</p>
-    <p>Days Since Last Note: {{ claim.days_since_last_note}}</p>
-    <p>Follow Up Date: {{ claim.follow_up_date}}</p>
-    <p>In Suit?: {{ claim.in_suit}}</p>
-    <p>Insured Facility: {{ claim.insured_facility}}</p>
-    <p>Insurer Policy: {{ claim.insurer_policy}}</p>
-    <p>Last Note Date: {{ claim.last_note_date}}</p>
-    <p>Settlement Value: {{ claim.settlement_value}}</p>
-    <p>State: {{ claim.state}}</p>
-    <p>Action Required: {{ claim.action_required}}</p>
-    <p>Bulk Insured: {{ claim.bulk_insured}}</p>
-    <p>Claim Type: {{ claim.claim_type}}</p>
-  </ul>
+
+<div class="page_header">
+<h1>Claim Details View</h1>  
+<a href="{% url 'claims' %}" ><div class="add_claim"><p>View claims</p></div></a>
+</div> 
+
+<div class="back_link">
+<a href="{% url 'claims'%}" class="back_to_link"><h3>Back to claims list</h3></a>
 </div>
 
-<a href="{% url 'delete_claim' claim.id %}"><div class="">Edit Claim</div></a>
-            <a href="{% url 'delete_claim' claim.id %}"><div class="">Delete Claim</div></a>
+
+
+
+<div class="claim_details_container">
+  
+  <ul  class="claim_details_list">
+    <p>ID: {{ claim.id }}</p>
+    <p>Claim Number <br/>{{ claim.claim_number}}</p>
+    <p>Lit. Dates<br/> {{ claim.lit_dates }}</p>
+    <p>Claimant<br/> {{ claim.claimant}}</p>
+    <p>Coverage Letter<br/> {{ claim.coverage_letter}}</p>
+    <p>DC Assigned?<br/> {{ claim.dc_assigned}}</p>
+    <p>Date Coverage Letter Sent<br/> {{ claim.date_coverage_letter_sent}}</p>
+    <p>Last Note Date<br/> {{ claim.last_note_date}}</p>
+    <p>Days Since Last Note<br/>{{claim.Days_Since_Last_Note}}</p>
+    <p>Follow Up Date<br/>{{claim.Follow_Up_Date}}</p>
+    <p>In Suit?<br/> {{ claim.in_suit}}</p>
+    <p>Insured Facility<br/> {{ claim.insured_facility}}</p>
+    <p>Insurer Policy<br/> {{ claim.insurer_policy}}</p>
+    <p>Settlement Value<br/> {{ claim.settlement_value}}</p>
+    <p>State<br/> {{ claim.state}}</p>
+    <p>Action Required<br/> {{ claim.action_required}}</p>
+    <p>Bulk Insured<br/> {{ claim.bulk_insured}}</p>
+    <p>Claim Type<br/> {{ claim.claim_type}}</p>
+  </ul>
+
+</div>
+
+<a href="{% url 'update_claim' claim.id %}"><div class="add_claim">Edit Claim</div></a>
+            <a href="{% url 'delete_claim' claim.id %}"><div class="add_claim">Delete Claim</div></a>
 {% endblock %}
 
 

@@ -7,7 +7,7 @@ body {
     hsl(0, 0%, 19%),
     #3b3b3b
   ); */
-  background-color: rgb(48, 48, 48);
+  background-color: rgb(58, 58, 58) !important;
   background-repeat: no-repeat;
   padding: 0px;
   font-family: Arial, Helvetica, sans-serif;
@@ -33,14 +33,7 @@ a {
 
 
 #leftSideBar {
-  /* background-image: linear-gradient(
-    to bottom,
-    #000000,
-    #131313,
-    #1f1f1f,
-    #242424,
-    #242424
-  ); */
+
   background-color: rgb(27, 27, 27);
 
   width: 8%;
@@ -56,13 +49,6 @@ a {
   width: 200px;
   height: 100px;
   margin-top: -10px;
-  /* text-align: center;
-  vertical-align: bottom;
-  width: 150px;
-  height: 70px;
-  padding: 10px 0px;
-  font-family: Oswald;
-  font-style: italic; */
   font-size: 25px;
   color: #eeeeee;
 }
@@ -74,13 +60,6 @@ a {
   width: 200px;
   height: 100px;
   margin: 0 auto;
-  /* text-align: center;
-  vertical-align: bottom;
-  width: 150px;
-  height: 70px;
-  padding: 10px 0px;
-  font-family: Oswald;
-  font-style: italic; */
   font-size: 25px;
   color: #eeeeee;
 }
@@ -88,20 +67,19 @@ a {
 
 
 #leftSidebarList {
-  /* background-color: rgb(29, 29, 29); */
-  padding: 20px 10px;
+   padding: 20px 10px;
 }
 
 #leftSidebarList li {
   margin-bottom: 20px;
-  color: rgb(168, 168, 168);
+  color: rgb(214, 214, 214);
   font-size: 15px;
   font-weight: 500;
 }
 
 #leftSidebarList li a {
   text-decoration: none;
-  color: rgb(145, 145, 145);
+  color: rgb(196, 196, 196);
 }
 
 i {
@@ -126,21 +104,13 @@ i {
 }
 
 #navBar {
-  /* background-image: linear-gradient(
-    to bottom,
-    #000000,
-    #131313,
-    #1f1f1f,
-    #242424,
-    #292828
-  ); */
+
   background-color: rgb(27, 27, 27);
   padding: 5px 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  
-  margin-bottom: 25px;
+   margin-bottom: 25px;
   /* position: fixed; */
 }
 
@@ -154,7 +124,6 @@ i {
   justify-content: flex-start;
   vertical-align: middle;
   gap: 85px;
-  /* background-color: blue; */
   padding: 10px;
 }
 
@@ -179,7 +148,7 @@ i {
 
 #profileInfo p {
   margin: 0px 0px 0px -70px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   color: rgb(141, 140, 140);
 }
@@ -196,7 +165,7 @@ i {
   border: none;
   padding: 5px 30px;
   margin: 0px;
-  background-color: rgb(34, 34, 34);
+  background-color: rgb(26, 26, 26);
  
 }
 
@@ -213,19 +182,17 @@ li {
 
 h1 {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 400;
-  /* text-transform: uppercase; */
   padding-left: 45px;
 
-  color: rgb(180, 178, 178);
+  color: rgb(211, 211, 211);
 }
 
 a h2 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   font-weight: 400;
-  /* text-transform: uppercase; */
   padding: 0px;
   margin: 0px;
   color: rgb(180, 178, 178);
@@ -253,7 +220,7 @@ hr {
 
 #emailULList a {
   text-decoration: none;
-  color: rgb(173, 173, 173);
+  color: rgb(73, 73, 73);
 }
 
 pre {
@@ -265,7 +232,7 @@ pre {
 }
 
 .content-table {
-  /* background-color: rgb(233, 233, 233); */
+  
   min-width: 400px;
   margin: 0 auto;
   border-collapse: collapse;
@@ -370,22 +337,7 @@ pre {
   text-align: center;
 }
 
-/* tbody {
-  display: flex;
 
-
-} */
-
-#search_div input {
-  color: #646464;
-  font-size: 16px !important;
-  background-color: rgb(228, 228, 228) !important;
-  border: 1px solid rgb(204, 204, 204);
-  border-radius: 1px;
-  padding: 15px;
-  margin-top: 10px;
-  width: 100%;
-}
 
 .login_container input {
   color: #646464;
@@ -440,10 +392,10 @@ form {
   background: none;
   border: none;
   border-bottom: 1px dotted rgb(241, 241, 241);
-  /* border-radius: 1px;rgb(228, 228, 228) !important; */
+ 
   padding: 5px;
   margin: 15px;
-  /* width: 10%; */
+
 }
 
 
@@ -460,10 +412,17 @@ label {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  box-shadow: 0px 0px 50px #00000070;
+  justify-content: space-between;
+  
+  box-shadow: 0px 0px 10px #a0a0a070;
 
 }
+
+.login_container input {
+  margin-bottom: 10px;
+
+}
+
 .login_header {
   width: 100%;
   padding: 20px 0px 20px 0px;
@@ -476,7 +435,7 @@ label {
 
 .login_form {
   width: 80%;
-  /* background-color: rgb(43, 144, 226); */
+
   padding: 27px;
   
 
@@ -491,7 +450,7 @@ label {
   text-decoration: none;
   color: rgb(0, 124, 207);
   font-size: 11px;
- 
+  margin-right: 100px;
   
 }
 
@@ -506,8 +465,54 @@ label {
   width: 50%;
 }
 
+.submit_button {
+  
+  font-size: 15px;
+  margin: 15px 40px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(4, 105, 0);
+  border-radius: 3px;
+  border: none;
+  color: #fff;
+  padding:  5px 15px;
+  width: 100px;
+  text-align: center;
+}
+
+.update_button {
+  
+  font-size: 15px;
+  margin: 15px 40px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(4, 105, 0);
+  border-radius: 3px;
+  border: none;
+  color: #fff;
+  padding:  20px;
+  width: 150px;
+  text-align: center;
+}
+
+
+
 #search_div {
-  width: 30%;
+  /* width: 24%; */
+ 
+  margin: 20px 0px 20px 13px;
+  /* background-color: aqua; */
+
+}
+
+#search_button {
+  background-color: rgb(4, 105, 0);
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  padding: 10px;
+  width: 50px;
+  height: 40px;
+  font-size: 15px;
+  
 }
 
 #navBar input {
@@ -519,20 +524,10 @@ label {
   font-size: 13px;
   width: 300px;
   height: 20px;
-  margin-top: 20px;
+  margin-right: 10px;
 }
 
 
-#search_button {
-  background-color: rgb(4, 105, 0);
-  border: none;
-  border-radius: 3px;
-  color: #fff;
-  padding: 12px;
-  width: 14%;
-  font-size: 15px;
-  
-}
 
 .back_to_link {
   text-decoration: underline;
@@ -605,35 +600,35 @@ label {
 
 .add_claim {
   
-  font-size: 20px;
-  margin-left: 30px;
+  font-size: 15px;
+  margin: 15px 40px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: rgb(4, 105, 0);
   border-radius: 3px;
   color: #fff;
-  padding:  5px 13px;
-  width: 230px;
+  padding:  5px 15px;
+  width: 100px;
   text-align: center;
 
 }
 
 #total_claims {
-  background-color:  #610199;
+  background-color:  #808f76;
   color: #fff !important;
 }
 
 #total_emails {
-  background-color: #005ca7;
+  background-color: #84a36e;
   color: #fff !important;
 }
 
 #nationwide {
-  background-color: #bb4500;
+  background-color: #1f8368;
   color: #fff !important;
 }
 
 #scottsdale {
-  background-color: #ddb500;
+  background-color: #9db937;
   color: #000 !important;
 }
 
@@ -643,13 +638,13 @@ label {
 }
 
 #over_60 {
-  background-color: #b90000;
+  background-color: #4f7942;
   color: #fff !important;
 }
 
 .message {
   width:100%;
-  background-color: #3c5d61;
+  background-color: #506b63;
   padding: 5px 0px 5px 45px;
   font-size: 15px;
   margin: 0px;
@@ -668,4 +663,103 @@ label {
   text-align: center;
 }
 
+.page_header {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px dashed rgb(158, 158, 158);
+  
+}
 
+.page-link {
+  padding:5px;
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 50px;
+
+}
+
+.back_link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 12px;
+  width: 15%;
+  padding: 10px 44px;
+  font-size: 15px;
+}
+
+.back_link a {
+  text-decoration: none;
+  color: rgb(4, 105, 0);
+  font-size: 18px;
+}
+
+.back_to_link:hover {
+ text-decoration: underline;
+ color: #fff;
+}
+
+
+.email_details_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 12px;
+  width: 92%;
+  padding: 30px;
+  background-color: #fff;
+  color: #000;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.email_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 12px;
+  width: 92%;
+  padding: 30px;
+  background-color: rgb(26, 26, 26);
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.claim_details_container {
+ 
+  width: 90%;
+  padding: 30px;
+  background-color: rgb(36, 36, 36) ;
+  color: #fff;
+  margin: 0 auto;
+  margin-top: 30px;
+  font-size: 16px;
+  
+}
+
+.claim_details_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.search_container{
+  width: 90%;
+  padding: 30px;
+  background-color: rgb(36, 36, 36) ;
+  color: #fff;
+  margin: 0 auto;
+  margin-top: 30px;
+  font-size: 16px;
+
+}
+
+span {
+  color: rgb(7, 173, 1);
+}

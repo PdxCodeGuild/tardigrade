@@ -2,47 +2,49 @@
 
  .nav {
     list-style-type: none;
-    border-radius: 2px;
-    /* background: #3e5165; */
+    border-radius: 4px;
+    /* background: #057cfc; */
     margin: 0 auto;
-    padding: 0;
+    margin-top: 30px;
+    padding: 0px;
     width: 90%;
-    overflow: hidden;
+    
     /* box-shadow: 0px 0px 25px #00000070; */
  }
 
  .nav_header {
+    
+
     font-size: 12px;
-    background: #146600;
-    /* border-bottom: 3px solid rgb(51, 51, 51); */
+    background: #52634e;
+    margin-bottom: 2px;
+    overflow: hidden;
+    text-overflow: clip;
+    max-height: 70px;
+    text-decoration: none;
+    color: rgb(224, 224, 224);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 15px 0px 15px 0px;
-    height: 50px;
-    max-height: 50px;
-    align-items: center;
-    position: sticky;
-    gap: 5px;
-   
+    justify-content:flex-start;
+    /* flex-wrap: nowrap; */
+    align-items: top;
+    gap: 0px;
  }
 
  .nav-item {
     font-size: 12px;
-    background: #45484d;
-    /* border-bottom: 3px solid rgb(51, 51, 51); */
+    background: #203135;
     display: flex;
     flex-direction: row;
     justify-content:flex-start;
     align-items: top;
-    margin-left: -25px;
-    margin-bottom: 2px;
     overflow: hidden;
     text-overflow: clip;
-    height: 80px;
-    padding: 13px;
-    max-height: 100px;
-    gap: 25px;
+    max-height: 70px;
+    width: 100%;
+    border-bottom: 1px dotted rgb(90, 90, 90);
+     gap: 14px;
+
   
       
  
@@ -51,48 +53,41 @@
  .nav-item_has_email {
     
     font-size: 12px;
-    background: #571d3f;
-    border-bottom: 3px solid rgb(51, 51, 51);
-    display: flex;
-    flex-direction: row;
-    justify-content:flex-start;
-    align-items: top;
-    margin-left: -68px;
+    background: #717930;
     overflow: hidden;
     text-overflow: clip;
-    height: 80px;
-    padding: 13px;
-    max-height: 100px;
+    max-height: 70px;
+
     
 
   }
 
 
  
- /* .nav-item:last-child {
-    border-bottom: none;
- } */
  
  .nav-link {
     text-decoration: none;
-    width: 100%;
-    color: #fff;
+    width: 92%;
+    color: rgb(224, 224, 224);
     display: flex;
     flex-direction: row;
     justify-content:flex-start;
     align-items: top;
-    margin-left: 50px;
-    overflow: hidden;
-    text-overflow: clip;
-    height: 80px;
-    padding: 13px;
-    max-height: 100px;
-    gap: 15px;
+    gap: 0px;
+   
   
     
    
  }
 
+ .edit_delete_link {
+   
+    padding: 20px 0px 0px 8px;
+ }
+
+ .edit_delete_link:hover {
+   text-decoration: underline;
+ }
  
  .nav-submenu {
    
@@ -127,39 +122,45 @@
  } */
 
  .item_div{
-     width: 70px;
-     height: 95%;
-     text-align: left;
-     padding: 5px 0px 5px 0px;
-     overflow: hidden;
-     vertical-align: top;
-     margin-top: -10px;
-     /* background-color: aquamarine; */
- 
+    width: 50px;
+    height: 100px;
+    text-align: left;
+    padding: 10px 15px;
+    overflow: hidden;
+    
+    border-right: 1px dotted rgb(90, 90, 90);
      
-     /* border-right: 1px dashed #5c5c5c; */
-     /* border-bottom: 1px dashed #5c5c5c; */
  }
 
  .item_div_edit_delete {
-    width: 20px;
-    height: 80%;
+    width: 42px;
+    /* background-color: aquamarine; */
+    color: #fff;
+    
    
-     /* background-color: aqua; */
-     /* border-right: 1px dashed #5c5c5c;
-     border-bottom: 1px dashed #5c5c5c; */
-    /* background-color: aqua; */
+  
+
  }
 
  .item_div_claimnum {
     width: 80px;
-    height: 80%;
-    text-align: center;
+    height: 100px;
+    text-align: left;
+    padding: 10px 15px;
+    /* background:#155a34; */
+    border-right: 1px dotted rgb(90, 90, 90);
+    /* border-bottom: 1px dotted rgb(155, 155, 155); */
+     
+ }
+
+ .item_div_claimnum_header {
+    width: 80px;
+    height: 100px;
+    text-align: left;
+    padding: 10px 15px;
+    border-right: 1px dotted rgb(90, 90, 90);
     
-     /* background-color: aqua; */
-     /* border-right: 1px dashed #5c5c5c;
-     border-bottom: 1px dashed #5c5c5c; */
-    /* background-color: aqua; */
+     
  }
 
  .show {

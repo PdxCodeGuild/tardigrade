@@ -39,7 +39,7 @@
            <form class="" method="POST" action="{% url 'search' %} ">
                {% csrf_token %}
             <input type="text" placeholder="Search" name="searched" /> 
-            <button id="search_button" type="submit" class="">Go</button>
+            <button id="search_button" type="submit">Go</button>
             </form>
             </div>
           <div id="userProfile">
@@ -48,7 +48,7 @@
               <h2>Kisha Eikner</h2>
               <p>Claims Adjuster I</p>
             </div>
-            {% comment %} <div id="logout"><a href="http://127.0.0.1:8000/accounts/logout">Logout</a></div> {% endcomment %}
+         
           </div>
         </div>
         <div id="main">

@@ -15,19 +15,3 @@ for (let i=0; i < tdDSLN.length; i++) {
 }
 
 
-
-
-// for (let i=0; i < tdDSLN.length; i++) {
-    
-//     console.log(tdDSLN.textContent);
-
-//     if (tdDSLN.textContent > 59) {
-//         tdDSLN.style.backgroundColor = "#ff4364";
-//     } else {
-//         tdDSLN.style.backgroundColor = "";
-//     }
-
-
-
- 
-// // }       

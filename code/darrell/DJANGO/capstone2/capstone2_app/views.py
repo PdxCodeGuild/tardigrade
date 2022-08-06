@@ -194,7 +194,7 @@ def add_claims(request):
         dc_assigned = request.POST['dc_assigned']
         state = request.POST['state']
         date_coverage_letter_sent = request.POST['date_coverage_letter_sent']
-        days_since_last_note = request.POST['days_since_last_note']
+        # days_since_last_note = request.POST['days_since_last_note']
         # follow_up_date = request.POST['follow_up_date']
         insured_facility = request.POST['insured_facility']
         coverage_letter = request.POST['coverage_letter']
@@ -206,7 +206,7 @@ def add_claims(request):
 
     # add the new todo item to the database. objects.create() automatically saves the new todo item for us.
     Claim.objects.create(claim_number=claim_number, lit_dates=lit_dates, claimant=claimant, action_required=action_required, in_suit=in_suit, dc_assigned=dc_assigned,
-                         state=state, date_coverage_letter_sent=date_coverage_letter_sent, days_since_last_note=days_since_last_note, insured_facility=insured_facility,
+                         state=state, date_coverage_letter_sent=date_coverage_letter_sent, insured_facility=insured_facility,
                          coverage_letter=coverage_letter, settlement_value=settlement_value, insurer_policy=insurer_policy, bulk_insured=bulk_insured, claim_type=claim_type)
     return redirect('claims')
 

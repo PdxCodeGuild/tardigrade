@@ -1,15 +1,19 @@
 {% extends 'base.html' %} {% block content %}
+
+<div class="page_header">
+<h1>Update Claim View</h1>  
+<a href="{% url 'claims' %}" ><div class="add_claim"><p>View claims</p></div></a>
+</div> 
  
 <div class="form_container">
- <h1>Update Claim</h1>
- <br/>
+ 
 
  
   <form action="" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
     <br/>
-    <button type="submit" class="btn btn-primary">Update</button>
+    <button type="submit" class="update_button">Update</button>
   </form>
 
 

@@ -1,5 +1,10 @@
 {% extends 'base.html' %} {% block content %}
 
+<div class="page_header">
+<h1>Add New Claim View</h1>  
+<a href="{% url 'claims' %}" ><div class="add_claim"><p>View claims</p></div></a>
+</div> 
+<br/><br/><br/><br/>
 <div class="form_container">
   <form action="" method="POST">
     {% csrf_token %}
@@ -141,7 +146,7 @@
           placeholder="Claim Type"
         />
       </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="submit_button">Add Claim</button>
   </form>
 </div>
 {% endblock %}

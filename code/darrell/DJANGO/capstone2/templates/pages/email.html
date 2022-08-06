@@ -7,9 +7,17 @@
 
 {% else %}
 
-<h1>You have {{email_msgs|length}} email messages</h1>
+<div class="page_header">
+<h1>Email List View</h1>  
+<a href="{% url 'claims' %}" ><div class="add_claim"><p>View claims</p></div></a>
+</div> 
 
-<div id="emailDiv">
+<p class="message">You have {{email_msgs|length}} email messages</p>
+
+
+
+
+<div class="email_container">
     <ul id="emailULList">
 
       {% for x in email_msgs %}
@@ -18,5 +26,6 @@
       {% endfor %}
     </ul>
 </div>
+
 
 {% endif %} {% endblock %}
