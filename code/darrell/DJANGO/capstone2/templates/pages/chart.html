@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<div id="myCanvas" style="width: 75%; margin: auto">
+  <canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  //var raw = "";
+
+  const requestOptions = {
+    method: "GET",
+    //body: raw,
+    redirect: "follow",
+  };
+
+  fetch("http://127.0.0.1:8000/api/claims/", requestOptions)
+    .then((response) => response.json())
+    .then((result) => {
+      console.log(result);
+      const claim_type = result.map((elem) => claim_type );
+      {% comment %} const claim = result.map((elem) => elem.claim_number); {% endcomment %}
+      console.log(claim_type);
+      const labels = claim_type;
+      const data = {
+        labels: labels,
+        datasets: [
+          {
+            label: "Our Last Lab",
+            backgroundColor: "rgb(255, 99, 132)",
+            borderColor: "rgb(255, 99, 132)",
+            data: '',
+          },
+        ],
+      };
+
+      const config = {
+        type: "bar",
+        data: data,
+        options: {},
+      };
+
+      const myChart = new Chart(document.getElementById("myChart"), config);
+    })
+
+    .catch((error) => console.log("error", error));
+</script>
+
+{% endblock %}

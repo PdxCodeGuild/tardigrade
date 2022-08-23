@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+
+{% if searched %}
+ 
+ <div class="page_header">
+<h1>Search Results for <span>"{{searched}}":</span></h1>  
+<a href="{% url 'claims' %}" ><div class="add_claim"><p>View claims</p></div></a>
+</div> 
+
+<div class="search_container">
+ 
+
+ {% for claim in claims %}
+   <a href="{% url 'claim_details' claim.id %}">{{claim}} - {{claim.claimant}}</a><br/><hr>
+ {% endfor %}
+ 
+{% else %}
+  <h1>Please enter a search term.</h1>
+{% endif %}
+
+
+</div>
+{% endblock %}

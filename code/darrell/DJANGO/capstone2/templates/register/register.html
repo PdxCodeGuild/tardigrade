@@ -1,0 +1,52 @@
+{% extends 'splash.html' %} {% block content %} 
+
+
+{% comment %} <div class="container mt-3">
+    <form action="" method="POST">
+        <div id="author-form" class="form-group">
+            {% csrf_token %}
+            <label for="username">Username</label>
+            <input class="form_control" type='text' name="username"/><br/>
+            <label for="password">Password</label>
+            <input class="form_control" type='password' name="password"/><br/>
+            <label for="email">Email</label>
+            <input class="form_control" type='text' name="email"/><br/>
+            <label for="first_name">First Name</label>
+            <input class="form_control" type='text' name="first_name"/><br/>
+            <label for="last_name">Last Name</label>
+            <input class="form_control" type='text' name="last_name"/><br/>
+            <button type="submit" class="btn btn-primary mb-2 mt-3">Submit</button>
+        </div>
+    </form>
+    
+</div> {% endcomment %}
+
+
+
+<div class="login_container">
+    <div class="login_header">Register</div>
+
+    <div class="login_form">
+        <form id="author-form" action="{% url 'register' %} " method="POST">
+        {% csrf_token %}
+
+            <div class="form-group">
+            <label for="username">Username</label>
+            <input class="form_control" type='text' name="username"/><br/>
+            <label for="password">Password</label>
+            <input class="form_control" type='password' name="password"/><br/>
+            <label for="email">Email</label>
+            <input class="form_control" type='text' name="email"/><br/>
+            <label for="first_name">First Name</label>
+            <input class="form_control" type='text' name="first_name"/><br/>
+            <label for="last_name">Last Name</label>
+            <input class="form_control" type='text' name="last_name"/><br/>
+            </div>
+             <h3><a href="http://127.0.0.1:8000/accounts/login">Already have an account?</a></h3>
+            <button id="login_button" type="submit" class="">Register</button>
+        
+        </form>
+    </div>
+<div>
+
+ {% endblock %}
