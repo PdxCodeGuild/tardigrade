@@ -50,12 +50,16 @@ def claims(request):
    
     for x in range(len(email_msg)):
     
-        email_claim_no = email_msg[x]
-        claim_id = Claim.objects.filter(claim_number=email_claim_no).first()
-        if claim_id:
-            email_id = Email.objects.get(id=claim_id.id)
-            print(claim_id, claim_id.id, email_id)
-      
+        email_claim_no = email_msg[x] ##gets the claim from email
+        claim_instance = Claim.objects.filter(claim_number=email_claim_no).first() ## looks for a claim in the database that has the same claim number
+        if claim_instance: ## if the claim exists
+            claim_instance_id = claim_instance.id
+            claim = Claim.objects.get(id=claim_instance_id)
+            email = Email.objects.filter(claimNum=claim_instance).first()
+            email_instance = Email.objects.get(id=email.id)
+            print(claim_instance)
+            # email_instance.claim=claim_instance ## links the claim field from the email model to the claim instance
+            # email_instance.save()      
             
                  
         

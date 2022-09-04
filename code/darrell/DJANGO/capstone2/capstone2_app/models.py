@@ -39,7 +39,7 @@ class Email(models.Model):
 
 
     def __str__(self):
-        return f'{self.claimNum}'
+        return f'{self.claimNum}, {self.claim}'
 
 
 
