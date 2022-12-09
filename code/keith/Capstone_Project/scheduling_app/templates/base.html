@@ -75,10 +75,22 @@
 
   {% block content %}
   {% endblock %}
-  <footer class="text-center footer sticky-bottom ">
-    <p >Author: Keith "Rabbit" Townsend</p>
-    <p><a href="mailto:rabbitdub13@gmail.com">rabbitdub13@gmail.com</a></p>
+  <div class="container"></div>
+  <footer id="footer">
+    <section class="ft-social social-icons-bigger">
+      <ul class="ft-social-list social-icons-bigger">
+        <li><a href="https://www.facebook.com/Rabbitdub/photos"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/townsend_it/"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </section>
   </footer>
+
+  
+  
+  <!-- <footer id="footer" class="text-center footer sticky-bottom bg-dark">
+    <p class="author" >Author: Keith "Rabbit" Townsend</p>
+    <p><a href="mailto:rabbitdub13@gmail.com">rabbitdub13@gmail.com</a></p>
+  </footer> -->
 
   <script src="{% static 'main.js' %}"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -92,7 +104,15 @@
     crossorigin="anonymous"></script>
 
 
-
+    <!-- <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        const body = document.getElementsByTagName('body')[0]
+      const cal = document.getElementById('cal_pos')
+      const footer = document.getElementById('footer')
+      body.appendChild(footer);
+    
+    })
+    </script> -->
   
 </body>
 

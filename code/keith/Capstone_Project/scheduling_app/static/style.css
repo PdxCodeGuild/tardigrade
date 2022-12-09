@@ -29,29 +29,95 @@ h3{
   font-family: 'Work Sans', sans-serif !important;
 }
 
-/* .footer{
-  position: absolute !important;
-  text-align: center !important;
-} */
-.footer{
-  z-index: 1;
-  order: 5;
+.navbar{
+  height: 80px;
 }
 
+/* .footer{
+  z-index: 1;
+  order: 5;
+  max-height: 100%;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+} */
 
+* {
+  box-sizing: border-box;
+  font-family: ’Lato’, sans-serif;
+  margin: 0; 
+  padding: 0;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+  
+}
+footer {
+  background-color: #555;
+  color: #bbb;
+  line-height: 1.5;
+  
+}
+footer a {
+  text-decoration: none;
+  color: #eee;
+}
+a:hover {
+  text-decoration: underline;
+}
+.ft-title {
+  color: #fff;
+  font-family: ’Merriweather’, serif;
+  font-size: 1.375rem;
+  padding-bottom: 0.625rem;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.container {
+  flex: 1;    /* same as flex-grow: 1; */
+}
+.ft-social {
+  padding: 0 1.875rem 1.25rem;
+}
+.ft-social-list {
+  display: flex;
+  justify-content: center;
+  border-top: 1px #777 solid; 
+  padding-top: 1.25rem;
+  
+}
+.ft-social-list li {
+  margin: 0.5rem;
+  font-size: 1.25rem;
+  width: 50px;
+  line-height: 30px;
+  
+}
+.fab{
+  width: 50px;
+  font-size: 50px;
 
+}
 
 .blue_rabbit{
   width: 6vw !important;
   height: 10vh !important;
 }
+.author{
+  color: cornflowerblue;
+}
 
 .aboutbody{
   background-image: url(https://images.unsplash.com/photo-1603815878781-536e057a3e7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80);
   background-size:cover;
-  height:80rem;
+  height:60rem;
   min-height: 100%;
 }
+
 
 .register_body{
   background-image: url(https://images.unsplash.com/photo-1603190287605-e6ade32fa852?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80);
@@ -66,19 +132,16 @@ h3{
   font-size: 35px !important;
   color: antiquewhite;
 }
-/* 
+
 .calendar_body{
   background-image: url(https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2966&q=80);
   background-size: cover;
-} */
+} 
 .cal_pos{
   z-index: 2;
   order: 3;
 }
 
-.lorem{
-  order: 2;
-}
 
 body{
   display: flex;
@@ -108,74 +171,89 @@ body{
 .login_img{
   background-image: url(https://images.unsplash.com/photo-1593621198039-c87c6f91cbb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80);
   background-size: cover;
+  
 }
 .login_input{
   color: antiquewhite;
   align-content: flex-start;
 }
 
-  /* .calendar {
+.calendar {
     width: 98%;
     margin: auto;
     font-size: 13px;
     font-family: 'Work Sans', sans-serif;
     font-weight: bold;
     
-  } */
+  } 
 
-  .homebody{
+.homebody{
     background-image: url(https://images.unsplash.com/photo-1623081896756-606c15a4ea9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80) ;
     background-repeat: no-repeat;
     background-size: cover;
     height: 50rem;
   }
   
-  /* .calendar tr, .calendar td {
+.calendar tr, .calendar td {
     border: 3px solid black;
     
-  } */
+  } 
   
-  /* .calendar th {
+.calendar th {
     padding: 10px;
     text-align: center;
     font-size: 18px;
-  } */
+  } 
   
-  /* .calendar td {
+.calendar td {
     width: 200px;
     height: 150px;
     padding: 20px 0px 0px 5px;
   }
-   */
-  /* .month {
+
+.month {
     font-size: 45px !important;
     font-family: 'Roboto Mono', monospace;
 
   }
   
-  .date {
+.date{
     font-size: 16px;
   }
-   */
-  ul {
+
+ul {
     height: 100%;
     padding: 0px 5px 0px 20px;
   }
   
-  a {
+a {
     color: #17a2b8;
     font-family: 'Indie Flower', cursive;
     font-size: large;
   }
- 
-/* 
+
+.card{
+    background-color: blanchedalmond !important;
+    margin-top: 30px;
+    font-family: 'Roboto Mono', monospace;
+  }
+.card-header{
+  font-weight: 400;
+}
+
+.list-group-item{
+  background-color: rgb(28, 25, 25) !important;
+  color: antiquewhite;
+
+}
+
 .left {
   float: left;
 }
 
 .right {
   float: right;
-} */
+}
 
 .btn {
   outline: none;
@@ -189,20 +267,22 @@ body{
 
 }
 
-/* .clearfix {
+.clearfix {
   margin: 15px;
-} */
+} 
 
-/* .form {
-  margin: auto;
-} */
+.form {
+  margin:auto;
+  
+}
 .form-table{
   font-family: 'Roboto Mono', monospace;
+  
 }
 
 .form input, .form select, .form textarea {
   border-radius: 5px;
-  border: 1px solid #17a2b8;
+  border: 2px solid #1e3e43;
   outline: none;
   background: none;
   padding: 5px;

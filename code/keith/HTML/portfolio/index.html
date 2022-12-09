@@ -10,46 +10,165 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/6d8f1a62f7.js" crossorigin="anonymous"></script>
 
     <title>Rabbits Portfolio</title>
 </head>
 
 <body>
-    <div class="container navig">
-        <img src="./image/McLoughlin-Summit.jpg">
-        <header>Keith Townsend</header>
-        <p class="job">Full stack developer
-        </p>
-        <ul class="nav flex-column nav-bar">
-            <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Experience</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Resume</a>
-            </li>
-        </ul>
+    <nav>
 
-    </div>
-    <div class="container jumbo">
-        <div class="jumbotron">
-            <h1 class="display-4 intro">Hello!</h1>
-            <p class="lead intro-font">My name is Keith Townsend, and I'm on my way to becoming a developer working remotely wherever I please</p>
-            
-            <p class="lead learn-btn">
-              <a class="btn btn-success btn-lg" href="#" role="button">Learn more about me</a>
+        <div class="container navig">
+
+            <header class="name">Keith Townsend</header>
+            <p class="job">Full Stack Developer
             </p>
-          </div>
-    </div>
+            <ul class="nav flex-column nav-bar">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item text-start">
+                    <a href="https://www.linkedin.com/in/rabbitdub/">
+                        <i class="fa-brands fa-linkedin fa-2xl text-dark"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://github.com/rabbitdub">
+                        <i class="fa-brands fa-github fa-2xl text-dark"></i>
+                    </a>
+                </li>
+
+                <!-- <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark"
+                data-type="HORIZONTAL" data-vanity="rabbitdub" data-version="v1"><a
+                    class="badge-base__link LI-simple-link"
+                    href="https://www.linkedin.com/in/rabbitdub?trk=profile-badge"></a></div> -->
+
+            </ul>
+    </nav>
+
+    <main>
+
+        <div class="container jumbo">
+            <div class="jumbotron">
+                <br>
+                <h1 class="display-4 intro">Hello!</h1>
+                <br>
+                <p class="lead intro-font">I'm Keith, a full stack developer working remotely in beautiful Ashland,
+                    Oregon.
+                </p>
+
+                <p class="lead learn-btn">
+                    <a href="#about" class="btn btn-success btn-lg" href="#" role="button">Learn more about me</a>
+                </p>
+            </div>
+        </div>
+
+
+
+
+        <div id="about" class="aboutme text-center p-5 ">
+            <img class="headshot mb-4" src="image/MEB.jpg">
+            <p>
+                I've spent the last 13 years working across different areas of the music industry; touring, session
+                work,
+                developing content, to my current role of private teacher designing curriculum for beginner to
+                intermediate
+                students of all ages.</p>
+
+            <p>These days my time is spent learning different front and back end languages such as python, JS, HTML, and
+                CSS.
+                I also am focused on gaining and growing my experience in the field of software developement as a whole
+                with
+                things
+                like mentorships and additional schooling.</p>
+
+            <P>Out of the office, you'll find me dreaming of snow, surfing the
+                coastline, playing guitar, and petting all the good dogs.
+            </p>
+        </div>
+
+        <h3 id="projects" class="projects text-center mb-4">Projects</h3>
+
+
+
+        <div class="container text-center projectcards">
+            <div class="row">
+                <div class="col mt-5">
+                    <div class="card text-white bg-dark h-100" style="width: 18rem;">
+                        <img src="image/BURRITO.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Burrito Order Form</h5>
+                            <p class="card-text">A Chipotle style burrito order form for taking in all of the food pill
+                                conoisseur's wants and needs!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mt-5">
+                    <div class="card text-white bg-dark" style="width: 18rem;">
+                        <img src="image/OUTARD.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">OUTA RD.</h5>
+                            <p class="card-text">A simple no frills app for keeping track of gigs and rehearsals for
+                                musicians or performers of any kind.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mt-5">
+                    <div class="card text-white bg-dark" style="width: 18rem;">
+                        <img src="image/TO-DO.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">TODO List</h5>
+                            <p class="card-text">Everyone needs a handy dandy TO-DO list, what's more convenient than
+                                logging onto your computer TO-DO so?!?!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+        
+        
+        <div class="text-center contact">
+            <h6>Contact</h6>
+            <ul>
+                <li class="icon nav-item text-center">
+                    <a href="https://www.linkedin.com/in/rabbitdub/">
+                        <i class="fa-brands fa-linkedin fa-2xl text-dark"></i>
+                    </a>
+                </li>
+                <li class="icon nav-item text-center">
+                    <a href="https://github.com/rabbitdub">
+                        <i class="fa-brands fa-github fa-2xl text-dark"></i>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+
+        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    </main>
+
 </body>
+
 
 </html>

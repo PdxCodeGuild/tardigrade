@@ -1,6 +1,6 @@
 
 from django.shortcuts import render, redirect
-from .models import Todo
+from .models import Person, Todo
 from django.http import HttpResponse
 
 # Create your views here.
@@ -43,18 +43,21 @@ def see_details(request, id): ##we get the id of the element. Remember, all elem
     return render(request, 'details.html', {"todo_item": todo_item}) ## we are passing the context to the page
    
 
-def update_post(request, id):
+def update_post(request, id, sid):
+    print("hello world")
+    rabbit = Person.objects.get(id=sid)
+    rabbit = request.POST['name']
     blog_post = Todo.objects.get(id=id)
     blog_post.title = request.POST['title']
     blog_post.start_date = request.POST['start_date']
     blog_post.end_date = request.POST['end_date']
     blog_post.completed = ""
-
+    print(rabbit)
     try:                     ### this says if theres an error in this first command then go to the lower one
 
-            blog_post.completed = request.POST.getlist('completed')[0]
+        blog_post.completed = request.POST.getlist('completed')[0]
     except:
-            blog_post.completed = False    ##
+        blog_post.completed = False    ##
     print(blog_post)
     blog_post.save()
     print(id)

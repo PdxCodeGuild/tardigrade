@@ -2,9 +2,10 @@
 {% block content %}
 <p><a href="{% url 'home'%}">Back to main view</a></p>
 
-<form action="{% url 'update_post' todo_item.id %}" method="POST">
+<form action="{% url 'update_post' todo_item.id todo_person.id %}" method="POST">
     {% csrf_token %} title: <br />
     <input type="text" name="title" placeholder=" {{ todo_item.title }}" /><br /><br />
+    <input type="text" name="name" placeholder=" {{ todo_person.name }}" /><br /><br />
     <p>Date{{todo_item.start_date}}</p>
     <input type="date" id="start" name="start_date" value="{{todo_item.start_date}}" min="2018-01-01" max="2030-12-31">
     <input type="date" id="start" name="end_date" value="{{todo_item.end_date}}" min="2018-01-01" max="2030-12-31">

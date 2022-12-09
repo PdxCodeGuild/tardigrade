@@ -3,9 +3,6 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views import generic
 from django.utils.safestring import mark_safe
-
-
-
 from scheduling_app.forms import *
 from .models import *
 from .utils import Calendar
@@ -20,7 +17,7 @@ class CalendarView(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
-        # use today's date for the calendar
+    # use today's date for the calendar
         d = get_date(self.request.GET.get('month', None))
         context['prev_month'] = prev_month(d)
         context['next_month'] = next_month(d)
@@ -59,7 +56,6 @@ def home(request):
 
 def about(request):
     events = Event.objects.filter(user=request.user)
-    print(events)
     return render(request, 'pages/about.html', {"events":events})
 
 
